@@ -1,0 +1,141 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  list-style: none;
+  text-decoration: none;
+  box-sizing: border-box;
+  /* transition: all 1.667s ease-in-out !important; */
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Mixed Theme - Light Mode */
+main.color-1 {
+  --color-primary: #333333; /* Charcoal (monochrome) */
+  --color-secondary: #92a8d1; /* Sky Blue (colorful) */
+  --color-tertiary: #666666; /* Dark Gray (monochrome) */
+  --color-quaternary: #f7cac9; /* Blush Pink (colorful) */
+  --color-quinquenary: #f2f2f2; /* Light Gray (monochrome) */
+}
+
+/* Complementary Theme - Dark Mode */
+main.color-2 {
+  --color-primary: #cccccc; /* Complement of Charcoal */
+  --color-secondary: #35405a; /* Deep Midnight Blue */
+  --color-tertiary: #999999; /* Complement of Dark Gray */
+  --color-quaternary: #3a5f5d; /* Rich Teal - Complement of Blush Pink */
+  --color-quinquenary: #0d0d0d; /* Complement of Light Gray */
+}
+/* GENERAL CONTAINER CLASS */
+.container {
+  width: var(--container-width-lg);
+  max-width: 1920px;
+}
+
+/* GENERAL SECTION STYLES */
+section {
+  height: 100vh;
+  transition: var(--transition);
+}
+
+section > h2 {
+  text-align: center;
+}
+
+section > p {
+  text-align: center;
+  margin: 0.5rem auto 4rem;
+  width: 40%;
+}
+
+/* GENERAL IMAGES STYLES */
+/* img {
+  display: block;
+  width: 100%;
+  object-fit: cover;
+} */
+
+/* GENERAL BUTTON STYLES */
+.btn {
+  display: inline-block;
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background: var(--color-light);
+  color: var(--color-black);
+  padding: 0.6rem 2.5rem;
+  border: 1.5px solid transparent;
+  border-radius: var(--border-radius-2);
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: transparent;
+  border-color: var(--color-dark);
+  transform: translateY(-0.5rem);
+  color: var(--color-dark);
+}
+
+.btn.white {
+  background: var(--color-white);
+}
+
+.btn.white:hover {
+  background: transparent;
+  border-color: var(--color-primary);
+}
+
+.btn.primary {
+  border: none;
+  background: var(--color-quaternary);
+  color: var(--color-quinquenary);
+  font-weight: bolder;
+}
+
+.btn-primary a {
+  font-size: large;
+}
+
+.btn.primary:hover {
+  background: transparent;
+  border: 1px solid;
+  border-color: var(--color-primary);
+  color: var(--color-quinquenary);
+}
+
+.btn.sm {
+  padding: 0.5rem 1.2rem;
+}
+/* Media Queries */
+@media (min-width: 1441px) {
+  /* Extra-Large Desktops */
+}
+
+@media (min-width: 1281px) and (max-width: 1440px) {
+  /* Large Desktops and High-Resolution Screens */
+}
+
+@media (min-width: 1025px) and (max-width: 1280px) {
+  /* Small Desktops and Laptops */
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  /* Large Tablets (Landscape) */
+}
+
+@media (min-width: 601px) and (max-width: 768px) {
+  /* Small Tablets (Portrait) */
+}
+
+@media (min-width: 481px) and (max-width: 600px) {
+  /* Small Mobile (Landscape) */
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+  /* Extra Small Mobile (Portrait) */
+}
