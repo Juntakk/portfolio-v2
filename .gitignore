@@ -3,13 +3,7 @@ node_modules/
 
 # npm package-lock file
 package-lock.json
-package.json
 
-# webpack
-webpack.config.js
-
-# babel
-babel.config.js
 
 # .env files for environment variables
 .env
