@@ -35,9 +35,6 @@ const Projects = ({ projects, data }) => {
     >
       {isMobile ? (
         <>
-          {/* <p className="swipeMsg">
-            {language === "en" ? "Swipe to explore" : "Glissez pour explorer"}
-          </p> */}
           <Swiper
             modules={[Navigation]}
             navigation={{

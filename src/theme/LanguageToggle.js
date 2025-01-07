@@ -12,10 +12,10 @@ const LanguageToggle = () => {
       <span onClick={toggleLanguage} className="language__toggle">
         <p>
           {language === "en" ? (
-            <img src={frImg} alt="Switch to French" className="language-icon" />
+            <img src={enImg} alt="Switch to French" className="language-icon" />
           ) : (
             <img
-              src={enImg}
+              src={frImg}
               alt="Switch to English"
               className="language-icon"
             />

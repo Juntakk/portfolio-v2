@@ -57,10 +57,12 @@ h2 .none {
   transform: translateY(0);
 }
 .services__container .card .face.face1 .content {
+  color: var(--color-tertiary);
   opacity: 1;
   transition: 0.5s;
 }
 .services__container .card:hover .face.face1 .content {
+  color: var(--color-secondary);
   opacity: 1;
 }
 .services__container .card .face.face1 .content span {
@@ -69,12 +71,12 @@ h2 .none {
   transition: 1s all ease;
 }
 .services__container .card:hover .face.face1 .content span {
-  color: var(--color-tertiary);
+  color: var(--color-secondary);
 }
 .services__container .card .face.face1 .content h3 {
   margin: 10px 0 0;
   padding: 0;
-  color: var(--color-primary);
+  color: var(--color-quaternary);
   text-align: center;
   font-size: 1.5em;
 }
@@ -100,23 +102,23 @@ h2 .none {
   border-top-right-radius: 0px;
   border-bottom-left-radius: 15px;
   border-bottom-right-radius: 15px;
-  background-color: var(--color-tertiary);
+  background-color: var(--color-secondary);
   transform: translateY(0);
 }
 .services__container .card .face.face2 .content p {
   margin: 0;
   padding: 0;
-  color: var(--color-quinquenary);
+  color: var(--color-primary);
   font-size: 1.2rem;
 }
 .card.one.magictime.slideLeftReturn {
-  animation-duration: 1.25s;
+  animation-duration: 2.5s;
 }
 .card.two.magictime.slideLeftReturn {
   animation-duration: 2s;
 }
 .card.three.magictime.slideLeftReturn {
-  animation-duration: 2.3s;
+  animation-duration: 1.5s;
 }
 h2.none {
   opacity: 0;

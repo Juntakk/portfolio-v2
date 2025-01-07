@@ -2,18 +2,18 @@
 /* Style the autofill background */
 input:-webkit-autofill {
   background-color: transparent !important; /* Custom color */
-  color: var(--color-primary) !important; /* Text color */
+  color: var(--color-quinquenary) !important; /* Text color */
   -webkit-text-fill-color: var(
-    --color-primary
+    --color-quinquenary
   ) !important; /* Force text color */
   transition: background-color 5000s ease-in-out 0s; /* Prevent flashing */
 }
 
 /* Remove white flash when element is focused */
 input:-webkit-autofill:focus {
-  background-color: var(--color-secondary) !important;
-  color: var(--color-primary) !important;
-  -webkit-text-fill-color: var(--color-primary) !important;
+  background-color: var(--color-tertiary) !important;
+  color: var(--color-quinquenary) !important;
+  -webkit-text-fill-color: var(--color-quinquenary) !important;
 }
 
 #contact {
@@ -28,7 +28,7 @@ input:-webkit-autofill:focus {
   position: relative;
   width: 50rem;
   border-radius: 5px;
-  background: var(--color-quaternary);
+  background: var(--color-tertiary);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -40,7 +40,7 @@ input:-webkit-autofill:focus {
 }
 .contact_container h2 {
   font-size: 3rem;
-  color: var(--color-quinquenary);
+  color: var(--color-secondary);
   flex-direction: row;
   margin-right: auto;
   margin-left: 1.5rem;
@@ -68,12 +68,12 @@ input:-webkit-autofill:focus {
   font-family: inherit;
   width: 100%;
   border: none;
-  border-bottom: 1px solid var(--color-primary);
+  border-bottom: 1px solid var(--color-quaternary);
   outline: 0;
   font-size: 1.4rem;
-  color: var(--color-primary);
+  color: var(--color-quinquenary);
   padding: 7px 0;
-  background: var(--color-quaternary);
+  background: var(--color-tertiary);
   transition: border-color 0.2s;
 }
 
@@ -92,7 +92,7 @@ input:-webkit-autofill:focus {
   top: 0;
   display: block;
   font-size: 1.2rem !important ;
-  color: var(--color-primary);
+  color: var(--color-quaternary);
   opacity: 0.5;
   pointer-events: none;
   font-family: "Iceland", "serif";
@@ -121,7 +121,7 @@ a.magictime.slideLeftReturn {
 .form__field:focus {
   font-weight: 500;
   border-width: 3px;
-  border-image: var(--color-primary);
+  border-image: var(--color-tertiary);
   border-image-slice: 1;
 }
 
@@ -131,7 +131,7 @@ a.magictime.slideLeftReturn {
   display: block;
   transition: 0.2s;
   font-size: 1.5rem !important;
-  color: var(--color-primary);
+  color: var(--color-quaternary);
   font-weight: bold;
   opacity: 1;
 }
@@ -154,9 +154,9 @@ a.magictime.slideLeftReturn {
   left: 0;
   display: block;
   border-radius: 50px;
-  background: var(--color-tertiary);
+  background: var(--color-quaternary);
   width: 57px;
-  opacity: 0.5;
+  opacity: 0.8;
   height: 57px;
   transition: all 0.3s ease;
 }
@@ -166,12 +166,13 @@ a.magictime.slideLeftReturn {
   font-family: "Iceland", serif;
   font-size: 2rem;
   font-weight: 700;
-  color: var(--color-quinquenary);
+  color: var(--color-primary);
   padding: 5px;
 }
 
 .cta:hover:before {
   width: 100%;
+  opacity: 1;
 }
 
 .cta:hover span {
@@ -191,10 +192,18 @@ a.magictime.slideLeftReturn {
 /* Status message */
 .status_msg {
   text-align: center;
-  font-size: 1rem;
-  font-weight: bold;
+  font-size: 1.5rem;
+  font-family: "Iceland";
   margin-bottom: 20px;
+  color: var(--color-quaternary);
+}
+.footer__1 {
+  width: 100%;
+  margin-top: 4rem;
+  text-align: center;
+  margin-bottom: -3rem;
   color: var(--color-primary);
+  font-family: "Iceland";
 }
 
 @media (max-width: 1025px) {
@@ -376,7 +385,7 @@ a.magictime.slideLeftReturn {
   /* Status message */
   .status_msg {
     text-align: center;
-    font-size: 1rem;
+    font-size: 0.75rem;
     font-weight: bold;
     margin-bottom: 20px;
   }

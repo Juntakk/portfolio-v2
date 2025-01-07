@@ -12,7 +12,7 @@ const Portfolio = () => {
   const { language } = useLanguage();
   const data = language === "en" ? data_en : data_fr;
   const myRef = useRef();
-  const isVisible = useVisibility(myRef);
+  const isVisible = useVisibility(myRef, 0.5);
   const [projects, setProjects] = useState(() =>
     data.filter((project) => project.category === "Web")
   );
@@ -38,11 +38,7 @@ const Portfolio = () => {
 
   return (
     <section id="portfolio" ref={myRef}>
-      <div
-        className={`portfolio__container ${
-          isVisible ? "magictime slideLeftReturn" : "none"
-        }`}
-      >
+      <div className="portfolio__container" data-aos="fade-left">
         <h2>{language === "en" ? "Projects" : "Projets"}</h2>
         <ProjectsCategories
           categories={categories}

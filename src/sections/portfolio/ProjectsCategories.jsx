@@ -11,14 +11,14 @@ const ProjectsCategories = ({ categories, onFilterProjects }) => {
 
   const changeCategoryHandler = (activeCat) => {
     setActiveCategory(activeCat);
-    // onFilterProjects(activeCat);
+    onFilterProjects(activeCat);
   };
 
   return (
     <div
       className="portfolio__categories"
-      data-aos="fade-right"
-      data-aos-duration="1700"
+      data-aos="fade-left"
+      data-aos-duration="2000"
     >
       {categories.map((category) => (
         <CategoryButton

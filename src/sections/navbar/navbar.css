@@ -77,9 +77,9 @@ nav {
   position: relative;
   color: var(--color-tertiary);
   font-family: "Iceland";
-  font-size: 1.6rem;
+  font-size: 1.4rem;
   display: inline-block;
-  transition: transform 0.2s all ease-in-out !important;
+  transition: all 0.75s all ease-in-out !important;
 }
 
 .nav__menu li a.active {
@@ -94,13 +94,15 @@ nav {
   left: 0;
   width: 100%;
   text-align: left;
-  color: inherit; /* Match the link's text color */
+  font-size: 1.75rem;
   visibility: visible;
+  color: var(--color-secondary);
 }
 
 .nav__menu li a.active.animation-complete {
   visibility: visible; /* Reveal the main text after animation */
-  text-decoration: underline;
+  font-size: 1.75rem;
+  color: var(--color-secondary);
 }
 
 .nav__menu li a.active.animation-complete::before {
@@ -110,6 +112,7 @@ nav {
 .nav__menu li {
   transition: all 0.5s ease-in-out;
   color: var(--color-tertiary);
+  font-weight: bold;
 }
 .nav__menu li:hover {
   transform: translateX(-20px);

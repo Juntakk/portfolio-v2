@@ -1,14 +1,11 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import React from "react";
-
 import Navbar from "./sections/navbar/Navbar";
 import Header from "./sections/header/Header";
 import Services from "./sections/services/Services";
 import Portfolio from "./sections/portfolio/Portfolio";
 import Contact from "./sections/contact/Contact";
 import FloatingNav from "./sections/floating-nav/FloatingNav";
-import Themes from "./theme/Themes";
-// import { useThemeContext } from "./context/theme-context";
 import { useRef, useState, useEffect } from "react";
 import { LanguageProvider } from "./theme/LanguageContext";
 import Loader from "./components/Loader";
@@ -165,7 +162,6 @@ const App = () => {
         <Donut />
         <div className="spacing4"></div>
         <Contact />
-        <div className="spacing5"></div>
         <FloatingNav />
       </main>
     </LanguageProvider>

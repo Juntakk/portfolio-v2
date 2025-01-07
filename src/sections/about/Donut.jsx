@@ -11,14 +11,11 @@ const getRandom = (min, max) =>
   Math.floor(Math.random() * (max - (min + 1))) + min;
 
 const mockData = [
-  { name: "Code" },
   { name: "Volleyball" },
   { name: "Passion" },
   { name: "Backend" },
   { name: "Design" },
   { name: "Frontend" },
-  { name: "Geek" },
-  { name: "Technique" },
 ];
 
 const pieLayout = pie()
@@ -33,7 +30,7 @@ const Donut = () => {
   const updateArcs = useCallback(() => {
     const data = mockData.map(({ name }) => ({
       name,
-      value: getRandom(10, 100),
+      value: getRandom(20, 35),
     }));
     setArcs(pieLayout(sortBy(data, (d) => d.name)));
   }, []);
@@ -50,7 +47,7 @@ const Donut = () => {
 
   useEffect(() => {
     updateArcs();
-    const interval = setInterval(updateArcs, 2000);
+    const interval = setInterval(updateArcs, 1000);
     return () => clearInterval(interval);
   }, [updateArcs]);
 
@@ -64,8 +61,8 @@ const Donut = () => {
     .innerRadius(radius * 0.7)
     .outerRadius(radius * 0.9);
   const outerArcPath = arc()
-    .innerRadius(radius * 1.01)
-    .outerRadius(radius * 1.01);
+    .innerRadius(radius * 1.02)
+    .outerRadius(radius * 1.02);
   const mid = (d) => Math.PI > d.startAngle + (d.endAngle - d.startAngle);
   const myRef = useRef();
   const isVisible = useVisibility(myRef);

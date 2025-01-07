@@ -159,8 +159,13 @@ const Contact = () => {
             </button>
           </div>
         </form>
-        {status && <p className="status_msg">{status}</p>}
+        {status && <span className="status_msg">{status}</span>}
       </div>{" "}
+      <div className="footer__1" data-aos="fade-right">
+        {language === "en"
+          ? "Made by Nicolas H. Gauthier"
+          : "Réalisé par Nicolas H. Gauthier"}
+      </div>
     </section>
   );
 };
