@@ -249,9 +249,9 @@
     margin-top: 1.55rem;
   }
   .slideNumber {
-    color: var(--color-dark) !important;
-    font-style: italic;
-    font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+    color: var(--color-primary);
+    font-family: "Iceland";
+    margin-top: 1rem;
     font-size: 2rem;
     padding: 1px 5px;
   }
