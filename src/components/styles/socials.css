@@ -8,11 +8,26 @@
   flex-direction: column;
   z-index: 1;
   gap: 1rem;
-  transition: opacity 0.5s ease-in-out;
+  opacity: 0;
+  transition: all 1s ease-in-out;
+}
+.socials__container.hide:hover {
+  opacity: 1;
+  pointer-events: auto;
+}
+.socials__container.show {
+  cursor: pointer;
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.socials__container.hide {
+  opacity: 0;
 }
 .socials__container a {
   color: var(--color-secondary);
   font-size: 3rem;
+  cursor: pointer;
   transition: transform 0.75s ease-in-out;
 }
 .tooltip {
@@ -31,16 +46,12 @@
 
 .socials__container a:hover {
   transform: translateX(10px);
-  cursor: pointer;
   color: var(--color-quaternary);
+  z-index: 2;
 }
 .socials__container a:hover .tooltip {
   visibility: visible;
   opacity: 1;
-}
-
-.socials__container.none {
-  opacity: 0;
 }
 
 @media (max-width: 1024px) {

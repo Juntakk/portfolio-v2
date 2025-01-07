@@ -22,6 +22,7 @@ const App = () => {
   // const themeContext = useThemeContext();
   const [isMobile, setIsMobile] = useState(false);
   const [themeState, setThemeState] = useState("color-1");
+  const [isDarkMode, setIsDarkMode] = useState(false);
 
   const colorMap = {
     "color-1": "#92a8d1", // Soft coral to contrast the grayish tones
@@ -38,6 +39,7 @@ const App = () => {
   const toggleTheme = () => {
     const nextTheme = themeState === "color-1" ? "color-2" : "color-1";
     setThemeState(nextTheme);
+    setIsDarkMode(!isDarkMode);
   };
   // Update particle color when the theme changes
   useEffect(() => {
@@ -151,7 +153,7 @@ const App = () => {
         }}
       ></div>
       <main className={themeState} ref={mainRef}>
-        <Navbar toggleTheme={toggleTheme} />
+        <Navbar toggleTheme={toggleTheme} isDarkMode={isDarkMode} />
         <Socials />
         <Header isLoading={isLoading} setIsLoading={setIsLoading} />
         <div className="spacing1"></div>

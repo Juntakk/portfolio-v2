@@ -1,4 +1,6 @@
 import { MdDarkMode } from "react-icons/md";
+import { MdOutlineWbSunny } from "react-icons/md";
+
 import { useLanguage } from "../../theme/LanguageContext";
 import LanguageToggle from "../../theme/LanguageToggle";
 import { LiaCloudDownloadAltSolid } from "react-icons/lia";
@@ -9,13 +11,44 @@ import data_fr from "./data_fr";
 import "./navbar.css";
 import React from "react";
 
-const Navbar = ({ toggleTheme }) => {
+const Navbar = ({ toggleTheme, isDarkMode }) => {
   const { language } = useLanguage();
   const data = language === "en" ? data_en : data_fr;
   const [activeSection, setActiveSection] = useState(1);
   const [isMobile, setIsMobile] = useState(false);
   const [completed, setCompleted] = useState(false);
+  const [isScrolling, setIsScrolling] = useState(false);
+  const [scrollingTimeout, setScrollingTimeout] = useState(null);
 
+  useEffect(() => {
+    let stopScrollingTimeout;
+
+    const handleScroll = () => {
+      if (!isScrolling && !scrollingTimeout) {
+        const timer = setTimeout(() => {
+          setIsScrolling(true);
+          setScrollingTimeout(null);
+        }, 500);
+        setScrollingTimeout(timer);
+      }
+
+      clearTimeout(stopScrollingTimeout);
+
+      stopScrollingTimeout = setTimeout(() => {
+        setIsScrolling(false);
+        clearTimeout(scrollingTimeout);
+        setScrollingTimeout(null);
+      }, 500);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+      clearTimeout(stopScrollingTimeout);
+      clearTimeout(scrollingTimeout);
+    };
+  }, [isScrolling, scrollingTimeout]);
   useEffect(() => {
     if (activeSection) {
       setCompleted(false);
@@ -30,33 +63,6 @@ const Navbar = ({ toggleTheme }) => {
       setIsMobile(false);
     }
   }, [isMobile]);
-  useEffect(() => {
-    let timeoutId;
-
-    const handleScroll = () => {
-      const navBar = document.querySelector(".nav__container");
-      const scrollThreshold = 1;
-
-      if (window.scrollY > scrollThreshold) {
-        navBar.classList.add("show");
-      } else {
-        navBar.classList.remove("show");
-      }
-    };
-    const debouncedScroll = () => {
-      clearTimeout(timeoutId);
-      timeoutId = setTimeout(() => {
-        handleScroll();
-      }, 30);
-    };
-
-    window.addEventListener("scroll", debouncedScroll);
-
-    return () => {
-      window.removeEventListener("scroll", debouncedScroll);
-      clearTimeout(timeoutId);
-    };
-  }, []);
   useEffect(() => {
     const sections = document.querySelectorAll("section");
 
@@ -82,10 +88,11 @@ const Navbar = ({ toggleTheme }) => {
 
   return (
     <nav>
-      <div className="nav__container">
+      <div className={`nav__container ${isScrolling ? "show" : "hide"}`}>
+        <div className="nav__handle"></div>
         <div className="nav__right">
           <button className="theme__icon" onClick={toggleTheme}>
-            <MdDarkMode />
+            {isDarkMode ? <MdDarkMode /> : <MdOutlineWbSunny />}
           </button>
           <span className="line">|</span>
           <i className="nav__logo">

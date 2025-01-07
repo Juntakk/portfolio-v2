@@ -10,7 +10,7 @@ const LanguageToggle = () => {
   return (
     <>
       <span onClick={toggleLanguage} className="language__toggle">
-        <p>
+        <p style={{ cursor: "pointer" }}>
           {language === "en" ? (
             <img src={enImg} alt="Switch to French" className="language-icon" />
           ) : (

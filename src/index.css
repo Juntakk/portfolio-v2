@@ -8,7 +8,14 @@
   box-sizing: border-box;
   /* transition: all 1.667s ease-in-out !important; */
 }
-
+h1,
+h2,
+h3,
+h4,
+h5,
+p {
+  cursor: default;
+}
 html {
   scroll-behavior: smooth;
 }

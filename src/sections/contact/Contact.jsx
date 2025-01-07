@@ -161,7 +161,7 @@ const Contact = () => {
         </form>
         {status && <span className="status_msg">{status}</span>}
       </div>{" "}
-      <div className="footer__1" data-aos="fade-right">
+      <div className="footer__1">
         {language === "en"
           ? "Made by Nicolas H. Gauthier"
           : "Réalisé par Nicolas H. Gauthier"}

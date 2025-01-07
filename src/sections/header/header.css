@@ -12,7 +12,7 @@
   transition: opacity 2s ease, transform 2s ease;
   margin-top: 5rem;
   text-align: center;
-  color: var(--color-tertiary) !important;
+  color: var(--color-primary) !important;
 }
 
 .myName,
@@ -45,6 +45,7 @@
   z-index: 1;
   margin-top: auto;
   margin-bottom: 5rem;
+  cursor: pointer;
 }
 .down__arrow:hover {
   transform: scale(1.15);
