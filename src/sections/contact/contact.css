@@ -217,16 +217,9 @@ a.magictime.slideLeftReturn {
 }
 
 @media (max-width: 800px) {
-  /* Main container */
-  #contact {
-    display: flex;
-    justify-content: center;
-    overflow: hidden;
-    align-items: center;
-  }
   .contact_container {
     position: relative;
-    width: 65%;
+    width: 75%;
     border-radius: 5px;
     display: flex;
     flex-direction: column;
@@ -234,12 +227,10 @@ a.magictime.slideLeftReturn {
     align-items: center;
     padding: 0.5rem;
     margin-right: 0;
-  }
-  .contact_container.none {
-    opacity: 0;
+    margin-left: 1rem;
   }
   .contact_container h2 {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     flex-direction: row;
     margin-right: auto;
     margin-left: 0.5rem;
@@ -258,7 +249,7 @@ a.magictime.slideLeftReturn {
   /* From Uiverse.io by mrhyddenn */
   .form__group {
     position: relative;
-    padding: 8px;
+    padding: 2px;
     width: 100%;
   }
 
@@ -277,7 +268,7 @@ a.magictime.slideLeftReturn {
   }
 
   .form__field:placeholder-shown ~ .form__label {
-    font-size: 17px;
+    font-size: 12fpx !important;
     cursor: text;
     top: 20px;
   }
@@ -392,5 +383,9 @@ a.magictime.slideLeftReturn {
     font-size: 0.75rem;
     font-weight: bold;
     margin-bottom: 20px;
+  }
+  .footer__1 {
+    margin-bottom: -7rem;
+    margin-top: 8rem;
   }
 }
