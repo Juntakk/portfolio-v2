@@ -48,21 +48,6 @@ const Header = ({ isLoading, setIsLoading }) => {
     return () => clearTimeout(timer);
   }, [currentText, isDeleting, typingSpeed, texts, currentIndex, isPaused]);
 
-  // useEffect(() => {
-  //   const loadingElement = document.querySelector(".myName");
-  //   const loadingElement2 = document.querySelector(".desc_p");
-  //   if (loadingElement) {
-  //     if (isLoading) {
-  //       // Add animation on initial load
-  //       setTimeout(() => {
-  //         loadingElement.classList.add("fade-left");
-  //         loadingElement2.classList.add("fade-right");
-  //         setTimeout(() => setIsLoading(false), 2000); // Matches animation duration
-  //       }, 300); // Initial delay
-  //     }
-  //   }
-  // }, [isLoading, setIsLoading]);
-
   return (
     <section id="header" ref={myRef}>
       <div

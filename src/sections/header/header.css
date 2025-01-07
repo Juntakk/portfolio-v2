@@ -39,16 +39,26 @@
   margin-bottom: 1rem;
 }
 .down__arrow {
-  color: var(--color-tertiary);
+  color: var(--color-primary);
   font-size: 3rem;
   justify-self: flex-end;
   z-index: 1;
   margin-top: auto;
   margin-bottom: 5rem;
   cursor: pointer;
+  opacity: 0;
+  animation: fadeInRight 2s 2s forwards; /* Trigger animation with delay */
 }
-.down__arrow:hover {
-  transform: scale(1.15);
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(20px); /* Start off to the right */
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0); /* End at the original position */
+  }
 }
 
 .header__container {
@@ -80,6 +90,9 @@
   }
   .desc_p {
     font-size: 1.5rem !important;
+  }
+  .down__arrow {
+    margin-bottom: 5rem;
   }
 }
 

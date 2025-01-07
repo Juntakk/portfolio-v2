@@ -21,6 +21,7 @@ const Navbar = ({ toggleTheme, isDarkMode }) => {
   const [scrollingTimeout, setScrollingTimeout] = useState(null);
 
   useEffect(() => {
+    if (isMobile) return;
     let stopScrollingTimeout;
 
     const handleScroll = () => {
@@ -28,7 +29,7 @@ const Navbar = ({ toggleTheme, isDarkMode }) => {
         const timer = setTimeout(() => {
           setIsScrolling(true);
           setScrollingTimeout(null);
-        }, 500);
+        }, 1000);
         setScrollingTimeout(timer);
       }
 
@@ -38,7 +39,7 @@ const Navbar = ({ toggleTheme, isDarkMode }) => {
         setIsScrolling(false);
         clearTimeout(scrollingTimeout);
         setScrollingTimeout(null);
-      }, 500);
+      }, 1000);
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -57,7 +58,7 @@ const Navbar = ({ toggleTheme, isDarkMode }) => {
     }
   }, [activeSection]);
   useEffect(() => {
-    if (window.innerWidth < 1400) {
+    if (window.innerWidth < 700) {
       setIsMobile(true);
     } else {
       setIsMobile(false);
@@ -89,7 +90,6 @@ const Navbar = ({ toggleTheme, isDarkMode }) => {
   return (
     <nav>
       <div className={`nav__container ${isScrolling ? "show" : "hide"}`}>
-        <div className="nav__handle"></div>
         <div className="nav__right">
           <button className="theme__icon" onClick={toggleTheme}>
             {isDarkMode ? <MdDarkMode /> : <MdOutlineWbSunny />}

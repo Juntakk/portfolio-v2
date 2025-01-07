@@ -9,8 +9,21 @@ import { useEffect, useState } from "react";
 const Socials = () => {
   const [isScrolling, setIsScrolling] = useState(false);
   const [scrollingTimeout, setScrollingTimeout] = useState(null);
+  const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
+    const handleMobile = () => {
+      setIsMobile(window.innerWidth < 700);
+    };
+
+    handleMobile();
+
+    window.addEventListener("resize", handleMobile);
+  }, [isMobile]);
+
+  useEffect(() => {
+    if (isMobile) return;
+
     let stopScrollingTimeout;
 
     const handleScroll = () => {

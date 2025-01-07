@@ -244,11 +244,11 @@ h2.none {
     font-size: 0.9rem;
   }
   .statistics__row {
-    gap: 3rem;
+    gap: 1rem;
     margin-top: 1rem;
   }
   .statistic h3 {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     margin-bottom: 0.5rem;
   }
   .statistic p {
