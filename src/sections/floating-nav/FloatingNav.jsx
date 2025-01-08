@@ -1,11 +1,34 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import data from "./data";
 import Scrollspy from "react-scrollspy";
 import Nav from "./Nav";
 import "./floating-nav.css";
 
 const FloatingNav = () => {
-  return (
+  const [isVisible, setIsVisible] = useState();
+
+  useEffect(() => {
+    const showNav = () => {
+      const contactSectionHeight =
+        document.getElementById("contact").scrollHeight;
+      const totalHeight = document.documentElement.scrollHeight;
+      const currentScroll = window.scrollY;
+
+      if (currentScroll + 150 > totalHeight - contactSectionHeight) {
+        setIsVisible(false);
+      } else {
+        setIsVisible(true);
+      }
+    };
+
+    window.addEventListener("scroll", showNav);
+
+    return () => {
+      window.removeEventListener("scroll", showNav);
+    };
+  }, []);
+
+  return isVisible ? (
     <ul id="floating__nav">
       <Scrollspy
         offset={-350}
@@ -18,6 +41,8 @@ const FloatingNav = () => {
         ))}
       </Scrollspy>
     </ul>
+  ) : (
+    ""
   );
 };
 

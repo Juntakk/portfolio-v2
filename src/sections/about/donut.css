@@ -13,7 +13,7 @@
 text {
   position: relative;
   font-weight: 500;
-  font-size: 0.7rem;
+  font-size: 3rem;
   fill: var(--color-primary);
   font-family: "Iceland";
 }

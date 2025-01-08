@@ -10,6 +10,7 @@ const Socials = () => {
   const [isScrolling, setIsScrolling] = useState(false);
   const [scrollingTimeout, setScrollingTimeout] = useState(null);
   const [isMobile, setIsMobile] = useState(false);
+  const [isVisible, setIsVisible] = useState();
 
   useEffect(() => {
     const handleMobile = () => {
@@ -53,13 +54,43 @@ const Socials = () => {
     };
   }, [isScrolling, scrollingTimeout]);
 
+  useEffect(() => {
+    const showNav = () => {
+      const contactSectionHeight =
+        document.getElementById("contact").scrollHeight;
+      const totalHeight = document.documentElement.scrollHeight;
+      const currentScroll = window.scrollY;
+
+      if (currentScroll + 100 > totalHeight - contactSectionHeight) {
+        setIsVisible(false);
+      } else {
+        setIsVisible(true);
+      }
+    };
+
+    window.addEventListener("scroll", showNav);
+
+    return () => {
+      window.removeEventListener("scroll", showNav);
+    };
+  }, []);
   return (
-    <div className={`socials__container ${isScrolling ? "show" : "hide"}`}>
-      <a href="https://www.linkedin.com/in/nickhabashigauthier/">
+    <div
+      className={`socials__container ${isScrolling ? "show " : "hide "} ${
+        !isVisible ? "center" : ""
+      }`}
+    >
+      <a
+        href="https://www.linkedin.com/in/nickhabashigauthier/"
+        className={`${!isVisible ? "center" : ""}`}
+      >
         <IoLogoLinkedin />
         <span className="tooltip">LinkedIn</span>
       </a>
-      <a href="https://github.com/Juntakk">
+      <a
+        href="https://github.com/Juntakk"
+        className={`${!isVisible ? "center" : ""}`}
+      >
         <FaSquareGithub />
         <span className="tooltip">Github</span>
       </a>
