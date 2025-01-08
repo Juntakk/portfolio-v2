@@ -14,6 +14,7 @@ import "./particles.css";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import Donut from "./sections/about/Donut";
+import Testimonials from "./sections/testimonials/Testimonials";
 
 const App = () => {
   const mainRef = useRef();
@@ -162,7 +163,7 @@ const App = () => {
         <Portfolio />
         <div className="spacing3"></div>
         <Donut />
-        <div className="spacing4"></div>
+        {/* <Testimonials /> */}
         <Contact />
         <FloatingNav />
       </main>

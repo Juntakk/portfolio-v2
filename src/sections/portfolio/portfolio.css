@@ -35,7 +35,9 @@
   margin: 3rem 3rem;
   gap: 2rem;
 }
-
+.btn.cat__btn.white {
+  color: var(--color-primary) !important;
+}
 .btn.cat__btn {
   padding: 1rem 3rem;
   font-size: 1rem;
@@ -51,7 +53,7 @@
 }
 .btn.cat__btn:hover {
   background: var(--color-quaternary) !important;
-  color: var(--color-quinquenary);
+  color: var(--color-primary);
 }
 .portfolio__project {
   background-color: transparent;

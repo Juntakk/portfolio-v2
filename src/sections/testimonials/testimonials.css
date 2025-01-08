@@ -1,0 +1,50 @@
+#testimonials {
+  background-color: var(--color-quinquenary);
+  height: 75vh;
+  font-family: "Iceland";
+}
+
+.swiper {
+  height: 30rem;
+  padding-top: 10rem;
+}
+
+.card.light p {
+  font-size: 1.3rem;
+}
+
+.swiper-slide {
+  cursor: pointer;
+  height: 13rem;
+}
+
+.testimonial__client {
+  display: flex;
+  align-items: center;
+  font-size: 1.3rem;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+img {
+  display: block;
+  width: 100%;
+  object-fit: cover;
+}
+
+.testimonial__client-avatar {
+  width: 3.5rem;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  overflow: hidden;
+  transition: all 1s ease-in-out;
+}
+
+.swiper-pagination {
+  margin-bottom: 5rem;
+}
+
+.swiper-pagination-bullet {
+  background: var(--color-tertiary);
+  border: 1px solid var(--color-primary);
+}

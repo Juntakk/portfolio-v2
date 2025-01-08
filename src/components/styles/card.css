@@ -1,0 +1,67 @@
+/* Base Card Styles */
+.light {
+  background-color: var(--color-secondary); /* Default background */
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin: 15px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease,
+    background-color 0.3s ease;
+}
+
+/* Odd Child Hover Effect */
+.light:nth-child(odd):hover {
+  background-color: var(
+    --color-quaternary
+  ) !important; /* Example: Light blue */
+  transform: translateY(-5px); /* Slight lift on hover */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Even Child Hover Effect */
+.light:nth-child(even):hover {
+  background-color: var(--color-primary) !important; /* Example: Light green */
+  transform: translateY(-5px); /* Slight lift on hover */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+/* Other Elements */
+.light p {
+  font-size: 1rem;
+  font-style: italic;
+  color: var(--color-primary);
+  margin-bottom: 20px;
+}
+
+.testimonial__client-avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 2px solid var(--color-primary);
+  margin: 0 auto 10px;
+}
+
+.testimonial__client-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.testimonial__client-details h6 {
+  font-size: 1rem;
+  font-weight: bold;
+  color: var(--color-primary);
+}
+
+.testimonial__client-details small {
+  font-size: 0.875rem;
+  color: var(--color-primary);
+}
+
+/* MEDIA QUERIES (phones) */
+@media screen and (max-width: 600px) {
+  .card {
+    padding: 1.2rem;
+  }
+}

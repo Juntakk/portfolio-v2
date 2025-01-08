@@ -30,6 +30,7 @@ h2 .none {
   position: relative;
   background-color: transparent;
   overflow: hidden;
+  border: none;
 }
 .services__container .card .face {
   width: 245px;
