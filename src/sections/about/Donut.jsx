@@ -11,11 +11,12 @@ const getRandom = (min, max) =>
   Math.floor(Math.random() * (max - (min + 1))) + min;
 
 const mockData = [
+  { name: "ReactJs" },
+  { name: "Python" },
+  { name: "NodeJs" },
   { name: "Volleyball" },
-  { name: "Passion" },
-  { name: "Backend" },
-  { name: "Design" },
-  { name: "Frontend" },
+  { name: "Java" },
+  { name: "Flutter" },
 ];
 
 const pieLayout = pie()
@@ -51,11 +52,11 @@ const Donut = () => {
     return () => clearInterval(interval);
   }, [updateArcs]);
 
-  const view = isMobile ? [250, 250] : isTablet ? [850, 850] : [1200, 1200];
+  const view = isMobile ? [240, 240] : isTablet ? [850, 850] : [1200, 1200];
   const dims = [view[0], view[1]];
-  const radius = isMobile ? 65 : isTablet ? 150 : 400;
+  const radius = isMobile ? 75 : isTablet ? 150 : 400;
   const imageSize = radius * 1.4;
-  const fontSize = isMobile ? "6px" : isTablet ? "23px" : "50px";
+  const fontSize = isMobile ? "7px" : isTablet ? "23px" : "50px";
 
   const innerArcPath = arc()
     .innerRadius(radius * 0.7)
@@ -69,85 +70,89 @@ const Donut = () => {
 
   return (
     <section id="about" ref={myRef}>
-      <svg
-        className="donut"
-        width="100%"
-        length="auto"
-        viewBox={`0 0 ${dims[0]} ${dims[1]}`}
-      >
-        <g transform={`translate(${dims[0] / 2}, ${dims[1] / 2})`}>
-          <image
-            className={`about__image ${
-              isVisible ? "magictime slideRightReturn" : "none"
-            }`}
-            href={AboutImage}
-            x={-imageSize / 2}
-            y={-imageSize / 2}
-            width={imageSize}
-            height={imageSize}
-            style={{
-              pointerEvents: "none",
-              position: "relative",
-              zIndex: "20",
-            }}
-          />
-          <NodeGroup
-            data={arcs}
-            keyAccessor={(d) => d.data.name}
-            start={({ startAngle }) => ({
-              startAngle,
-              endAngle: startAngle,
-            })}
-            enter={({ endAngle }) => ({
-              endAngle: [endAngle],
-              timing: { duration: 1000, delay: 350, ease: easeExpOut },
-            })}
-            update={({ startAngle, endAngle }) => ({
-              startAngle: [startAngle],
-              endAngle: [endAngle],
-              timing: { duration: 1350, ease: easeExpOut },
-            })}
-          >
-            {(nodes) => (
-              <g
-                className={`${
-                  isVisible ? "magictime slideDownReturn" : "none"
-                }`}
-              >
-                {nodes.map(({ key, data, state }) => {
-                  const p1 = outerArcPath.centroid(state);
-                  const p2 = [
-                    mid(state) ? p1[0] + radius * 0.2 : p1[0] - radius * 0.2,
-                    p1[1],
-                  ];
-                  return (
-                    <g key={key}>
-                      <path
-                        d={innerArcPath(state)}
-                        className={`arc-path-${data.data.name}`}
-                        opacity={0.9}
-                      />
-                      <text
-                        dy="4px"
-                        fontSize={fontSize}
-                        transform={`translate(${p2})`}
-                        textAnchor={mid(state) ? "start" : "end"}
-                      >
-                        {data.data.name}
-                      </text>
-                      <polyline
-                        fill="none"
-                        stroke="gray"
-                        points={`${innerArcPath.centroid(state)},${p1},${p2}`}
-                      />
-                    </g>
-                  );
-                })}
-              </g>
-            )}
-          </NodeGroup>
-        </g>
-      </svg>
+      {!isMobile ? (
+        <div>Hi</div>
+      ) : (
+        <svg
+          className="donut"
+          width="100%"
+          length="auto"
+          viewBox={`0 0 ${dims[0]} ${dims[1]}`}
+        >
+          <g transform={`translate(${dims[0] / 2}, ${dims[1] / 2})`}>
+            <image
+              className={`about__image ${
+                isVisible ? "magictime slideRightReturn" : "none"
+              }`}
+              href={AboutImage}
+              x={-imageSize / 2}
+              y={-imageSize / 2}
+              width={imageSize}
+              height={imageSize}
+              style={{
+                pointerEvents: "none",
+                position: "relative",
+                zIndex: "20",
+              }}
+            />
+            <NodeGroup
+              data={arcs}
+              keyAccessor={(d) => d.data.name}
+              start={({ startAngle }) => ({
+                startAngle,
+                endAngle: startAngle,
+              })}
+              enter={({ endAngle }) => ({
+                endAngle: [endAngle],
+                timing: { duration: 1000, delay: 350, ease: easeExpOut },
+              })}
+              update={({ startAngle, endAngle }) => ({
+                startAngle: [startAngle],
+                endAngle: [endAngle],
+                timing: { duration: 1350, ease: easeExpOut },
+              })}
+            >
+              {(nodes) => (
+                <g
+                  className={`${
+                    isVisible ? "magictime slideDownReturn" : "none"
+                  }`}
+                >
+                  {nodes.map(({ key, data, state }) => {
+                    const p1 = outerArcPath.centroid(state);
+                    const p2 = [
+                      mid(state) ? p1[0] + radius * 0.2 : p1[0] - radius * 0.2,
+                      p1[1],
+                    ];
+                    return (
+                      <g key={key}>
+                        <path
+                          d={innerArcPath(state)}
+                          className={`arc-path-${data.data.name}`}
+                          opacity={0.9}
+                        />
+                        <text
+                          dy="4px"
+                          fontSize={fontSize}
+                          transform={`translate(${p2})`}
+                          textAnchor={mid(state) ? "start" : "end"}
+                        >
+                          {data.data.name}
+                        </text>
+                        <polyline
+                          fill="none"
+                          stroke="gray"
+                          points={`${innerArcPath.centroid(state)},${p1},${p2}`}
+                        />
+                      </g>
+                    );
+                  })}
+                </g>
+              )}
+            </NodeGroup>
+          </g>
+        </svg>
+      )}
     </section>
   );
 };

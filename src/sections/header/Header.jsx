@@ -80,12 +80,12 @@ const Header = ({ isLoading, setIsLoading }) => {
             ? currentText + " Developer"
             : "Développeur " + currentText}
         </p>
+        <a href="#services" className="down__arrow">
+          <span>
+            <MdKeyboardDoubleArrowDown />
+          </span>
+        </a>
       </div>
-      <a href="#services" className="down__arrow">
-        <span>
-          <MdKeyboardDoubleArrowDown />
-        </span>
-      </a>
     </section>
   );
 };

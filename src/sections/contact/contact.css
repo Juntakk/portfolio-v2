@@ -1,21 +1,14 @@
-/* Main container */
-/* Style the autofill background */
 input:-webkit-autofill {
-  background-color: transparent !important; /* Custom color */
-  color: var(--color-quinquenary) !important; /* Text color */
-  -webkit-text-fill-color: var(
-    --color-quinquenary
-  ) !important; /* Force text color */
-  transition: background-color 5000s ease-in-out 0s; /* Prevent flashing */
+  background-color: transparent !important;
+  color: var(--color-quinquenary) !important;
+  -webkit-text-fill-color: var(--color-quinquenary) !important;
+  transition: background-color 5000s ease-in-out 0s;
 }
-
-/* Remove white flash when element is focused */
 input:-webkit-autofill:focus {
   background-color: var(--color-tertiary) !important;
   color: var(--color-quinquenary) !important;
   -webkit-text-fill-color: var(--color-quinquenary) !important;
 }
-
 #contact {
   display: flex;
   justify-content: center;
@@ -58,14 +51,11 @@ input:-webkit-autofill:focus {
 .container.none {
   display: none;
 }
-
-/* From Uiverse.io by mrhyddenn */
 .form__group {
   position: relative;
   padding: 18px;
   width: 100%;
 }
-
 .form__field {
   font-family: inherit;
   width: 100%;
@@ -78,17 +68,14 @@ input:-webkit-autofill:focus {
   background: var(--color-tertiary);
   transition: border-color 0.2s;
 }
-
 .form__field::placeholder {
   color: transparent;
 }
-
 .form__field:placeholder-shown ~ .form__label {
   font-size: 17px;
   cursor: text;
   top: 20px;
 }
-
 .form__label {
   position: absolute;
   top: 0;
@@ -99,19 +86,15 @@ input:-webkit-autofill:focus {
   pointer-events: none;
   font-family: "Iceland", "serif";
 }
-
-/*ANIMATIONS*/
 .contact_container.magictime.slideDownReturn {
   animation-duration: 1.5s;
 }
-
 h2.magictime.slideRightReturn {
   animation-duration: 2s;
 }
 p.magictime.slideUpReturn {
   animation-duration: 2.5s;
 }
-
 .cta.magictime.slideRightReturn {
   animation-duration: 2s;
 }
@@ -119,14 +102,12 @@ a.magictime.slideLeftReturn {
   animation-delay: 1s;
   animation-duration: 1s;
 }
-
 .form__field:focus {
   font-weight: 500;
   border-width: 3px;
   border-image: var(--color-tertiary);
   border-image-slice: 1;
 }
-
 .form__field:focus ~ .form__label {
   position: absolute;
   top: -10;
@@ -137,8 +118,6 @@ a.magictime.slideLeftReturn {
   font-weight: bold;
   opacity: 1;
 }
-
-/* From Uiverse.io by alexmaracinaru */
 .cta {
   position: relative;
   padding: 12px 12px;
@@ -148,7 +127,6 @@ a.magictime.slideLeftReturn {
   cursor: pointer;
   margin-right: auto;
 }
-
 .cta:before {
   content: "";
   position: absolute;
@@ -162,7 +140,6 @@ a.magictime.slideLeftReturn {
   height: 57px;
   transition: all 0.3s ease;
 }
-
 .cta span {
   position: relative;
   font-family: "Iceland", serif;
@@ -171,27 +148,20 @@ a.magictime.slideLeftReturn {
   color: var(--color-primary);
   padding: 5px;
 }
-
 .cta:hover:before {
   width: 100%;
   opacity: 1;
 }
-
 .cta:hover span {
   transform: translateX(0);
 }
-
 .cta:active {
   transform: scale(0.95);
 }
-
-/* reset input */
 .form__field:required,
 .form__field:invalid {
   box-shadow: none;
 }
-
-/* Status message */
 .status_msg {
   text-align: center;
   font-size: 1.5rem;
@@ -212,180 +182,52 @@ a.magictime.slideLeftReturn {
 
 @media (max-width: 1025px) {
   .contact_container {
-    width: 65%;
+    width: 75%;
+    margin-right: 5rem;
   }
 }
 
-@media (max-width: 800px) {
+@media (max-width: 700px) {
   .contact_container {
-    position: relative;
-    width: 75%;
-    border-radius: 5px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 0.5rem;
-    margin-right: 0;
-    margin-left: 1rem;
+    width: 90%;
+    height: 80%;
+    margin: 10px;
+    padding: 5px 0px;
+    text-align: center;
+    justify-content: flex-start;
   }
   .contact_container h2 {
-    font-size: 1.2rem;
-    flex-direction: row;
-    margin-right: auto;
-    margin-left: 0.5rem;
-    font-family: "Iceland", serif;
+    margin: 0;
+    padding: 0.5rem;
+    justify-content: center;
+    align-items: center;
+    font-size: 3rem;
   }
   .contact_container p {
-    font-size: 1rem;
-    font-family: "Iceland", serif;
-    margin-right: auto;
-    margin-left: 0.5rem;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
   }
-  .container.none {
-    display: none;
-  }
-
-  /* From Uiverse.io by mrhyddenn */
   .form__group {
-    position: relative;
-    padding: 2px;
     width: 100%;
+    padding: 0.75rem;
   }
-
   .form__field {
-    font-family: inherit;
-    width: 100%;
-    border: none;
-    outline: 0;
-    font-size: 1.4rem;
-    padding: 7px 0;
-    transition: border-color 0.2s;
+    font-size: 1.2rem;
+    padding: 24px;
   }
 
-  .form__field::placeholder {
-    color: transparent;
+  button.cta {
+    font-size: 20px;
+    padding: 12px;
   }
 
-  .form__field:placeholder-shown ~ .form__label {
-    font-size: 12fpx !important;
-    cursor: text;
-    top: 20px;
-  }
-
-  .form__label {
-    position: absolute;
-    top: 0;
-    display: block;
-    font-size: 1.2rem !important ;
-    opacity: 0.5;
-    pointer-events: none;
-    font-family: "Iceland", "serif";
-  }
-
-  /*ANIMATIONS*/
-  .contact_container.magictime.slideDownReturn {
-    animation-duration: 1.5s;
-  }
-
-  h2.magictime.slideRightReturn {
-    animation-duration: 2s;
-  }
-  p.magictime.slideUpReturn {
-    animation-duration: 2.5s;
-  }
-
-  .cta.magictime.slideRightReturn {
-    animation-duration: 2s;
-  }
-  a.magictime.slideLeftReturn {
-    animation-delay: 1s;
-    animation-duration: 1s;
-  }
-
-  .form__field:focus {
-    font-weight: 500;
-    border-width: 3px;
-    border-image-slice: 1;
-  }
-
-  .form__field:focus ~ .form__label {
-    position: absolute;
-    top: -5;
-    display: block;
-    transition: 0.2s;
-    font-size: 1.2rem !important;
-    font-weight: bold;
-    opacity: 1;
-  }
-
-  /* From Uiverse.io by alexmaracinaru */
-  .cta {
-    position: relative;
-    padding: 5px 5px;
-    transition: all 0.2s ease;
-    border: none;
-    background: none;
-    cursor: pointer;
-    margin-right: auto;
-  }
-
-  .cta:before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    display: block;
-    border-radius: 50px;
-    width: 30px;
-    opacity: 0.2;
-    height: 30px;
-    transition: all 0.3s ease;
-  }
-
-  .cta span {
-    position: relative;
-    font-family: "Iceland", serif;
-    font-size: 1rem;
-    font-weight: 700;
-    padding: 5px;
-  }
-
-  .cta svg {
-    display: none;
-  }
-
-  .cta:hover:before {
-    width: 100%;
-  }
-
-  .cta:hover span {
-    transform: translateX(0);
-  }
-
-  .cta:hover svg {
-    transform: translateX(0);
-  }
-
-  .cta:active {
-    transform: scale(0.95);
-  }
-
-  /* reset input */
-  .form__field:required,
-  .form__field:invalid {
-    box-shadow: none;
-  }
-
-  /* Status message */
-  .status_msg {
-    text-align: center;
-    font-size: 0.75rem;
-    font-weight: bold;
-    margin-bottom: 20px;
-  }
   .footer__1 {
-    margin-bottom: -7rem;
-    margin-top: 8rem;
+    font-size: 1.5rem;
+    margin-top: 10px;
+  }
+  .status_msg {
+    font-size: 1.2rem;
+    font-weight: bold;
   }
 }

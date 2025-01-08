@@ -17,7 +17,6 @@
 h2 .none {
   opacity: 0;
 }
-
 .services__container {
   position: relative;
   display: flex;
@@ -204,20 +203,25 @@ h2.none {
 @media (min-width: 00px) and (max-width: 806px) {
   #services h2 {
     font-size: 3rem;
+    margin-top: 0rem;
     margin-bottom: 1rem;
   }
   .services__container {
-    gap: 0.5rem;
+    gap: 0rem;
     flex-direction: column;
   }
+  .services__container .card {
+    padding: 0.5rem;
+  }
   .services__container .card .face {
-    width: 120px;
-    height: 105px;
-    transition: 0.5s;
+    width: 220px;
+    height: 135px;
+    transition: all 0.5s ease;
   }
   .services__container .card .face.face1 .content span {
     width: 100px;
-    color: var(--color-secondary);
+    aspect-ratio: 16 / 9;
+    color: var(--color-quaternary);
     display: flex;
     justify-content: center;
     transition: 1s all ease;
@@ -225,35 +229,19 @@ h2.none {
   .services__container .card .face.face1 {
     transform: translateY(0px);
   }
-  .services__container .card:hover .face.face1 {
-    transform: translateY(0);
-  }
   .services__container .card .face.face2 {
-    padding: 0px;
     display: none;
-    transform: translateY(-75px);
-  }
-  .services__container .card:hover .face.face2 {
-    transform: translateY(0);
-  }
-  .services__container .card .face.face2 .content {
-    font-size: 0.6rem;
-    height: 100%;
-  }
-  .services__container .card .face.face2 .content p {
-    padding: 0.75rem;
-    font-size: 0.9rem;
   }
   .statistics__row {
-    gap: 1rem;
+    gap: 1.5rem;
     margin-top: 1rem;
   }
   .statistic h3 {
-    font-size: 1.2rem;
+    font-size: 2.2rem;
     margin-bottom: 0.5rem;
   }
   .statistic p {
-    font-size: 0.8rem;
+    font-size: 1.2rem;
     font-weight: lighter;
   }
 }

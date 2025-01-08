@@ -13,6 +13,7 @@
 text {
   position: relative;
   font-weight: 500;
+  font-size: 0.7rem;
   fill: var(--color-primary);
   font-family: "Iceland";
 }
@@ -22,27 +23,42 @@ polyline {
 svg.donut {
   width: 100%;
 }
-.arc-path-Code {
+.arc-path-reactjs {
   fill: var(--color-tertiary);
 }
-.arc-path-Backend {
+.arc-path-python {
   fill: var(--color-quaternary);
 }
-.arc-path-Volleyball {
+.arc-path-NodeJs {
   fill: var(--color-primary);
 }
-.arc-path-Technique {
+.arc-path-volleyball {
   fill: var(--color-secondary);
 }
-.arc-path-Passion {
+.arc-path-java {
   fill: var(--color-tertiary);
 }
-.arc-path-Design {
-  fill: var(--color-secondary);
-}
-.arc-path-Frontend {
-  fill: var(--color-primary);
-}
-.arc-path-Geek {
+.arc-path-Flutter {
   fill: var(--color-quaternary);
+}
+@media (max-width: 700px) {
+  .donut {
+    max-width: 100%;
+    height: 75%;
+    position: relative;
+    display: block;
+    margin: 0 auto;
+    z-index: 1;
+  }
+  text {
+    position: relative;
+    font-weight: 500;
+    font-size: 0.6rem;
+    fill: var(--color-primary);
+    font-family: "Iceland";
+  }
+  #about {
+    height: 90vh;
+    padding-top: 7.5rem;
+  }
 }
