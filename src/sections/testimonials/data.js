@@ -17,7 +17,7 @@ const data = [
     quote:
       "Nick's expertise in web development is truly impressive. He delivered a website that not only looks amazing but is also highly responsive and user-friendly. I couldn't be happier with the results!",
     avatar: Avatar2,
-    name: "Ernest Achiever",
+    name: "Ernest Jykrell",
     profession: "Web Developer",
   },
   {

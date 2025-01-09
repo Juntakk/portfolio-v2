@@ -1,12 +1,17 @@
-import { createContext, useContext, useReducer, useEffect } from "react";
+import React, { createContext, useContext, useReducer, useEffect } from "react";
 import themeReducer from "./themeReducer";
-import React from "react";
 
 export const ThemeContext = createContext();
 
-const initialThemeState = JSON.parse(localStorage.getItem("themeSettings")) || {
-  primary: "color-1",
-};
+let initialThemeState;
+try {
+  initialThemeState = JSON.parse(localStorage.getItem("themeSettings")) || {
+    primary: "color-1",
+  };
+} catch (error) {
+  console.error("Error parsing theme settings from localStorage:", error);
+  initialThemeState = { primary: "color-1" };
+}
 
 export const ThemeProvider = ({ children }) => {
   const [themeState, dispatchTheme] = useReducer(
@@ -18,10 +23,8 @@ export const ThemeProvider = ({ children }) => {
     dispatchTheme({ type: buttonClassName });
   };
 
-  //Save theme settings to local storage
   useEffect(() => {
     localStorage.setItem("themeSettings", JSON.stringify(themeState));
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [themeState.primary]);
 
   return (
@@ -31,7 +34,4 @@ export const ThemeProvider = ({ children }) => {
   );
 };
 
-//Hook to use Theme context wherever we want
-export const useThemeContext = () => {
-  return useContext(ThemeContext);
-};
+export const useThemeContext = () => useContext(ThemeContext);

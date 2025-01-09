@@ -16,7 +16,8 @@ const Services = () => {
   const { language } = useLanguage();
   const data = language === "en" ? data_en : data_fr;
   const [isMobile, setIsMobile] = useState(false);
-
+  const french = language === "fr";
+  const english = language === "en";
   const myRef = useRef();
   const isVisible = useVisibility(myRef, 0.1);
   useEffect(() => {
@@ -43,7 +44,7 @@ const Services = () => {
               <span>
                 <TfiLayoutAccordionList size={isMobile ? 45 : 75} />
               </span>
-              <h3>Design</h3>
+              <h3>{data[0].title}</h3>
             </div>
           </div>
           <div class="face face2">
@@ -63,7 +64,7 @@ const Services = () => {
               <span>
                 <FaLaptopCode size={isMobile ? 45 : 75} />
               </span>{" "}
-              <h3>Code</h3>
+              <h3>{data[1].title}</h3>
             </div>
           </div>
           <div class="face face2">
@@ -83,7 +84,7 @@ const Services = () => {
               <span>
                 <GrLaunch size={isMobile ? 45 : 75} />
               </span>
-              <h3>Launch</h3>
+              <h3>{data[2].title}</h3>
             </div>
           </div>
           <div class="face face2">
@@ -102,15 +103,15 @@ const Services = () => {
       >
         <div className="statistic">
           <h3>20+</h3>
-          <p>Successful Projects</p>
+          <p>{english ? "Successful projects" : "Projets réussis"}</p>
         </div>
         <div className="statistic">
           <h3>3+</h3>
-          <p>Years Experience</p>
+          <p>{english ? "Years experience" : "Années d'expérience"}</p>
         </div>
         <div className="statistic">
           <h3>10+</h3>
-          <p>Tools / Frameworks</p>
+          <p>{english ? "Tools/Frameworks" : "Outils/Frameworks"}</p>
         </div>
       </div>
     </section>

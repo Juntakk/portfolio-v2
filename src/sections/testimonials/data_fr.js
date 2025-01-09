@@ -17,7 +17,7 @@ const data = [
     quote:
       "L'expertise de Nick en développement web est vraiment impressionnante. Il a livré un site web qui non seulement est magnifique, mais aussi très réactif et convivial. Je suis ravi du résultat !",
     avatar: Avatar2,
-    name: "Ernest Achiever",
+    name: "Ernest Jykrell",
     profession: "Développeur Web",
   },
   {

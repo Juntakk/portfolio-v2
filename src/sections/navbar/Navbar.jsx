@@ -180,9 +180,9 @@ const Navbar = ({ toggleTheme, isDarkMode }) => {
       >
         <span>
           {isOpen ? (
-            <MdKeyboardDoubleArrowRight />
+            <MdKeyboardDoubleArrowRight color="black" />
           ) : (
-            <MdKeyboardDoubleArrowLeft />
+            <MdKeyboardDoubleArrowLeft color="black" />
           )}
         </span>
       </div>

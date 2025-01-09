@@ -59,6 +59,7 @@ h2 .none {
 .services__container .card .face.face1 .content {
   color: var(--color-tertiary);
   opacity: 1;
+  text-align: center;
   transition: 0.5s;
 }
 .services__container .card:hover .face.face1 .content {

@@ -12,7 +12,7 @@ nav {
   height: 100%;
   background-color: transparent;
   opacity: 1 !important;
-  transform: translateX(); /* Hidden by default */
+  transform: translateX();
   transition: transform 0.3s ease-in-out;
   display: flex;
   flex-direction: column;
@@ -21,10 +21,7 @@ nav {
   z-index: 1;
   border-left: 1px solid var(--color-tertiary);
 }
-/* .nav__container:hover {
-  transform: translateX(0%) !important;
-  opacity: 1 !important;
-} */
+
 .nav__container.show {
   transform: translateX(0);
   opacity: 1;
@@ -122,12 +119,13 @@ nav {
   width: 100%;
   text-align: left;
   visibility: visible;
-  color: var(--color-secondary);
+  z-index: 3;
+  color: var(--color-quaternary);
 }
 
 .nav__menu li a.active.animation-complete {
   visibility: visible; /* Reveal the main text after animation */
-  color: var(--color-secondary);
+  color: var(--color-quaternary);
   will-change: auto;
 }
 

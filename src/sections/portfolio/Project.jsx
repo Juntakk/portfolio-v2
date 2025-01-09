@@ -1,14 +1,11 @@
-// import { NavLink } from "react-router-dom";
-// import Card from "../../components/Card";
 import React, { useEffect } from "react";
-// import { useLanguage } from "../../theme/LanguageContext";
+import { useLanguage } from "../../theme/LanguageContext";
 
 const Project = ({ project, data }) => {
   const projectData = data[project.id - 1];
-  // const language = useLanguage();
+  const { language } = useLanguage();
 
   useEffect(() => {
-    // Define a reusable function for the event listener
     const toggleCardFlip = (event) => {
       const project = event.currentTarget;
       const innerCard = project.querySelector(".inner_card");
@@ -17,13 +14,11 @@ const Project = ({ project, data }) => {
       }
     };
 
-    // Add event listener to all projects
     const projects = document.querySelectorAll(".portfolio__project");
     projects.forEach((project) => {
       project.addEventListener("click", toggleCardFlip);
     });
 
-    // Cleanup function to remove event listeners
     return () => {
       projects.forEach((project) => {
         project.removeEventListener("click", toggleCardFlip);
@@ -47,18 +42,6 @@ const Project = ({ project, data }) => {
               {/* <NavLink to={"/project-details"} state={{ projectData }}>
                 {language === "en" ? "View Details" : "Voir Détails"}
               </NavLink> */}
-              {projectData.demo.startsWith("http") ? (
-                <a
-                  className="btn_demo"
-                  href={projectData.demo}
-                  target="_blank"
-                  rel="noopner noreferrer"
-                >
-                  Demo
-                </a>
-              ) : (
-                ""
-              )}
 
               <a
                 className="btn_git"
@@ -66,7 +49,7 @@ const Project = ({ project, data }) => {
                 target="_blank"
                 rel="noopner noreferrer"
               >
-                GitHub
+                {language === "en" ? "See Code" : "Voir Code"}
               </a>
             </div>
           </div>
