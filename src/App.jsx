@@ -20,7 +20,6 @@ const App = () => {
   const mainRef = useRef();
   const [isLoading, setIsLoading] = useState(true);
   const [particleColor, setParticleColor] = useState(null);
-  // const themeContext = useThemeContext();
   const [isMobile, setIsMobile] = useState(false);
   const [themeState, setThemeState] = useState("color-1");
   const [isDarkMode, setIsDarkMode] = useState(false);
@@ -29,20 +28,31 @@ const App = () => {
     "color-1": "#92a8d1", // Soft coral to contrast the grayish tones
     "color-2": "#3a5f5d", // Bright lime to pop against the greens
   };
+
+  const handleParticleColor = (theme) => colorMap[theme] || "#CCCCCC";
+  const toggleTheme = () => {
+    // const nextTheme = themeState === "color-1" ? "color-2" : "color-1";
+    // setThemeState(nextTheme);
+    // setIsDarkMode(!isDarkMode);
+    const main = document.getElementById("main");
+
+    if (main.classList.contains("color-1")) {
+      main.classList.remove("color-1");
+      main.classList.add("color-2");
+    } else {
+      main.classList.remove("color-2");
+      main.classList.add("color-1");
+    }
+  };
+
   useEffect(() => {
-    if (window.innerWidth < 800) {
+    if (window.innerWidth < 700) {
       setIsMobile(true);
     } else {
       setIsMobile(false);
     }
   }, [isMobile]);
-  const handleParticleColor = (theme) => colorMap[theme] || "#CCCCCC";
-  const toggleTheme = () => {
-    const nextTheme = themeState === "color-1" ? "color-2" : "color-1";
-    setThemeState(nextTheme);
-    setIsDarkMode(!isDarkMode);
-  };
-  // Update particle color when the theme changes
+
   useEffect(() => {
     if (themeState) {
       const newColor = handleParticleColor(themeState);
@@ -139,6 +149,7 @@ const App = () => {
       offset: 25,
     });
   }, []);
+
   return (
     <LanguageProvider>
       {isLoading && <Loader />}
@@ -149,11 +160,11 @@ const App = () => {
           opacity: isLoading ? 0.25 : 1,
           visibility: isLoading ? "hidden" : "visible",
           transition: "opacity 2s ease-out, background-color 1s ease-out", // Smooth transition
-          width: "100%", // Ensure it covers the entire screen
-          height: "100%", // Ensure it covers the entire screen
+          width: "100%",
+          height: "100%",
         }}
       ></div>
-      <main className={themeState} ref={mainRef}>
+      <main className={themeState} ref={mainRef} id="main">
         <Navbar toggleTheme={toggleTheme} isDarkMode={isDarkMode} />
         <Socials />
         <Header isLoading={isLoading} setIsLoading={setIsLoading} />

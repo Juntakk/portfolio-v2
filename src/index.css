@@ -9,22 +9,19 @@
 }
 /* width */
 ::-webkit-scrollbar {
-  width: 20px;
+  width: 5px;
 }
-
 /* Track */
 ::-webkit-scrollbar-track {
-  background: #f1f1f1;
+  background: var(--color-primary);
 }
-
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: blue;
+  background: var(--color-secondary);
 }
-
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: #555;
+  background: var(--color-primary);
 }
 
 h1,
@@ -38,20 +35,28 @@ p {
 html {
   scroll-behavior: smooth;
 }
+:root {
+  --color-primary: #333333;
+  --color-secondary: #92a8d1;
+  --color-tertiary: #666666;
+  --color-quaternary: #f7cac9;
+  --color-quinquenary: #f2f2f2;
+}
 main.color-1 {
-  --color-primary: #333333; /* Charcoal (monochrome) */
-  --color-secondary: #92a8d1; /* Sky Blue (colorful) */
-  --color-tertiary: #666666; /* Dark Gray (monochrome) */
-  --color-quaternary: #f7cac9; /* Blush Pink (colorful) */
-  --color-quinquenary: #f2f2f2; /* Light Gray (monochrome) */
+  --color-primary: #333333;
+  --color-secondary: #92a8d1;
+  --color-tertiary: #666666;
+  --color-quaternary: #f7cac9;
+  --color-quinquenary: #f2f2f2;
 }
 main.color-2 {
-  --color-primary: #cccccc; /* Complement of Charcoal */
-  --color-secondary: #35405a; /* Deep Midnight Blue */
-  --color-tertiary: #999999; /* Complement of Dark Gray */
-  --color-quaternary: #3a5f5d; /* Rich Teal - Complement of Blush Pink */
-  --color-quinquenary: #0d0d0d; /* Complement of Light Gray */
+  --color-primary: #cccccc;
+  --color-secondary: #35405a;
+  --color-tertiary: #999999;
+  --color-quaternary: #3a5f5d;
+  --color-quinquenary: #0d0d0d;
 }
+
 .container {
   width: var(--container-width-lg);
   max-width: 1920px;
