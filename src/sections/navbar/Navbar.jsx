@@ -122,8 +122,7 @@ const Navbar = ({ toggleTheme, isDarkMode }) => {
 
   useEffect(() => {
     setIsOpen(isHovered);
-    setIsOpen(isMobile);
-  }, [isHovered, isMobile]);
+  }, [isHovered]);
 
   return (
     <nav

@@ -13,13 +13,13 @@ nav {
   background-color: transparent;
   opacity: 1 !important;
   transform: translateX();
-  transition: transform 0.3s ease-in-out;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
   z-index: 1;
   border-left: 1px solid var(--color-quaternary);
+  transition: all 1s 0.1s ease;
 }
 
 .nav__container.show {
@@ -45,8 +45,7 @@ nav {
   cursor: pointer;
   transform: translateY(-50%);
   opacity: 0;
-  transition: right 0.3s ease-in-out, transform 1s ease,
-    background-color 1s ease !important;
+  transition: right 1s 0.1s ease, transform 1s ease, background-color 1s ease !important;
   animation: fadeInRight 2s forwards;
 }
 @keyframes fadeInRight {
