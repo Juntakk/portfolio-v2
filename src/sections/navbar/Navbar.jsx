@@ -1,5 +1,7 @@
 import { MdDarkMode } from "react-icons/md";
 import { MdOutlineWbSunny } from "react-icons/md";
+import { MdKeyboardDoubleArrowLeft } from "react-icons/md";
+import { MdKeyboardDoubleArrowRight } from "react-icons/md";
 
 import { useLanguage } from "../../theme/LanguageContext";
 import LanguageToggle from "../../theme/LanguageToggle";
@@ -87,9 +89,46 @@ const Navbar = ({ toggleTheme, isDarkMode }) => {
     };
   }, []);
 
+  const [isOpen, setIsOpen] = useState(false);
+  const [startX, setStartX] = useState(null); // Tracks initial drag position
+
+  const toggleNavbar = () => {
+    setIsOpen((prev) => !prev);
+  };
+
+  const handleDragStart = (e) => {
+    setStartX(e.clientX); // Capture the initial X position
+  };
+
+  const handleDragMove = (e) => {
+    if (startX === null) return;
+
+    const deltaX = e.clientX - startX;
+
+    // If dragging enough to the right, open the navbar
+    if (deltaX < 10 && !isOpen) {
+      setIsOpen(true);
+      setStartX(null); // Reset startX to prevent repeated toggling
+    }
+
+    // If dragging enough to the left, close the navbar
+    if (deltaX > -10 && isOpen) {
+      setIsOpen(false);
+      setStartX(null); // Reset startX to prevent repeated toggling
+    }
+  };
+
+  const handleDragEnd = () => {
+    setStartX(null); // Reset when the drag ends
+  };
+
   return (
-    <nav>
-      <div className={`nav__container ${isScrolling ? "show" : "hide"}`}>
+    <nav
+      onMouseDown={handleDragStart}
+      onMouseMove={handleDragMove}
+      onMouseUp={handleDragEnd}
+    >
+      <div className={`nav__container ${isOpen ? "show" : "hide"}`}>
         <div className="nav__right">
           <button className="theme__icon" onClick={toggleTheme}>
             {isDarkMode ? <MdDarkMode /> : <MdOutlineWbSunny />}
@@ -100,27 +139,25 @@ const Navbar = ({ toggleTheme, isDarkMode }) => {
           </i>
         </div>
         <ul className="nav__menu">
-          {data.map((item) => {
-            return (
-              <li key={item.id}>
-                <a
-                  href={item.link}
-                  className={`${
-                    activeSection === item.link.replace("#", "")
-                      ? `active ${completed ? "animation-complete" : ""}`
-                      : ""
-                  }`}
-                  aria-current={
-                    activeSection === item.link.replace("#", "")
-                      ? "true"
-                      : "false"
-                  }
-                >
-                  {item.title} - 0{item.id}
-                </a>
-              </li>
-            );
-          })}
+          {data.map((item) => (
+            <li key={item.id}>
+              <a
+                href={item.link}
+                className={`${
+                  activeSection === item.link.replace("#", "")
+                    ? `active ${completed ? "animation-complete" : ""}`
+                    : ""
+                }`}
+                aria-current={
+                  activeSection === item.link.replace("#", "")
+                    ? "true"
+                    : "false"
+                }
+              >
+                {item.title} - 0{item.id}
+              </a>
+            </li>
+          ))}
         </ul>
         <a
           href={CV}
@@ -134,6 +171,20 @@ const Navbar = ({ toggleTheme, isDarkMode }) => {
           <span className="cv__text">{language === "en" ? "CV" : "CV"}</span>{" "}
           <LiaCloudDownloadAltSolid className="icon" />
         </a>
+      </div>
+      {/* Handle */}
+      <div
+        className="nav__handle"
+        onClick={toggleNavbar}
+        title={isOpen ? "Close Navbar" : "Open Navbar"}
+      >
+        <span>
+          {isOpen ? (
+            <MdKeyboardDoubleArrowRight />
+          ) : (
+            <MdKeyboardDoubleArrowLeft />
+          )}
+        </span>
       </div>
     </nav>
   );

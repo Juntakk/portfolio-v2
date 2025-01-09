@@ -61,7 +61,7 @@ const Socials = () => {
       const totalHeight = document.documentElement.scrollHeight;
       const currentScroll = window.scrollY;
 
-      if (currentScroll + 100 > totalHeight - contactSectionHeight) {
+      if (currentScroll + 200 > totalHeight - contactSectionHeight) {
         setIsVisible(false);
       } else {
         setIsVisible(true);

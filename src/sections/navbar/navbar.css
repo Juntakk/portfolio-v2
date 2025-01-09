@@ -1,59 +1,71 @@
 nav {
-  display: flex;
-  flex-direction: row;
-  z-index: 0;
-}
-.nav__wrapper {
-  position: relative;
-  width: 100%;
-  height: auto;
-  z-index: 1;
-  visibility: visible;
-}
-
-.nav__container {
   position: fixed;
   top: 0;
   right: 0;
-  height: auto;
+  height: 100%;
+  display: flex;
+  z-index: 100;
+}
+
+.nav__container {
+  width: 9rem;
+  height: 100%;
+  background-color: transparent;
+  opacity: 1 !important;
+  transform: translateX(); /* Hidden by default */
+  transition: transform 0.3s ease-in-out;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  gap: 1rem;
-  height: 100vh;
-  width: 10rem;
-  z-index: 100;
-  overflow: hidden;
-  transition: all 1s ease-in-out;
+  z-index: 1;
+  border-left: 1px solid var(--color-tertiary);
 }
-.nav__container:hover {
+/* .nav__container:hover {
   transform: translateX(0%) !important;
   opacity: 1 !important;
-}
+} */
 .nav__container.show {
-  transform: translateX(0%);
+  transform: translateX(0);
   opacity: 1;
 }
 .nav__container.hide {
-  transform: translateX(10%);
+  transform: translateX(100%);
   opacity: 0;
 }
-
 .nav__handle {
-  background-color: var(--color-quaternary);
   position: absolute;
-  height: 3rem;
-  width: 1rem;
-  border-left: 2px solid var(--color-primary);
-  border-top: 2px solid var(--color-primary);
-  border-bottom: 2px solid var(--color-primary);
-  border-right: var(--color-quaternary);
-  right: 10rem;
+  top: 35%;
+  right: 9rem; /* Match the width of nav__container */
+  width: 20px;
+  height: 80px;
+  background-color: var(--color-tertiary);
+  color: #fff;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transform: translateY(-50%);
+  opacity: 0;
+  transition: right 0.5s ease-in-out, transform 1s ease !important;
+  animation: fadeInRight 2s 1s forwards; /* Trigger animation with delay */
 }
-
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.nav__container.hide ~ .nav__handle {
+  right: 0;
+}
 .cv {
   display: flex;
+  justify-content: center;
   align-items: center;
   gap: 0.5rem;
   font-family: "Iceland";
@@ -63,8 +75,9 @@ nav {
   border-radius: 5px;
   margin-top: auto;
   margin-bottom: 1rem;
-  color: var(--color-tertiary);
+  color: var(--color-primary);
   transition: all 1s;
+  z-index: 2;
 }
 
 .cv:hover {
@@ -86,7 +99,7 @@ nav {
 
 .nav__menu li a {
   position: relative;
-  color: var(--color-tertiary);
+  color: var(--color-primary);
   font-family: "Iceland";
   font-size: 1.4rem;
   display: inline-block;
@@ -94,7 +107,7 @@ nav {
 }
 
 .nav__menu li a:hover {
-  color: var(--color-secondary) !important;
+  color: var(--color-quaternary) !important;
 }
 .nav__menu li a.active {
   visibility: hidden; /* Fully hide the text during animation */
@@ -115,6 +128,7 @@ nav {
 .nav__menu li a.active.animation-complete {
   visibility: visible; /* Reveal the main text after animation */
   color: var(--color-secondary);
+  will-change: auto;
 }
 
 .nav__menu li a.active.animation-complete::before {
@@ -127,7 +141,7 @@ nav {
   font-weight: bold;
 }
 .nav__menu li:hover {
-  transform: translateX(-20px);
+  transform: translateX(-8px);
 }
 .nav__right {
   display: flex;
@@ -142,7 +156,7 @@ nav {
   border: none;
   cursor: pointer;
   font-size: 1.75rem;
-  color: var(--color-tertiary);
+  color: var(--color-primary);
   transition: 0.75s all ease-in-out;
 }
 .theme__icon:focus {
@@ -150,11 +164,12 @@ nav {
 }
 .theme__icon:hover {
   transform: rotateZ(360deg);
-  color: var(--color-secondary);
+  color: var(--color-quaternary);
 }
 .line {
   color: var(--color-primary);
   font-size: 1.6rem;
+  cursor: default;
 }
 .nav__logo {
   font-size: 1.2rem;

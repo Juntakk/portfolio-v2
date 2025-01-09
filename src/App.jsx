@@ -159,11 +159,13 @@ const App = () => {
         <Header isLoading={isLoading} setIsLoading={setIsLoading} />
         <div className="spacing1"></div>
         <Services />
-        <div className="spacing2"></div>
+        <div className="spacing4"></div>
         <Portfolio />
         <div className="spacing3"></div>
         <Donut />
-        {/* <Testimonials /> */}
+        <div className="spacing2"></div>
+        <Testimonials />
+        <div className="spacing2"></div>
         <Contact />
         <FloatingNav />
       </main>
