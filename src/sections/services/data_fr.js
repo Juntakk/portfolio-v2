@@ -5,7 +5,7 @@ const data_fr = [
   },
   {
     id: 2,
-    text: "Je développe des solutions robustes et évolutives pour des applications, sites web et outils numériques. Fonctionnalité et créativité s’allient harmonieusement dans nos réalisations.",
+    text: "Je développe des solutions robustes et évolutives pour des applications, sites web et outils numériques. Fonctionnalité et créativité s’allient harmonieusement dans mes réalisations.",
   },
   {
     id: 3,

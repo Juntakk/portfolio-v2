@@ -5,11 +5,11 @@ const data = [
   },
   {
     id: 2,
-    text: "I build robust and scalable solutions for apps, websites, and digital tools. Our development ensures functionality meets creativity seamlessly.",
+    text: "I build robust and scalable solutions for apps, websites, and digital tools. My development ensures functionality meets creativity seamlessly.",
   },
   {
     id: 3,
-    text: "I handle the launch process with precision, ensuring your app or website is ready for the world. From deployment to optimization, we’re here for a smooth takeoff.",
+    text: "I handle the launch process with precision, ensuring your app or website is ready for the world. From deployment to optimization, I am here for a smooth takeoff.",
   },
 ];
 

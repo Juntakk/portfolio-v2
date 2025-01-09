@@ -5,7 +5,8 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/autoplay";
 import { Pagination } from "swiper/modules";
-import testimonials from "./data";
+import testimonialsEn from "./data";
+import testimonialsFr from "./data_fr";
 import Testimonial from "./Testimonial";
 import "./testimonials.css";
 import { useLanguage } from "../../theme/LanguageContext";
@@ -40,11 +41,17 @@ const Testimonials = () => {
           autoplay={true}
           className={`mySwiper ${isVisible ? "magicTimeLeftReturn" : "none"}`}
         >
-          {testimonials.map((testimonial) => (
-            <SwiperSlide key={testimonial.id}>
-              <Testimonial testimonial={testimonial} />
-            </SwiperSlide>
-          ))}
+          {language === "en"
+            ? testimonialsEn.map((testimonial) => (
+                <SwiperSlide key={testimonial.id}>
+                  <Testimonial testimonial={testimonial} />
+                </SwiperSlide>
+              ))
+            : testimonialsFr.map((testimonial) => (
+                <SwiperSlide key={testimonial.id}>
+                  <Testimonial testimonial={testimonial} />
+                </SwiperSlide>
+              ))}
         </Swiper>
       </div>
     </section>
