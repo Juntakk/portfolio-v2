@@ -53,7 +53,7 @@ module.exports = {
   ],
   devServer: {
     static: "./dist",
-    port: 3000, // Change port if needed
+    port: 3000 || 3001, // Change port if needed
     open: true, // Automatically opens the browser
   },
 };

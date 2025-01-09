@@ -62,11 +62,7 @@ const Navbar = ({ toggleTheme, isDarkMode }) => {
     }
   }, [activeSection]);
   useEffect(() => {
-    if (window.innerWidth < 700) {
-      setIsMobile(true);
-    } else {
-      setIsMobile(false);
-    }
+    setIsMobile(window.innerWidth < 700);
   }, [isMobile]);
   useEffect(() => {
     const sections = document.querySelectorAll("section");
@@ -126,15 +122,16 @@ const Navbar = ({ toggleTheme, isDarkMode }) => {
 
   useEffect(() => {
     setIsOpen(isHovered);
-  }, [isHovered]);
+    setIsOpen(isMobile);
+  }, [isHovered, isMobile]);
 
   return (
     <nav
-      onMouseDown={handleDragStart}
-      onMouseMove={handleDragMove}
-      onMouseUp={handleDragEnd}
-      onMouseEnter={() => setIsHovered(true)}
-      onMouseLeave={() => setIsHovered(false)}
+      onMouseDown={!isMobile ? handleDragStart : null}
+      onMouseMove={!isMobile ? handleDragMove : null}
+      onMouseUp={!isMobile ? handleDragEnd : null}
+      onMouseEnter={!isMobile ? () => setIsHovered(true) : null}
+      onMouseLeave={!isMobile ? () => setIsHovered(false) : null}
     >
       <div className={`nav__container ${isOpen ? "show" : "hide"}`}>
         <div className="nav__right">

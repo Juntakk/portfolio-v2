@@ -183,10 +183,18 @@ nav {
 }
 /* Responsive Design */
 @media (max-width: 700px) {
+  nav {
+    height: 10%;
+    width: 100%;
+  }
+  .nav__handle {
+    display: none;
+    pointer-events: none;
+  }
   .nav__container {
     height: 4rem;
     left: 0;
-    width: auto;
+    width: 100%;
     flex-direction: row;
     justify-content: start;
     padding: 0.25rem;
