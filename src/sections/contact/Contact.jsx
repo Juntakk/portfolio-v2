@@ -161,9 +161,11 @@ const Contact = () => {
         {status && <span className="status_msg">{status}</span>}
       </div>{" "}
       <div className="footer__1">
-        {language === "en"
-          ? "Made by Nicolas H. Gauthier"
-          : "Réalisé par Nicolas H. Gauthier"}
+        {language === "en" ? (
+          <p>&copy; 2025 Nicolas H. Gauthier. All rights reserved.</p>
+        ) : (
+          <p>&copy; 2025 Nicolas H. Gauthier. Tous droits réservés.</p>
+        )}
       </div>
     </section>
   );
