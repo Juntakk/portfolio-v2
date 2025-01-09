@@ -34,7 +34,7 @@
   opacity: 0;
   position: absolute;
   background-color: var(--color-quaternary);
-  color: var(--color-secondary);
+  color: var(--color-primary);
   padding: 5px;
   border-radius: 1px;
   font-size: 15px;

@@ -30,7 +30,6 @@ const Contact = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    // Send email using EmailJS
     emailjs
       .send(
         "service_1ke57ce", // Replace with your service ID from EmailJS

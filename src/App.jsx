@@ -26,8 +26,8 @@ const App = () => {
   const { themeState, themeHandler } = useThemeContext();
 
   const colorMap = {
-    "color-1": "#CA4CBC",
-    "color-2": "#074609",
+    "color-1": "#92a8d1",
+    "color-2": "#35405a",
   };
 
   const handleParticleColor = (theme) => colorMap[theme] || "color-1";
@@ -48,11 +48,7 @@ const App = () => {
 
   //Is mobile state
   useEffect(() => {
-    if (window.innerWidth < 700) {
-      setIsMobile(true);
-    } else {
-      setIsMobile(false);
-    }
+    setIsMobile(window.innerWidth < 700);
   }, [isMobile]);
 
   //Particle color

@@ -25,9 +25,7 @@ const ProjectsCategories = ({ categories, onFilterProjects }) => {
           key={category}
           category={category}
           onChangeCategory={() => changeCategoryHandler(category)}
-          className={`btn cat__btn ${
-            activeCategory === category ? "primary" : "white"
-          }`}
+          className={`cat__btn ${activeCategory === category ? "active" : ""}`}
         />
       ))}
     </div>

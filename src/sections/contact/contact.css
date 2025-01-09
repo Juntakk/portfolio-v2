@@ -1,13 +1,13 @@
 input:-webkit-autofill {
   background-color: transparent !important;
-  color: var(--color-quinquenary) !important;
-  -webkit-text-fill-color: var(--color-quinquenary) !important;
+  color: var(--color-primary) !important;
+  -webkit-text-fill-color: var(--color-primary) !important;
   transition: background-color 5000s ease-in-out 0s;
 }
 input:-webkit-autofill:focus {
   background-color: var(--color-tertiary) !important;
-  color: var(--color-quinquenary) !important;
-  -webkit-text-fill-color: var(--color-quinquenary) !important;
+  color: var(--color-primary) !important;
+  -webkit-text-fill-color: var(--color-primary) !important;
 }
 #contact {
   display: flex;
@@ -21,7 +21,7 @@ input:-webkit-autofill:focus {
   position: relative;
   width: 50rem;
   border-radius: 5px;
-  background: var(--color-tertiary);
+  background: var(--color-secondary);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -35,7 +35,7 @@ input:-webkit-autofill:focus {
 }
 .contact_container h2 {
   font-size: 3rem;
-  color: var(--color-secondary);
+  color: var(--color-primary);
   flex-direction: row;
   margin-right: auto;
   margin-left: 1.5rem;
@@ -60,12 +60,12 @@ input:-webkit-autofill:focus {
   font-family: inherit;
   width: 100%;
   border: none;
-  border-bottom: 1px solid var(--color-quaternary);
+  border-bottom: 1px solid var(--color-quinquenary);
   outline: 0;
   font-size: 1.4rem;
-  color: var(--color-quinquenary);
+  color: var(--color-primary);
   padding: 7px 0;
-  background: var(--color-tertiary);
+  background: var(--color-secondary);
   transition: border-color 0.2s;
 }
 .form__field::placeholder {
@@ -81,7 +81,7 @@ input:-webkit-autofill:focus {
   top: 0;
   display: block;
   font-size: 1.2rem !important ;
-  color: var(--color-quaternary);
+  color: var(--color-primary);
   opacity: 0.5;
   pointer-events: none;
   font-family: "Iceland", "serif";
@@ -114,7 +114,7 @@ a.magictime.slideLeftReturn {
   display: block;
   transition: 0.2s;
   font-size: 1.5rem !important;
-  color: var(--color-quaternary);
+  color: var(--color-primary);
   font-weight: bold;
   opacity: 1;
 }
@@ -139,6 +139,9 @@ a.magictime.slideLeftReturn {
   opacity: 0.8;
   height: 57px;
   transition: all 0.3s ease;
+}
+textarea {
+  color: var(--color-primary) !important;
 }
 .cta span {
   position: relative;

@@ -42,7 +42,7 @@ const Socials = () => {
         setIsScrolling(false);
         clearTimeout(scrollingTimeout);
         setScrollingTimeout(null);
-      }, 500);
+      }, 1500);
     };
 
     window.addEventListener("scroll", handleScroll);

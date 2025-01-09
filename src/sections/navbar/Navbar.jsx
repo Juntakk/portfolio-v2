@@ -21,6 +21,7 @@ const Navbar = ({ toggleTheme, isDarkMode }) => {
   const [completed, setCompleted] = useState(false);
   const [isScrolling, setIsScrolling] = useState(false);
   const [scrollingTimeout, setScrollingTimeout] = useState(null);
+  const [isHovered, setIsHovered] = useState(false);
 
   useEffect(() => {
     if (isMobile) return;
@@ -52,6 +53,7 @@ const Navbar = ({ toggleTheme, isDarkMode }) => {
       clearTimeout(scrollingTimeout);
     };
   }, [isScrolling, scrollingTimeout]);
+
   useEffect(() => {
     if (activeSection) {
       setCompleted(false);
@@ -105,13 +107,13 @@ const Navbar = ({ toggleTheme, isDarkMode }) => {
 
     const deltaX = e.clientX - startX;
 
-    // If dragging enough to the right, open the navbar
+    // If dragging enough to the right, close the navbar
     if (deltaX < 10 && !isOpen) {
       setIsOpen(true);
       setStartX(null); // Reset startX to prevent repeated toggling
     }
 
-    // If dragging enough to the left, close the navbar
+    // If dragging enough to the left, open the navbar
     if (deltaX > -10 && isOpen) {
       setIsOpen(false);
       setStartX(null); // Reset startX to prevent repeated toggling
@@ -122,11 +124,17 @@ const Navbar = ({ toggleTheme, isDarkMode }) => {
     setStartX(null); // Reset when the drag ends
   };
 
+  useEffect(() => {
+    setIsOpen(isHovered);
+  }, [isHovered]);
+
   return (
     <nav
       onMouseDown={handleDragStart}
       onMouseMove={handleDragMove}
       onMouseUp={handleDragEnd}
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
     >
       <div className={`nav__container ${isOpen ? "show" : "hide"}`}>
         <div className="nav__right">

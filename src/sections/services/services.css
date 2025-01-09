@@ -42,7 +42,7 @@ h2 .none {
   border-bottom-left-radius: 15px;
   border-bottom-right-radius: 15px;
   position: relative;
-  background: var(--color-tertiary);
+  background: var(--color-secondary);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -69,10 +69,10 @@ h2 .none {
 .services__container .card .face.face1 .content span {
   max-width: 100px;
   color: var(--color-quaternary);
-  transition: 1s all ease;
+  transition: 0.5s all ease;
 }
 .services__container .card:hover .face.face1 .content span {
-  color: var(--color-secondary);
+  color: var(--color-primary);
 }
 .services__container .card .face.face1 .content h3 {
   margin: 10px 0 0;
@@ -80,9 +80,10 @@ h2 .none {
   color: var(--color-quaternary);
   text-align: center;
   font-size: 1.5em;
+  transition: color 0.5s ease;
 }
 .services__container .card:hover .face.face1 .content h3 {
-  color: var(--color-secondary);
+  color: var(--color-primary);
 }
 .services__container .card .face.face2 {
   position: relative;
