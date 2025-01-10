@@ -4,6 +4,16 @@ const data = [
   {
     id: 1,
     category: "Web",
+    image: images.ChatImage,
+    title: "Chatbot",
+    desc: "Python | Django | NumPy",
+    demo: "",
+    github: "https://github.com/Juntakk/chat-bot",
+    info: "Projet d'IA : Je développe un chatbot que j'intégrerai à ce portfolio. J'utilise des outils tels que NumPy, TensorFlow et d'autres bibliothèques. Projet en cours, plus de détails à venir.",
+  },
+  {
+    id: 2,
+    category: "Web",
     image: images.seeFlix,
     title: "Outil de recherche de films",
     desc: "ReactJS | NodeJS | MongoDB",
@@ -12,7 +22,7 @@ const data = [
     info: "Plateforme de recherche de films, permettant la recherche et le visionnage des détails de milliers de films. Utilisant l'API de IMDB les utilisateurs peuvent parcourir ce site en temps réel.",
   },
   {
-    id: 2,
+    id: 3,
     category: "Mobile",
     image: images.Image1,
     title: "Application d'entreprise",
@@ -22,7 +32,7 @@ const data = [
     info: "Application de réservation d'activités et de terrains pour une entreprise de camping, permet aux clients de choisir parmi plusieurs choix à partir d'une base de données SQL.",
   },
   {
-    id: 3,
+    id: 4,
     category: "Web",
     image: images.Image9,
     title: "E-Commerce",
@@ -32,7 +42,7 @@ const data = [
     info: "Plateforme de commerce et de gestion, permet aux utilisateurs de parcourir tous les jeux vidéo dans une base de donnée Mongoose, de trier ceux-ci par catégorie et des les mettre dans leur liste de souhaits.",
   },
   {
-    id: 4,
+    id: 5,
     category: "Jeux",
     image: images.Image3,
     title: "Jeu de Combat",
@@ -52,7 +62,7 @@ const data = [
   //   info: "Planificateur de tâches et d'événements. Avec des fonctionnalités CRUD de base, les tâches de l'utilisateur sont sauvegardées localement, il peut les trier, les organiser par catégorie et modifier l'apparence de sa page.",
   // },
   {
-    id: 5,
+    id: 6,
     category: "Jeux",
     image: images.Image7,
     title: "Mini RPG",
@@ -72,7 +82,7 @@ const data = [
   //   info: "Application éducative sur le système solaire, l'utilisateur se voit transporter dans notre galaxie où il peut interagir avec nos planètes pour en apprendre davantage sur celles-ci.",
   // },
   {
-    id: 6,
+    id: 7,
     category: "Mobile",
     image: images.Image12,
     title: "Application de recettes",
@@ -92,7 +102,7 @@ const data = [
   //   info: "Application de chat mobile permettant à l'utilisateur de communiquer avec notre utilisateurs présents dans la BDD en temps réel. Il peut aussi supprimer ou modifier les messages qu'il a envoyé.",
   // },
   {
-    id: 7,
+    id: 8,
     category: "Mobile",
     image: images.Image14,
     title: "Souvenirs de Voyages",
@@ -102,7 +112,7 @@ const data = [
     info: "Application de voyage permettant aux utilisateurs de prendre des photo, de les sauvegarder dans l'application avec l'endroit exact qu'elles ont été prises et le tout est sauvegarder localement avec l'aide de l'API Google Maps.",
   },
   {
-    id: 8,
+    id: 9,
     category: "Mobile",
     image: images.BlogImage,
     title: "Application de blog",

@@ -71,7 +71,7 @@ const Contact = () => {
       >
         <h2 className={`${isVisible ? "magictime slideRightReturn" : "none"}`}>
           {language === "en"
-            ? "Ready to join your project"
+            ? "Ready to join your project today"
             : "Prêt à rejoindre votre projet"}
         </h2>
         <p className={`${isVisible ? "magictime slideUpReturn" : "none"}`}>

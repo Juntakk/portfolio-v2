@@ -10,6 +10,7 @@ const images = {
   Image13: require("../../assets/chat-7767693_1280.jpg"),
   Image14: require("../../assets/camera-1130731_1280.jpg"),
   BlogImage: require("../../assets/anatomy-of-a-blog-post-header-3.jpg"),
+  ChatImage: require("../../assets/chat-8147986_1280.jpg"),
 };
 
 export default images;

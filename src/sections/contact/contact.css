@@ -46,7 +46,7 @@ input:-webkit-autofill:focus {
   font-family: "Iceland", serif;
   margin-right: auto;
   margin-left: 1.5rem;
-  color: var(--color-quinquenary);
+  color: var(--color-quaternary);
 }
 .container.none {
   display: none;

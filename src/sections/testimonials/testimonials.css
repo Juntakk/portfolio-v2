@@ -2,6 +2,7 @@
   background-color: var(--color-quinquenary);
   height: 55vh;
   font-family: "Iceland";
+  cursor: default !important;
 }
 
 #testimonials h2 {
@@ -32,6 +33,7 @@ h2 .none {
 .card.light p {
   font-size: 1.3rem;
   text-align: start;
+  color: var(--color-primary);
 }
 
 .swiper-slide {
@@ -62,7 +64,9 @@ img {
 #testimonials h6 {
   font-size: 1.5rem;
   font-weight: 100;
+  color: var(--color-primary);
 }
+
 #testimonials small {
   font-size: 1rem;
   font-weight: 100;

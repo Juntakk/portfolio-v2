@@ -4,6 +4,16 @@ const data = [
   {
     id: 1,
     category: "Web",
+    image: images.ChatImage,
+    title: "Chatbot",
+    desc: "Python | Django | NumPy",
+    demo: "",
+    github: "https://github.com/Juntakk/chat-bot",
+    info: "AI Project: I am developing a chatbot that I plan to integrate into this portfolio. I am using tools like NumPy, TensorFlow, and other libraries. Project in progress, more details coming soon.",
+  },
+  {
+    id: 2,
+    category: "Web",
     image: images.seeFlix,
     title: "Movie Search Tool",
     desc: "ReactJS | NodeJS | MongoDB",
@@ -12,7 +22,7 @@ const data = [
     info: "Movie search platform that allows users to search and view details of thousands of movies. Using the IMDb API, users can browse this site in real time.",
   },
   {
-    id: 2,
+    id: 3,
     category: "Mobile",
     image: images.Image1,
     title: "Reservation App",
@@ -22,7 +32,7 @@ const data = [
     info: "Activity and field booking application for a camping company, allowing customers to choose from various options based on an SQL database.",
   },
   {
-    id: 3,
+    id: 4,
     category: "Web",
     image: images.Image9,
     title: "E-Commerce",
@@ -32,7 +42,7 @@ const data = [
     info: "Commerce and management platform that allows users to browse all video games in a Mongoose database, sort them by category, and add them to their wishlist.",
   },
   {
-    id: 4,
+    id: 5,
     category: "Games",
     image: images.Image3,
     title: "Bullet-hell Game",
@@ -52,7 +62,7 @@ const data = [
   //   info: "Task and event planner. With basic CRUD features, the user's tasks are saved locally, allowing them to sort, organize by category, and customize the appearance of their page.",
   // },
   {
-    id: 5,
+    id: 6,
     category: "Games",
     image: images.Image7,
     title: "RPG game",
@@ -72,7 +82,7 @@ const data = [
   //   info: "Educational application about the solar system, where the user is transported to our galaxy and can interact with the planets to learn more about them.",
   // },
   {
-    id: 6,
+    id: 7,
     category: "Mobile",
     image: images.Image12,
     title: "Recipe App",
@@ -92,7 +102,7 @@ const data = [
   //   info: "Mobile chat application that allows the user to communicate with other users in the database in real time. They can also delete or modify the messages they have sent.",
   // },
   {
-    id: 7,
+    id: 8,
     category: "Mobile",
     image: images.Image14,
     title: "Travel App",
@@ -102,7 +112,7 @@ const data = [
     info: "Travel application that allows users to take photos, save them in the app with the exact location where they were taken, and all data is stored locally with the help of the Google Maps API.",
   },
   {
-    id: 8,
+    id: 9,
     category: "Mobile",
     image: images.BlogImage,
     title: "Blog App",

@@ -43,18 +43,18 @@ html {
   --color-quinquenary: #f2f2f2;
 }
 main.color-1 {
-  --color-primary: #333333;
-  --color-secondary: #92a8d1;
-  --color-tertiary: #666666;
-  --color-quaternary: #f7cac9;
-  --color-quinquenary: #f2f2f2;
+  --color-primary: #243127;
+  --color-secondary: #ffdf7c;
+  --color-tertiary: #feb640;
+  --color-quaternary: #a46379;
+  --color-quinquenary: #fdf8e7;
 }
 main.color-2 {
-  --color-primary: #cccccc;
-  --color-secondary: #35405a;
-  --color-tertiary: #999999;
-  --color-quaternary: #3a5f5d;
-  --color-quinquenary: #0d0d0d;
+  --color-primary: #eef3f9;
+  --color-secondary: #1d3f58;
+  --color-tertiary: #b3cde4;
+  --color-quaternary: #537692;
+  --color-quinquenary: #001b2e;
 }
 
 .container {

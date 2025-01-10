@@ -26,8 +26,8 @@ const App = () => {
   const { themeState, themeHandler } = useThemeContext();
 
   const colorMap = {
-    "color-1": "#92a8d1",
-    "color-2": "#35405a",
+    "color-1": "#feb640",
+    "color-2": "#537692",
   };
 
   const handleParticleColor = (theme) => colorMap[theme] || "color-1";
@@ -44,6 +44,7 @@ const App = () => {
       main.classList.add("color-1");
       themeHandler("color-1");
     }
+    setIsDarkMode(!isDarkMode);
   };
 
   //Is mobile state

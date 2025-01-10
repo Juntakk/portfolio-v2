@@ -33,7 +33,7 @@
 }
 .cat__btn {
   padding: 1rem 3rem;
-  font-size: 1rem;
+  font-size: 1.3rem;
   transition: all 0.75s ease-in-out;
   color: var(--color-quinquenary);
   border-radius: 5px;
@@ -41,6 +41,7 @@
   z-index: 12;
   transition: all 0.5s ease;
   background-color: var(--color-tertiary);
+  font-family: "Iceland";
 }
 .cat__btn.active {
   background-color: var(--color-secondary);
