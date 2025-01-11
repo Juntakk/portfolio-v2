@@ -227,8 +227,9 @@ textarea {
   }
 
   .footer__1 {
-    font-size: 1.5rem;
-    margin-top: 10px;
+    font-size: 1rem;
+    margin-top: auto;
+    margin-bottom: 1rem;
   }
   .status_msg {
     font-size: 1.2rem;

@@ -202,10 +202,10 @@ h2.none {
     font-weight: lighter;
   }
 }
-@media (min-width: 00px) and (max-width: 806px) {
+@media (max-width: 700px) {
   #services h2 {
     font-size: 3rem;
-    margin-top: 0rem;
+    margin-top: 7rem;
     margin-bottom: 1rem;
   }
   .services__container {
@@ -235,15 +235,17 @@ h2.none {
     display: none;
   }
   .statistics__row {
-    gap: 1.5rem;
+    gap: 4.5rem;
     margin-top: 1rem;
   }
   .statistic h3 {
-    font-size: 2.2rem;
+    font-size: 2rem;
     margin-bottom: 0.5rem;
   }
   .statistic p {
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     font-weight: lighter;
+    text-align: center;
+    width: 120px;
   }
 }

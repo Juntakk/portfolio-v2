@@ -2,7 +2,7 @@
   background-color: var(--color-quinquenary);
   height: max-content;
   overflow: hidden;
-  z-index: 1;
+  z-index: 33;
 }
 .portfolio__container {
   transition: all 1s ease-in-out;
@@ -83,6 +83,7 @@
   height: 100%;
   overflow: hidden;
   border-radius: 3px;
+  z-index: 333;
 }
 .portfolio__project img {
   width: 100%;

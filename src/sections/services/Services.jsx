@@ -16,12 +16,11 @@ const Services = () => {
   const { language } = useLanguage();
   const data = language === "en" ? data_en : data_fr;
   const [isMobile, setIsMobile] = useState(false);
-  const french = language === "fr";
   const english = language === "en";
   const myRef = useRef();
   const isVisible = useVisibility(myRef, 0.1);
   useEffect(() => {
-    if (window.innerWidth < 800) {
+    if (window.innerWidth < 700) {
       setIsMobile(true);
     } else {
       setIsMobile(false);
@@ -94,8 +93,6 @@ const Services = () => {
           </div>
         </div>
       </div>
-
-      {/* Statistics */}
       <div
         className={`statistics__row ${
           isVisible ? "magictime slideLeftReturn" : "none"
@@ -109,10 +106,14 @@ const Services = () => {
           <h3>3+</h3>
           <p>{english ? "Years experience" : "Années d'expérience"}</p>
         </div>
-        <div className="statistic">
-          <h3>10+</h3>
-          <p>{english ? "Tools/Frameworks" : "Outils/Frameworks"}</p>
-        </div>
+        {!isMobile ? (
+          <div className="statistic">
+            <h3>10+</h3>
+            <p>{english ? "Tools/Frameworks" : "Outils/Frameworks"}</p>
+          </div>
+        ) : (
+          ""
+        )}
       </div>
     </section>
   );

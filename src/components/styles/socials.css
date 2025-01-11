@@ -24,7 +24,7 @@
   opacity: 0;
 }
 .socials__container a {
-  color: var(--color-tertiary);
+  color: var(--color-quaternary);
   font-size: 3rem;
   cursor: pointer;
   transition: transform 0.75s ease-in-out;
@@ -62,15 +62,14 @@
 }
 @media (max-width: 700px) {
   .socials__container a {
-    font-size: 2.5rem;
-    color: var(--color-secondary);
+    font-size: 3.5rem;
     transition: all 1s ease-in-out;
   }
   .socials__container {
     position: fixed;
     display: flex;
     bottom: 70%;
-    left: 5%;
+    left: -1%;
     justify-content: center;
     align-items: center;
     flex-direction: column;

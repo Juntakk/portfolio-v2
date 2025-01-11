@@ -3,6 +3,7 @@
   height: 55vh;
   font-family: "Iceland";
   cursor: default !important;
+  overflow: hidden;
 }
 
 #testimonials h2 {
