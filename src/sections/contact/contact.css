@@ -44,8 +44,7 @@ input:-webkit-autofill:focus {
 .contact_container p {
   font-size: 2rem;
   font-family: "Iceland", serif;
-  margin-right: auto;
-  margin-left: 1.5rem;
+
   color: var(--color-quaternary);
 }
 .container.none {
@@ -196,22 +195,23 @@ textarea {
     margin: 10px;
     padding: 5px 0px;
     text-align: center;
-    justify-content: flex-start;
+    justify-content: center;
     background-color: transparent;
   }
   .contact_container h2 {
-    margin: 0;
     padding: 0.5rem;
     justify-content: center;
     align-items: center;
     font-size: 3rem;
     color: var(--color-primary);
+    margin-bottom: 2rem;
   }
   .contact_container p {
     color: var(--color-primary);
+    margin-bottom: 4rem;
     justify-content: center;
     align-items: center;
-    margin: 0;
+    text-align: center;
   }
   .form__group {
     display: none;
@@ -230,6 +230,8 @@ textarea {
     font-size: 1rem;
     margin-top: auto;
     margin-bottom: 1rem;
+    font-weight: 100;
+    font-family: "Iceland";
   }
   .status_msg {
     font-size: 1.2rem;

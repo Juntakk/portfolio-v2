@@ -61,7 +61,7 @@ const Socials = () => {
       const totalHeight = document.documentElement.scrollHeight;
       const currentScroll = window.scrollY;
 
-      if (currentScroll + 150 > totalHeight - contactSectionHeight) {
+      if (currentScroll + 20 > totalHeight - contactSectionHeight) {
         setIsVisible(false);
       } else {
         setIsVisible(true);
@@ -83,6 +83,8 @@ const Socials = () => {
       <a
         href="https://www.linkedin.com/in/nickhabashigauthier/"
         className={`${!isVisible ? "center" : ""}`}
+        target="_blank"
+        rel="noopner noreferrer"
       >
         <IoLogoLinkedin />
         <span className="tooltip">LinkedIn</span>
@@ -90,6 +92,8 @@ const Socials = () => {
       <a
         href="https://github.com/Juntakk"
         className={`${!isVisible ? "center" : ""}`}
+        target="_blank"
+        rel="noopner noreferrer"
       >
         <FaSquareGithub />
         <span className="tooltip">Github</span>

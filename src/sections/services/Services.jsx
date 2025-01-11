@@ -93,28 +93,28 @@ const Services = () => {
           </div>
         </div>
       </div>
-      <div
-        className={`statistics__row ${
-          isVisible ? "magictime slideLeftReturn" : "none"
-        }`}
-      >
-        <div className="statistic">
-          <h3>20+</h3>
-          <p>{english ? "Successful projects" : "Projets réussis"}</p>
-        </div>
-        <div className="statistic">
-          <h3>3+</h3>
-          <p>{english ? "Years experience" : "Années d'expérience"}</p>
-        </div>
-        {!isMobile ? (
+      {!isMobile ? (
+        <div
+          className={`statistics__row ${
+            isVisible ? "magictime slideLeftReturn" : "none"
+          }`}
+        >
+          <div className="statistic">
+            <h3>20+</h3>
+            <p>{english ? "Successful projects" : "Projets réussis"}</p>
+          </div>
+          <div className="statistic">
+            <h3>3+</h3>
+            <p>{english ? "Years experience" : "Années d'expérience"}</p>
+          </div>
           <div className="statistic">
             <h3>10+</h3>
             <p>{english ? "Tools/Frameworks" : "Outils/Frameworks"}</p>
           </div>
-        ) : (
-          ""
-        )}
-      </div>
+        </div>
+      ) : (
+        ""
+      )}
     </section>
   );
 };

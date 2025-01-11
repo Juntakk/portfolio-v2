@@ -41,14 +41,14 @@
   font-family: "Iceland";
   transition: opacity 0.3s ease, visibility 0.3s ease;
 }
+.socials__container a:hover .tooltip {
+  visibility: visible;
+  opacity: 1;
+}
 .socials__container a:hover {
   transform: translateX(10px);
   color: var(--color-quaternary);
   z-index: 2;
-}
-.socials__container a:hover .tooltip {
-  visibility: visible;
-  opacity: 1;
 }
 @media (max-width: 1024px) {
   .socials__container a {
@@ -85,5 +85,9 @@
   .socials__container.show a.center {
     font-size: 10rem;
     color: var(--color-tertiary);
+  }
+
+  .socials__container a:hover .tooltip {
+    visibility: hidden;
   }
 }
