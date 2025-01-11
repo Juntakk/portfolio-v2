@@ -18,6 +18,7 @@ const Navbar = ({ toggleTheme, isDarkMode }) => {
   const data = language === "en" ? data_en : data_fr;
   const [activeSection, setActiveSection] = useState(1);
   const [isMobile, setIsMobile] = useState(false);
+  const [isMobile2, setIsMobile2] = useState(true);
   const [completed, setCompleted] = useState(false);
   const [isScrolling, setIsScrolling] = useState(false);
   const [scrollingTimeout, setScrollingTimeout] = useState(null);
@@ -63,6 +64,7 @@ const Navbar = ({ toggleTheme, isDarkMode }) => {
   }, [activeSection]);
   useEffect(() => {
     setIsMobile(window.innerWidth < 700);
+    setIsOpen(isMobile);
   }, [isMobile]);
   useEffect(() => {
     const sections = document.querySelectorAll("section");
@@ -122,8 +124,7 @@ const Navbar = ({ toggleTheme, isDarkMode }) => {
 
   useEffect(() => {
     setIsOpen(isHovered);
-    setIsOpen(isMobile);
-  }, [isHovered, isMobile]);
+  }, [isHovered]);
 
   return (
     <nav
@@ -178,11 +179,7 @@ const Navbar = ({ toggleTheme, isDarkMode }) => {
         </a>
       </div>
       {/* Handle */}
-      <div
-        className="nav__handle"
-        onClick={toggleNavbar}
-        title={isOpen ? "Close Navbar" : "Open Navbar"}
-      >
+      <div className="nav__handle" onClick={toggleNavbar}>
         <span>
           {isOpen ? (
             <MdKeyboardDoubleArrowRight color="black" />

@@ -160,13 +160,6 @@ const Contact = () => {
         </form>
         {status && <span className="status_msg">{status}</span>}
       </div>{" "}
-      <div className="footer__1">
-        {language === "en" ? (
-          <p>&copy; 2025 Nicolas H. Gauthier. All rights reserved.</p>
-        ) : (
-          <p>&copy; 2025 Nicolas H. Gauthier. Tous droits réservés.</p>
-        )}
-      </div>
     </section>
   );
 };

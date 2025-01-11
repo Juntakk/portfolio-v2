@@ -31,10 +31,10 @@ const Services = () => {
       <h2 className={`${isVisible ? "magictime slideRightReturn" : "none"}`}>
         Services
       </h2>
-      <div class="container services__container">
-        {/* Card 1 */}
+      <div class="services__container">
+        {/* service__card 1 */}
         <div
-          className={`card one ${
+          className={`service__card one ${
             isVisible ? "magictime slideLeftReturn" : "none"
           }`}
         >
@@ -52,9 +52,9 @@ const Services = () => {
             </div>
           </div>
         </div>
-        {/* Card 2 */}
+        {/* service__card 2 */}
         <div
-          className={`card two ${
+          className={`service__card two ${
             isVisible ? "magictime slideLeftReturn" : "none"
           }`}
         >
@@ -72,9 +72,9 @@ const Services = () => {
             </div>
           </div>
         </div>
-        {/* Card 3 */}
+        {/* service__card 3 */}
         <div
-          className={`card three ${
+          className={`service__card three ${
             isVisible ? "magictime slideLeftReturn" : "none"
           }`}
         >

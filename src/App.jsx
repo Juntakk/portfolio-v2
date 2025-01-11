@@ -16,6 +16,7 @@ import "aos/dist/aos.css";
 import Donut from "./sections/about/Donut";
 import Testimonials from "./sections/testimonials/Testimonials";
 import { useThemeContext } from "./context/theme-context";
+import Footer from "./components/Footer";
 
 const App = () => {
   const mainRef = useRef();
@@ -182,6 +183,7 @@ const App = () => {
         <Testimonials />
         <div className="spacing2"></div>
         <Contact />
+        <Footer />
         <FloatingNav />
       </main>
     </LanguageProvider>

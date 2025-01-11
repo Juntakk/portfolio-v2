@@ -171,16 +171,6 @@ textarea {
   margin-bottom: 20px;
   color: var(--color-quaternary);
 }
-.footer__1 {
-  width: 100%;
-  margin-top: 4rem;
-  text-align: center;
-  margin-bottom: -3rem;
-  color: var(--color-primary) !important;
-  font-family: "serif";
-  z-index: 28;
-  cursor: default;
-}
 
 @media (max-width: 1025px) {
   .contact_container {
@@ -224,14 +214,6 @@ textarea {
   button.cta {
     font-size: 20px;
     padding: 12px;
-  }
-
-  .footer__1 {
-    font-size: 1rem;
-    margin-top: auto;
-    margin-bottom: 1rem;
-    font-weight: 100;
-    font-family: "Iceland";
   }
   .status_msg {
     font-size: 1.2rem;
