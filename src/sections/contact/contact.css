@@ -197,6 +197,7 @@ textarea {
     font-size: 3rem;
     color: var(--color-primary);
     margin-bottom: 2rem;
+    margin-top: 5rem;
   }
   .contact_container p {
     color: var(--color-primary);
