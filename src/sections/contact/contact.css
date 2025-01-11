@@ -44,7 +44,8 @@ input:-webkit-autofill:focus {
 .contact_container p {
   font-size: 2rem;
   font-family: "Iceland", serif;
-
+  margin-right: auto;
+  margin-left: 2rem;
   color: var(--color-quaternary);
 }
 .container.none {
@@ -187,6 +188,7 @@ textarea {
     text-align: center;
     justify-content: center;
     background-color: transparent;
+    margin-bottom: -10rem;
   }
   .contact_container h2 {
     padding: 0.5rem;
@@ -199,6 +201,7 @@ textarea {
   .contact_container p {
     color: var(--color-primary);
     margin-bottom: 4rem;
+    margin-right: 1rem !important;
     justify-content: center;
     align-items: center;
     text-align: center;
