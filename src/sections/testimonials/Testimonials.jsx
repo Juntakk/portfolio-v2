@@ -34,9 +34,6 @@ const Testimonials = () => {
             700: { slidesPerView: 2 },
             1325: { slidesPerView: 2 },
           }}
-          pagination={{
-            clickable: true,
-          }}
           modules={[Pagination, Autoplay]}
           autoplay={true}
           className={`mySwiper ${isVisible ? "magicTimeLeftReturn" : "none"}`}
