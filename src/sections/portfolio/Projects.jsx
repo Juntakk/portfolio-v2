@@ -5,6 +5,7 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 import Project from "./Project";
+import "./styles/projects.css";
 
 const Projects = ({ projects, data }) => {
   const [isMobile, setIsMobile] = useState(false);

@@ -1,0 +1,144 @@
+.portfolio__project {
+  background-color: transparent;
+  width: 100%;
+  height: 20rem;
+  perspective: 5000px;
+}
+.inner_card {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.5s ease;
+  transform-style: preserve-3d;
+}
+.portfolio__project:hover .inner_card {
+  transform: rotateY(180deg);
+}
+.front,
+.back {
+  position: absolute;
+  backface-visibility: hidden;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  border-radius: 0%;
+  z-index: 333;
+}
+.portfolio__project img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.back {
+  background-color: var(--color-secondary);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0.75rem 0rem 0rem;
+  border: 2px solid;
+  border-color: var(--color-primary);
+  transform: rotateY(180deg);
+  cursor: pointer;
+}
+.title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: var(--color-primary);
+}
+.info {
+  color: var(--color-primary);
+  font-size: 1.75rem;
+  padding: 1.5rem;
+  text-align: start;
+}
+.desc {
+  margin-top: auto;
+  color: var(--color-primary);
+  font-size: 1.5rem;
+  margin-bottom: 0.7rem;
+}
+.title,
+.desc,
+.info {
+  opacity: 0.9;
+  font-family: "Iceland", serif;
+}
+.btn_div {
+  margin-top: 1rem;
+  width: 100%;
+}
+.btn_div a {
+  padding: 0.5rem 1.5rem;
+  font-family: "Iceland";
+  color: var(--color-tertiary);
+  width: 100%;
+  border-radius: 0px;
+  font-weight: 200;
+  font-size: 1rem;
+  transition: all 0.2s linear;
+}
+.btn_div a:hover {
+  color: var(--color-primary);
+  border-bottom: 1px solid var(--color-primary);
+}
+.btn_demo {
+  border-bottom-right-radius: 0px !important;
+  border-right: 2px solid var(--color-primary) !important;
+}
+.btn_git {
+  border-bottom-left-radius: 0px !important;
+}
+
+@media screen and (max-width: 1224px) {
+  .info {
+    font-size: 1.25rem;
+  }
+  .portfolio__project {
+    background-color: transparent;
+    width: 100%;
+    height: 20rem;
+    perspective: 5000px;
+  }
+}
+
+@media screen and (max-width: 975px) {
+  .portfolio__project {
+    background-color: transparent;
+    width: 80%;
+    height: 13rem;
+    perspective: 5000px;
+    align-self: center;
+    justify-self: center;
+  }
+
+  .title {
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+  }
+  .info {
+    font-size: 1.25rem;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .portfolio__project {
+    width: 18rem;
+    height: 16rem;
+    margin-left: 1rem;
+  }
+  .title {
+    font-size: 2rem;
+  }
+  .desc {
+    font-size: 1.5rem;
+    margin-bottom: 3rem;
+  }
+  .info {
+    display: none;
+  }
+}

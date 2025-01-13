@@ -1,4 +1,5 @@
 import images from "./images";
+import icons from "./icons";
 
 const data = [
   {
@@ -6,6 +7,8 @@ const data = [
     category: "Web",
     image: images.ChatImage,
     title: "Chatbot",
+    icons: [icons.python, icons.django, icons.numpy, icons.html],
+
     desc: "Python | Django | NumPy",
     demo: "",
     github: "https://github.com/Juntakk/chat-bot",
@@ -16,6 +19,8 @@ const data = [
     category: "Web",
     image: images.seeFlix,
     title: "Outil de recherche de films",
+    icons: [icons.react, icons.node, icons.mongo, icons.tailwind],
+
     desc: "ReactJS | NodeJS | MongoDB",
     demo: "https://seeflix.netlify.app/",
     github: "https://github.com/Juntakk/SeeFlix",
@@ -26,6 +31,8 @@ const data = [
     category: "Mobile",
     image: images.Image1,
     title: "Application d'entreprise",
+    icons: [icons.java, icons.sql, icons.android],
+
     desc: "Java | Android Studio | SQL",
     demo: "",
     github: "https://github.com/Juntakk/Android-Camping-App",
@@ -36,6 +43,8 @@ const data = [
     category: "Web",
     image: images.Image9,
     title: "E-Commerce",
+    icons: [icons.react, icons.node, icons.mongo, icons.css],
+
     desc: "ReactJS | NodeJS | MongoDB",
     demo: "https://steem-frontend.onrender.com/",
     github: "https://github.com/Juntakk/Steem",
@@ -46,6 +55,8 @@ const data = [
     category: "Jeux",
     image: images.Image3,
     title: "Jeu de Combat",
+    icons: [icons.cplusplus, icons.godot],
+
     desc: "C++ | Godot | GDscript",
     demo: "",
     github: "https://github.com/Juntakk/survivors",
@@ -66,6 +77,8 @@ const data = [
     category: "Jeux",
     image: images.Image7,
     title: "Mini RPG",
+    icons: [icons.cplusplus, icons.raylib, icons.unreal],
+
     desc: "C++ | Raylib | Unreal Engine",
     demo: "",
     github: "https://github.com/Juntakk/mini-game-3",
@@ -86,6 +99,8 @@ const data = [
     category: "Mobile",
     image: images.Image12,
     title: "Application de recettes",
+    icons: [icons.flutter, icons.dart],
+
     desc: "Flutter | Riverpod | Clean",
     demo: "",
     github: "https://github.com/Juntakk/meals",
@@ -106,6 +121,8 @@ const data = [
     category: "Mobile",
     image: images.Image14,
     title: "Souvenirs de Voyages",
+    icons: [icons.flutter, icons.dart],
+
     desc: "Flutter | Bloc | MVC",
     demo: "",
     github: "https://github.com/Juntakk/favoritePlaces",
@@ -116,6 +133,8 @@ const data = [
     category: "Mobile",
     image: images.BlogImage,
     title: "Application de blog",
+    icons: [icons.flutter, icons.dart],
+
     desc: "Flutter | Bloc | Clean",
     demo: "",
     github: "https://github.com/Juntakk/blog_app",

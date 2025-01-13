@@ -1,9 +1,15 @@
 import React, { useEffect } from "react";
 import { useLanguage } from "../../theme/LanguageContext";
+import { useModalContext } from "../../context/modal-context";
+import { useThemeContext } from "../../context/theme-context";
+
+import "./styles/project.css";
 
 const Project = ({ project, data }) => {
   const projectData = data[project.id - 1];
   const { language } = useLanguage();
+  const { showModalHandler } = useModalContext();
+  const { themeState } = useThemeContext();
 
   useEffect(() => {
     const toggleCardFlip = (event) => {
@@ -26,6 +32,10 @@ const Project = ({ project, data }) => {
     };
   }, []);
 
+  const openModal = () => {
+    showModalHandler({ projectData, themeState });
+    console.log(projectData);
+  };
   return (
     <>
       <div className="portfolio__project">
@@ -33,23 +43,16 @@ const Project = ({ project, data }) => {
           <div className="front">
             <img src={projectData.image} alt="" />
           </div>
-          <div className="back">
+          <div className="back" onClick={openModal}>
             <p className="title">{projectData.title}</p>
-            <p className="info">{projectData.info}</p>
-            <p className="desc">{projectData.desc}</p>
-            <p></p>
             <div className="btn_div">
-              {/* <NavLink to={"/project-details"} state={{ projectData }}>
-                {language === "en" ? "View Details" : "Voir Détails"}
-              </NavLink> */}
-
               <a
                 className="btn_git"
-                href={projectData.github}
                 target="_blank"
                 rel="noopner noreferrer"
+                onClick={openModal}
               >
-                {language === "en" ? "See Code" : "Voir Code"}
+                {language === "en" ? "KNOW MORE" : "VOIR PLUS"}
               </a>
             </div>
           </div>

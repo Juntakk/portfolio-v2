@@ -17,6 +17,9 @@ import Donut from "./sections/about/Donut";
 import Testimonials from "./sections/testimonials/Testimonials";
 import { useThemeContext } from "./context/theme-context";
 import Footer from "./components/Footer";
+import ProjectDetails from "./sections/portfolio/ProjectDetails";
+import Modal from "./components/Modal";
+import Card from "./components/Card";
 
 const App = () => {
   const mainRef = useRef();
@@ -115,7 +118,7 @@ const App = () => {
         move: {
           enable: true,
           speed: 1.5,
-          direction: "bottom",
+          direction: "top",
           random: true,
           straight: true,
           out_mode: "out",
@@ -184,6 +187,9 @@ const App = () => {
         <div className="spacing2"></div>
         <Contact />
         <Footer />
+        <ProjectDetails />
+        <Modal />
+        {/* <Card /> */}
         <FloatingNav />
       </main>
     </LanguageProvider>

@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import CategoryButton from "./CategoryButton";
 import React from "react";
+import "./styles/project-categories.css";
 
 const ProjectsCategories = ({ categories, onFilterProjects }) => {
   const [activeCategory, setActiveCategory] = useState("Web");

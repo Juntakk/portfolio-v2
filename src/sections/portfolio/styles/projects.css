@@ -1,0 +1,36 @@
+.portfolio__projects {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  justify-content: center;
+  align-items: center;
+  padding-inline: 12rem;
+  gap: 2rem;
+}
+@media screen and (max-width: 975px) {
+  .portfolio__projects {
+    padding-inline: 1rem;
+  }
+}
+@media screen and (max-width: 700px) {
+  .portfolio__swiper {
+    margin: 0;
+    padding-top: 2rem !important;
+    width: 20rem;
+    height: 20rem;
+  }
+  .swiper-wrapper {
+    margin: 0;
+    padding: 0;
+  }
+  .swiper-slide {
+    margin: 0;
+    padding: 0;
+  }
+  .slideNumber {
+    color: var(--color-primary);
+    font-family: "Iceland";
+    padding-bottom: 1rem;
+    font-size: 2rem;
+    text-align: center;
+  }
+}
