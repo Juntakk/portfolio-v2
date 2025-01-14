@@ -8,6 +8,7 @@ const data = [
     image: images.ChatImage,
     title: "Chatbot",
     icons: [icons.python, icons.django, icons.numpy, icons.html],
+    screenshots: images.steemScreenshots,
 
     desc: "Python | Django | NumPy",
     demo: "",
@@ -20,6 +21,7 @@ const data = [
     image: images.seeFlix,
     title: "Outil de recherche de films",
     icons: [icons.react, icons.node, icons.mongo, icons.tailwind],
+    screenshots: images.steemScreenshots,
 
     desc: "ReactJS | NodeJS | MongoDB",
     demo: "https://seeflix.netlify.app/",
@@ -32,6 +34,7 @@ const data = [
     image: images.Image1,
     title: "Application d'entreprise",
     icons: [icons.java, icons.sql, icons.android],
+    screenshots: images.steemScreenshots,
 
     desc: "Java | Android Studio | SQL",
     demo: "",
@@ -44,6 +47,7 @@ const data = [
     image: images.Image9,
     title: "E-Commerce",
     icons: [icons.react, icons.node, icons.mongo, icons.css],
+    screenshots: images.steemScreenshots,
 
     desc: "ReactJS | NodeJS | MongoDB",
     demo: "https://steem-frontend.onrender.com/",
@@ -56,6 +60,7 @@ const data = [
     image: images.Image3,
     title: "Jeu de Combat",
     icons: [icons.cplusplus, icons.godot],
+    screenshots: images.steemScreenshots,
 
     desc: "C++ | Godot | GDscript",
     demo: "",
@@ -78,6 +83,7 @@ const data = [
     image: images.Image7,
     title: "Mini RPG",
     icons: [icons.cplusplus, icons.raylib, icons.unreal],
+    screenshots: images.steemScreenshots,
 
     desc: "C++ | Raylib | Unreal Engine",
     demo: "",
@@ -100,6 +106,7 @@ const data = [
     image: images.Image12,
     title: "Application de recettes",
     icons: [icons.flutter, icons.dart],
+    screenshots: images.steemScreenshots,
 
     desc: "Flutter | Riverpod | Clean",
     demo: "",
@@ -122,6 +129,7 @@ const data = [
     image: images.Image14,
     title: "Souvenirs de Voyages",
     icons: [icons.flutter, icons.dart],
+    screenshots: images.steemScreenshots,
 
     desc: "Flutter | Bloc | MVC",
     demo: "",
@@ -134,6 +142,7 @@ const data = [
     image: images.BlogImage,
     title: "Application de blog",
     icons: [icons.flutter, icons.dart],
+    screenshots: images.steemScreenshots,
 
     desc: "Flutter | Bloc | Clean",
     demo: "",

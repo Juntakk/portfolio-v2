@@ -4,6 +4,10 @@ import "../../index.css";
 import { useModalContext } from "../../context/modal-context";
 import "./styles/project-details.css";
 import { useLanguage } from "../../theme/LanguageContext";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Pagination, Autoplay } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/navigation";
 
 const ProjectDetails = () => {
   const { modalData } = useModalContext();
@@ -21,18 +25,25 @@ const ProjectDetails = () => {
 
   if (!modalData || !modalData.projectData) return null;
 
-  const { title, info, icons, image, github, demo } = modalData.projectData;
+  const { title, info, icons, screenshots, github, demo } =
+    modalData.projectData;
 
   return (
     <Modal className="theme__modal">
-      <div className="modal__image-container">
-        <img src={image} alt={title} className="modal__image" />
-      </div>
+      <Swiper
+        slidesPerView={1}
+        spaceBetween={0}
+        modules={[Pagination, Autoplay]}
+        autoplay={true}
+        className="myDetailsSwiper"
+      >
+        {screenshots.map((screenshot, index) => (
+          <SwiperSlide>
+            <img src={screenshot} alt="" className="swiper_img" />
+          </SwiperSlide>
+        ))}
+      </Swiper>
       <div className="modal__body">
-        <div className="modal__text">
-          <h1 className="modal__title">{title}</h1>
-          <p className="modal__info">{info}</p>
-        </div>
         <div className="modal__icons">
           {icons.map(([icon, name], index) => (
             <div key={index} className="icon">
@@ -40,6 +51,10 @@ const ProjectDetails = () => {
               <span>{name}</span>
             </div>
           ))}
+        </div>
+        <div className="modal__text">
+          <h1 className="modal__title">{title}</h1>
+          <p className="modal__info">{info}</p>
         </div>
       </div>
       <div className="btn__container">

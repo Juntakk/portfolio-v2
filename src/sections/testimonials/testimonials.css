@@ -39,7 +39,6 @@ h2 .none {
 
 .swiper-slide {
   cursor: pointer;
-  height: 13rem;
 }
 
 .testimonial__client {
@@ -50,7 +49,7 @@ h2 .none {
   margin-top: 1.5rem;
 }
 
-img {
+.testimonial__client-avatar img {
   display: block;
   width: 100%;
   object-fit: cover;

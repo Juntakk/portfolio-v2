@@ -25,32 +25,30 @@ const Testimonials = () => {
           ? "What My Clients and Colleagues Have to Say"
           : "Les témoignages de mes clients et collègues"}
       </h2>
-      <div className="container">
-        <Swiper
-          slidesPerView={1}
-          spaceBetween={30}
-          breakpoints={{
-            600: { slidesPerView: 1 },
-            700: { slidesPerView: 2 },
-            1325: { slidesPerView: 2 },
-          }}
-          modules={[Pagination, Autoplay]}
-          autoplay={true}
-          className={`mySwiper ${isVisible ? "magicTimeLeftReturn" : "none"}`}
-        >
-          {language === "en"
-            ? testimonialsEn.map((testimonial) => (
-                <SwiperSlide key={testimonial.id}>
-                  <Testimonial testimonial={testimonial} />
-                </SwiperSlide>
-              ))
-            : testimonialsFr.map((testimonial) => (
-                <SwiperSlide key={testimonial.id}>
-                  <Testimonial testimonial={testimonial} />
-                </SwiperSlide>
-              ))}
-        </Swiper>
-      </div>
+      <Swiper
+        slidesPerView={1}
+        spaceBetween={30}
+        breakpoints={{
+          600: { slidesPerView: 1 },
+          700: { slidesPerView: 2 },
+          1325: { slidesPerView: 2 },
+        }}
+        modules={[Pagination, Autoplay]}
+        autoplay={true}
+        className={`mySwiper ${isVisible ? "magicTimeLeftReturn" : "none"}`}
+      >
+        {language === "en"
+          ? testimonialsEn.map((testimonial) => (
+              <SwiperSlide key={testimonial.id}>
+                <Testimonial testimonial={testimonial} />
+              </SwiperSlide>
+            ))
+          : testimonialsFr.map((testimonial) => (
+              <SwiperSlide key={testimonial.id}>
+                <Testimonial testimonial={testimonial} />
+              </SwiperSlide>
+            ))}
+      </Swiper>
     </section>
   );
 };

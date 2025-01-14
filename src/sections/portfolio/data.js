@@ -10,6 +10,8 @@ const data = [
     desc: "Python | Django | NumPy",
     icons: [icons.python, icons.django, icons.numpy, icons.html],
     demo: "",
+    screenshots: images.steemScreenshots,
+
     github: "https://github.com/Juntakk/chat-bot",
     info: "AI Project: I am developing a chatbot that I plan to integrate into this portfolio. I am using tools like NumPy, TensorFlow, and other libraries. Project in progress, more details coming soon.",
   },
@@ -21,6 +23,8 @@ const data = [
     icons: [icons.react, icons.node, icons.mongo, icons.tailwind],
     desc: "ReactJS | NodeJS | MongoDB",
     demo: "https://seeflix.netlify.app/",
+    screenshots: images.steemScreenshots,
+
     github: "https://github.com/Juntakk/SeeFlix",
     info: "Movie search platform that allows users to search and view details of thousands of movies. Using the IMDb API, users can browse this site in real time.",
   },
@@ -32,6 +36,7 @@ const data = [
     icons: [icons.java, icons.sql, icons.android],
     desc: "Java | Android Studio | SQL",
     demo: "",
+    screenshots: images.steemScreenshots,
     github: "https://github.com/Juntakk/Android-Camping-App",
     info: "Activity and field booking application for a camping company, allowing customers to choose from various options based on an SQL database.",
   },
@@ -43,6 +48,8 @@ const data = [
     icons: [icons.react, icons.node, icons.mongo, icons.css],
     desc: "ReactJS | NodeJS | MongoDB",
     demo: "https://steem-frontend.onrender.com/",
+    screenshots: images.steemScreenshots,
+
     github: "https://github.com/Juntakk/Steem",
     info: "Commerce and management platform that allows users to browse all video games in a Mongoose database, sort them by category, and add them to their wishlist.",
   },
@@ -52,6 +59,7 @@ const data = [
     image: images.Image3,
     title: "Bullet-hell Game",
     icons: [icons.cplusplus, icons.godot],
+    screenshots: images.steemScreenshots,
 
     desc: "C++ | Godot | GDscript",
     demo: "",
@@ -76,6 +84,8 @@ const data = [
     icons: [icons.cplusplus, icons.raylib, icons.unreal],
     desc: "C++ | Raylib | Unreal Engine",
     demo: "",
+    screenshots: images.steemScreenshots,
+
     github: "https://github.com/Juntakk/mini-game-3",
     info: "Top-down 2D RPG where the player chooses their character and is thrown into a medieval fantasy world, where they must fight enemies and fill their inventory with powerful items to survive.",
   },
@@ -97,6 +107,8 @@ const data = [
     icons: [icons.flutter, icons.dart],
     desc: "Flutter | Riverpod | Clean",
     demo: "",
+    screenshots: images.steemScreenshots,
+
     github: "https://github.com/Juntakk/meals",
     info: "Meal planning, organization, and recipe search app that allows users to get inspired and manage their diet. They can also sort all recipes in the database to make everything easier.",
   },
@@ -118,6 +130,8 @@ const data = [
     icons: [icons.flutter, icons.dart],
     desc: "Flutter | Bloc | MVC",
     demo: "",
+    screenshots: images.steemScreenshots,
+
     github: "https://github.com/Juntakk/favoritePlaces",
     info: "Travel application that allows users to take photos, save them in the app with the exact location where they were taken, and all data is stored locally with the help of the Google Maps API.",
   },
@@ -129,6 +143,8 @@ const data = [
     icons: [icons.flutter, icons.dart],
     desc: "Flutter | Bloc | Clean",
     demo: "",
+    screenshots: images.steemScreenshots,
+
     github: "https://github.com/Juntakk/blog_app",
     info: "Blog application using Clean Architecture and Bloc for state management. The user must create an account and log in to view blogs from other users and create, edit, or delete their own.",
   },

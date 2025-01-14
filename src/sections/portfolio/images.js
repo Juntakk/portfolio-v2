@@ -11,6 +11,12 @@ const images = {
   Image14: require("../../assets/camera-1130731_1280.jpg"),
   BlogImage: require("../../assets/anatomy-of-a-blog-post-header-3.jpg"),
   ChatImage: require("../../assets/chat-8147986_1280.jpg"),
+  steemScreenshots: [
+    require("../../assets/screenshots/steem1.png"),
+    require("../../assets/screenshots/steem2.png"),
+    require("../../assets/screenshots/steem3.png"),
+    require("../../assets/screenshots/steem4.png"),
+  ],
 };
 
 export default images;
