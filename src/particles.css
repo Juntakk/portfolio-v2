@@ -28,10 +28,10 @@
 }
 
 @media (max-width: 700px) {
-  .spacing3,
+  /* .spacing3,
   .spacing2,
   .spacing1,
   .spacing4 {
     display: none;
-  }
+  } */
 }
