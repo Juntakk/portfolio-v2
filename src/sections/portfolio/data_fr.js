@@ -8,7 +8,7 @@ const data = [
     image: images.ChatImage,
     title: "Chatbot",
     icons: [icons.python, icons.django, icons.numpy, icons.html],
-    screenshots: images.steemScreenshots,
+    screenshots: [],
 
     desc: "Python | Django | NumPy",
     demo: "",

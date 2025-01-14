@@ -50,20 +50,25 @@
   color: var(--color-quaternary);
   z-index: 1;
 }
-@media (max-width: 1024px) {
+@media (max-width: 1025px) {
   .socials__container a {
-    font-size: 3rem;
+    font-size: 5rem;
   }
 }
-@media (max-width: 800px) {
-  .socials__container a {
-    font-size: 2rem;
-  }
-}
+
 @media (max-width: 700px) {
   .socials__container a {
     font-size: 3rem;
     transition: all 1s ease-in-out;
+  }
+  .get_in_touch.center {
+    color: var(--color-primary) !important;
+    position: absolute;
+    z-index: 199 !important;
+    bottom: 65%;
+    left: calc(100vw - (50vw + 9rem));
+    height: 12rem !important;
+    width: auto;
   }
   .socials__container {
     position: fixed;

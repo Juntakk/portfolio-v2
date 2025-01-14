@@ -190,7 +190,7 @@ textarea {
     background-color: transparent;
     margin-top: 15rem;
   }
-  .contact_container h2 {
+  /* .contact_container h2 {
     padding: 0.5rem;
     justify-content: center;
     align-items: center;
@@ -204,6 +204,10 @@ textarea {
     justify-content: center;
     align-items: center;
     text-align: center;
+  } */
+  .contact_container h2,
+  .contact_container p {
+    display: none;
   }
   .form__group {
     display: none;

@@ -41,6 +41,28 @@ svg.donut {
 .arc-path-Flutter {
   fill: var(--color-quaternary);
 }
+@media (max-width: 1025px) {
+  .donut {
+    max-width: 100%;
+    height: 85%;
+    position: relative;
+    display: block;
+    margin: 0 auto;
+    z-index: 1;
+  }
+  text {
+    position: relative;
+    font-weight: 500;
+    font-size: 1.3rem;
+    padding: 0rem;
+    fill: var(--color-primary);
+    font-family: "Iceland";
+  }
+  #about {
+    height: 90vh;
+    padding-top: 7.5rem;
+  }
+}
 @media (max-width: 700px) {
   .donut {
     max-width: 100%;

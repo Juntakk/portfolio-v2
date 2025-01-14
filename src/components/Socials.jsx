@@ -14,7 +14,7 @@ const Socials = () => {
 
   useEffect(() => {
     const handleMobile = () => {
-      setIsMobile(window.innerWidth < 700);
+      setIsMobile(window.innerWidth < 1025);
     };
 
     handleMobile();
@@ -23,8 +23,6 @@ const Socials = () => {
   }, [isMobile]);
 
   useEffect(() => {
-    if (isMobile) return;
-
     let stopScrollingTimeout;
 
     const handleScroll = () => {
@@ -32,16 +30,19 @@ const Socials = () => {
         const timer = setTimeout(() => {
           setIsScrolling(true);
           setScrollingTimeout(null);
-        }, 500);
+        }, 1500);
         setScrollingTimeout(timer);
       }
 
       clearTimeout(stopScrollingTimeout);
 
       stopScrollingTimeout = setTimeout(() => {
-        setIsScrolling(false);
-        clearTimeout(scrollingTimeout);
-        setScrollingTimeout(null);
+        if (!isMobile) {
+          setIsScrolling(false);
+          clearTimeout(scrollingTimeout);
+          setScrollingTimeout(null);
+        }
+        return;
       }, 1500);
     };
 
@@ -61,7 +62,7 @@ const Socials = () => {
       const totalHeight = document.documentElement.scrollHeight;
       const currentScroll = window.scrollY;
 
-      if (currentScroll + 380 > totalHeight - contactSectionHeight) {
+      if (currentScroll > totalHeight - contactSectionHeight * 1.8) {
         setIsVisible(false);
       } else {
         setIsVisible(true);

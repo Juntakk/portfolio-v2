@@ -2,6 +2,7 @@ import { useLanguage } from "./LanguageContext";
 import enImg from "../assets/uk.png";
 import frImg from "../assets/france.png";
 import React from "react";
+import "../sections/navbar/navbar.css";
 
 const LanguageToggle = () => {
   const { toggleLanguage } = useLanguage();

@@ -39,7 +39,7 @@ const Projects = ({ projects, data }) => {
               nextEl: ".swiper-button-next",
               prevEl: ".swiper-button-prev",
             }}
-            spaceBetween={2}
+            spaceBetween={0}
             slidesPerView={1}
             onSlideChange={handleSlideChange}
           >

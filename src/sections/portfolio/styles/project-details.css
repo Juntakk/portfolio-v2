@@ -122,73 +122,179 @@
 }
 
 @media (max-width: 1025px) {
-  .modal__body {
+  .theme__modal {
+    background-color: var(--color-quinquenary);
+    display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: "Iceland";
+    width: 50%;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 8px;
+    z-index: 101;
+    max-height: 80%;
+  }
+  .myDetailsSwiper {
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+  }
+  .swiper_img {
+    height: 100%;
+    width: 100%;
+  }
+  .modal__body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1.5rem;
+    gap: 1rem;
+    width: 100%;
+  }
+  .modal__text {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding-top: 1rem;
+    color: var(--color-primary);
+  }
+  .modal__title {
+    font-size: 1.8rem;
+    font-weight: 400;
+    color: var(--color-primary);
+  }
+
+  .modal__info,
+  .modal__desc {
+    font-size: 1.2rem;
+    line-height: 1.3;
+  }
+
+  .modal__icons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
     align-items: center;
     gap: 2rem;
-  }
-  .theme__modal {
-    padding: 0rem;
-    width: 75%;
-    height: 60%;
-  }
-  .modal__image-container {
-    max-height: 250px;
+    max-width: 30%;
   }
 
-  .modal__image {
-    height: 15rem;
+  .icon {
+    color: var(--color-primary);
+    font-size: 2.5rem;
   }
 
-  .modal__text {
-    max-width: 100%;
-    padding: 1rem;
+  .icon span {
+    font-size: 1rem;
   }
 
   .btn__container {
-    justify-content: center;
-    gap: 1.5rem;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 1rem;
+    gap: 2rem;
+  }
+
+  .git__btn {
+    background-color: transparent;
+    color: var(--color-primary);
+    font-size: 1.6rem;
+    font-family: "Iceland";
+    padding: 0rem;
+    cursor: pointer;
+    transition: all 0.5s ease;
+    border-bottom: 1px solid transparent;
+  }
+
+  .git__btn:hover {
+    border-bottom: 1px solid var(--color-primary);
+  }
+
+  .modal__info {
+    font-weight: 100;
+    margin-bottom: 0.5rem;
+  }
+
+  .modal__desc {
+    margin-top: 0;
   }
 }
 
 /* Responsive Styles for Viewports Under 700px */
 @media (max-width: 700px) {
   .theme__modal {
-    padding: 0rem;
-    width: 75%;
-    height: 50%;
+    background-color: var(--color-quinquenary);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: "Iceland";
+    width: 70%;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 8px;
+    z-index: 101;
+    max-height: 50%;
   }
   .myDetailsSwiper {
+    overflow: hidden;
     width: 100%;
     height: 100%;
-    display: none;
   }
   .swiper_img {
     display: none;
   }
+  .modal__body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1.5rem;
+    gap: 0.5rem;
+    width: 100%;
+  }
+  .modal__text {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding-top: 1rem;
+    color: var(--color-primary);
+  }
   .modal__title {
-    font-size: 2rem;
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: var(--color-primary);
   }
 
-  .modal__info {
+  .modal__info,
+  .modal__desc {
     font-size: 1.2rem;
-  }
-
-  .modal__image-container {
-    max-height: 200px;
-  }
-
-  .modal__image {
-    height: 10rem;
+    line-height: 1.3;
   }
 
   .modal__icons {
-    gap: 1rem;
+    display: flex;
     flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    max-width: 30%;
   }
 
   .icon {
-    font-size: 2.5rem;
+    color: var(--color-primary);
+    font-size: 2rem;
   }
 
   .icon span {
@@ -196,13 +302,35 @@
   }
 
   .btn__container {
-    flex-direction: row;
-    align-items: center;
-    gap: 1rem;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 1rem;
+    gap: 2rem;
   }
 
   .git__btn {
-    font-size: 1.4rem;
-    padding: 0.4rem;
+    background-color: transparent;
+    color: var(--color-primary);
+    font-size: 1.2rem;
+    font-family: "Iceland";
+    padding: 0rem;
+    cursor: pointer;
+    transition: all 0.5s ease;
+    border-bottom: 1px solid transparent;
+  }
+
+  .git__btn:hover {
+    border-bottom: 1px solid var(--color-primary);
+  }
+
+  .modal__info {
+    font-weight: 100;
+    margin-bottom: 0.5rem;
+  }
+
+  .modal__desc {
+    margin-top: 0;
   }
 }

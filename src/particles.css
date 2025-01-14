@@ -26,12 +26,25 @@
   height: 4rem;
   background-color: var(--color-quinquenary);
 }
-
+@media (max-width: 1025px) {
+  .spacing5 {
+    display: none;
+  }
+  .spacing2 {
+    height: 20rem;
+  }
+}
 @media (max-width: 700px) {
-  /* .spacing3,
-  .spacing2,
-  .spacing1,
+  .spacing2 {
+    height: 0rem;
+  }
+  .spacing3 {
+    display: none;
+  }
   .spacing4 {
     display: none;
-  } */
+  }
+  .spacing5 {
+    display: none;
+  }
 }

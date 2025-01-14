@@ -15,7 +15,6 @@ const images = {
     require("../../assets/screenshots/steem1.png"),
     require("../../assets/screenshots/steem2.png"),
     require("../../assets/screenshots/steem3.png"),
-    require("../../assets/screenshots/steem4.png"),
   ],
 };
 

@@ -38,7 +38,7 @@ const Donut = () => {
 
   useEffect(() => {
     const handleResize = () => {
-      setIsTablet(window.innerWidth < 1400);
+      setIsTablet(window.innerWidth < 1025);
       setIsMobile(window.innerWidth < 700);
     };
     handleResize();
@@ -54,7 +54,7 @@ const Donut = () => {
 
   const view = isMobile ? [240, 240] : isTablet ? [850, 850] : [1200, 1200];
   const dims = [view[0], view[1]];
-  const radius = isMobile ? 75 : isTablet ? 150 : 400;
+  const radius = isMobile ? 75 : isTablet ? 300 : 400;
   const imageSize = radius * 1.4;
   const fontSize = isMobile ? "7px" : isTablet ? "23px" : "50px";
 

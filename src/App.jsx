@@ -178,13 +178,13 @@ const App = () => {
         <Header isLoading={isLoading} setIsLoading={setIsLoading} />
         <div className="spacing1"></div>
         <Services />
-        <div className="spacing4"></div>
+        <div className="spacing2"></div>
         <Portfolio />
         <div className="spacing3"></div>
         <Donut />
-        <div className="spacing2"></div>
+        <div className="spacing4"></div>
         <Testimonials />
-        <div className="spacing2"></div>
+        <div className="spacing5"></div>
         <Contact />
         <Footer />
         <ProjectDetails />

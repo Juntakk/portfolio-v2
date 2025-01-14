@@ -6,15 +6,28 @@
   padding-inline: 12rem;
   gap: 2rem;
 }
-@media screen and (max-width: 975px) {
+@media screen and (max-width: 1025px) {
   .portfolio__projects {
-    padding-inline: 1rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    justify-content: center;
+    align-items: center;
+    padding-inline: 5rem;
+    gap: 1rem;
   }
 }
 @media screen and (max-width: 700px) {
+  .portfolio__projects {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0rem;
+  }
   .portfolio__swiper {
     margin: 0;
-    padding-top: 2rem !important;
+    padding: 0;
+    padding-top: 0rem !important;
     width: 20rem;
     height: 20rem;
   }
@@ -26,12 +39,13 @@
     margin: 0;
     padding: 0;
     z-index: 100;
+    display: flex;
   }
   .slideNumber {
     color: var(--color-primary);
     font-family: "Iceland";
-    padding-bottom: 1rem;
     font-size: 2rem;
     text-align: center;
+    margin-bottom: auto;
   }
 }
