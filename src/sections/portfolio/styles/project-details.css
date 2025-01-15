@@ -186,7 +186,7 @@
   }
 
   .modal__image {
-    height: 12rem;
+    max-height: 10rem;
   }
 
   .modal__icons {
