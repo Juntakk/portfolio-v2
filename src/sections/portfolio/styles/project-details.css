@@ -204,7 +204,7 @@
   .theme__modal {
     transform: translate(-50%, -50%);
     padding: 0rem;
-    height: 70%;
+    height: 75%;
     margin: 0;
     bottom: 0% !important;
   }
@@ -238,7 +238,7 @@
   }
 
   .modal__icons {
-    gap: 1.25rem;
+    gap: 1rem;
     flex-direction: row;
     margin: 0;
     padding: 0;
