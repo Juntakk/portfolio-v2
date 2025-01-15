@@ -46,12 +46,7 @@ const Project = ({ project, data }) => {
           <div className="back" onClick={openModal}>
             <p className="title">{projectData.title}</p>
             <div className="btn_div">
-              <a
-                className="btn_git"
-                target="_blank"
-                rel="noopner noreferrer"
-                onClick={openModal}
-              >
+              <a target="_blank" rel="noopner noreferrer" onClick={openModal}>
                 {language === "en" ? "KNOW MORE" : "VOIR PLUS"}
               </a>
             </div>

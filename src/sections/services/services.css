@@ -6,7 +6,6 @@
   justify-content: space-evenly;
   align-items: center;
   flex-direction: column;
-  overflow: hidden;
 }
 #services h2 {
   margin-top: 2rem;
@@ -24,7 +23,7 @@ h2 .none {
   align-items: center;
   gap: 2rem;
   font-family: "Iceland", "serif";
-  margin-bottom: 15rem;
+  margin-bottom: 12rem;
 }
 .services__container .service__card {
   position: relative;
@@ -36,7 +35,7 @@ h2 .none {
 .services__container .service__card .face {
   width: 300px;
   height: 200px;
-  transition: 0.5s;
+  transition: all 0.5s ease-in-out;
 }
 .services__container .service__card .face.face1 {
   border-top-left-radius: 15px;
@@ -107,6 +106,7 @@ h2 .none {
   border-bottom-right-radius: 15px;
   background-color: var(--color-secondary);
   transform: translateY(0);
+  transition: all 0.5s ease;
 }
 .services__container .service__card .face.face2 .content p {
   margin: 0;
@@ -131,7 +131,7 @@ h2.none {
   justify-content: center;
   align-items: center;
   gap: 8rem;
-  margin-bottom: 10rem;
+  margin-bottom: 5rem;
   background-color: transparent;
   padding: 0rem 1rem;
   border-radius: 10px;
@@ -283,11 +283,26 @@ h2.none {
     opacity: 1;
     transition: all 1s ease-in-out;
   }
-  .statistics__row {
-    display: none;
+  .statistics__row .none {
+    opacity: 0;
+  }
+  .statistic {
+    text-align: center;
+  }
+  .statistic h3 {
+    font-family: "Iceland", serif;
+    font-size: 3.5rem;
+    color: var(--color-tertiary);
+    margin-bottom: 0.5rem;
+  }
+  .statistic p {
+    color: var(--color-primary);
+    font-family: "Iceland", serif;
+    font-size: 1.7rem;
+    font-weight: bold;
   }
 }
-@media (max-width: 1000px) {
+@media (max-width: 1025px) {
   #services h2 {
     margin-top: 1rem;
     font-size: 4rem;
@@ -333,5 +348,51 @@ h2.none {
     padding: 0;
     color: var(--color-primary);
     font-size: 19px;
+  }
+}
+@media (max-width: 700px) {
+  #services h2 {
+    margin-top: 6rem;
+  }
+  .services__container .service__card:hover .face.face2 {
+    transform: translateY(-190px);
+  }
+  .services__container .service__card {
+    position: relative;
+    background-color: transparent;
+    border: none;
+    width: 250px;
+    height: 190px;
+  }
+  .services__container .service__card .face {
+    width: 250px;
+    height: 190px;
+    transition: 0.5s;
+  }
+}
+@media (max-width: 400px) {
+  #services h2 {
+    margin-top: 6rem;
+  }
+  .services__container .service__card:hover .face.face2 {
+    transform: translateY(-150px);
+  }
+  .services__container .service__card {
+    position: relative;
+    background-color: transparent;
+    border: none;
+    width: 200px;
+    height: 150px;
+  }
+  .services__container .service__card .face {
+    width: 200px;
+    height: 150px;
+    transition: 0.5s;
+  }
+  .services__container .service__card .face.face2 .content p {
+    margin: 0;
+    padding: 0;
+    color: var(--color-primary);
+    font-size: 1rem;
   }
 }
