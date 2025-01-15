@@ -25,25 +25,41 @@ const ProjectDetails = () => {
 
   if (!modalData || !modalData.projectData) return null;
 
-  const { title, info, icons, screenshots, github, demo } =
+  const { title, info, desc, icons, screenshots, github, demo } =
     modalData.projectData;
 
   return (
     <Modal className="theme__modal">
-      <Swiper
-        slidesPerView={1}
-        spaceBetween={0}
-        modules={[Pagination, Autoplay]}
-        autoplay={true}
-        className="myDetailsSwiper"
-      >
-        {screenshots.map((screenshot, index) => (
-          <SwiperSlide>
-            <img src={screenshot} alt="" className="swiper_img" />
-          </SwiperSlide>
-        ))}
-      </Swiper>
       <div className="modal__body">
+        <div className="modal__text">
+          <h1 className="modal__title">{title}</h1>
+          <p className="modal__info">{info}</p>
+        </div>
+      </div>
+      <div className="swiper__container">
+        <Swiper
+          slidesPerView={1}
+          spaceBetween={0}
+          modules={[Pagination, Autoplay]}
+          autoplay={{
+            delay: 3000,
+            disableOnInteraction: false,
+          }}
+          className="myDetailsSwiper"
+          loop={false}
+          pagination={true}
+          direction="vertical"
+          lazy={{
+            loadPrevNext: true,
+          }}
+          centeredSlides={true}
+        >
+          {screenshots.map((screenshot, index) => (
+            <SwiperSlide>
+              <img src={screenshot} alt="" className="swiper_img" />
+            </SwiperSlide>
+          ))}
+        </Swiper>
         <div className="modal__icons">
           {icons.map(([icon, name], index) => (
             <div key={index} className="icon">
@@ -52,29 +68,27 @@ const ProjectDetails = () => {
             </div>
           ))}
         </div>
-        <div className="modal__text">
-          <h1 className="modal__title">{title}</h1>
-          <p className="modal__info">{info}</p>
-        </div>
-      </div>
-      <div className="btn__container">
-        <button
-          className="git__btn"
-          onClick={() => window.open(github, "_blank")}
-        >
-          {language === "en" ? "See code" : "Voir code"}
-        </button>
-        {hasDemo && (
+        <div className="btn__container">
           <button
             className="git__btn"
-            onClick={() => window.open(demo, "_blank")}
+            onClick={() => window.open(github, "_blank")}
           >
-            Demo{" "}
+            {language === "en" ? "See code" : "Voir code"}
           </button>
-        )}
+          {hasDemo && (
+            <button
+              className="git__btn"
+              onClick={() => window.open(demo, "_blank")}
+            >
+              Demo{" "}
+            </button>
+          )}
+        </div>
       </div>
     </Modal>
   );
 };
+{
+}
 
 export default ProjectDetails;

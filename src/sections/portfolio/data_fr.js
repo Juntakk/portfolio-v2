@@ -105,10 +105,10 @@ const data = [
     category: "Mobile",
     image: images.Image12,
     title: "Application de recettes",
-    icons: [icons.flutter, icons.dart],
-    screenshots: images.steemScreenshots,
+    icons: [icons.flutter, icons.dart, icons.firebase],
+    screenshots: images.mealScreenshots,
 
-    desc: "Flutter | Riverpod | Clean",
+    desc: "Riverpod | Clean Architecture | TDD",
     demo: "",
     github: "https://github.com/Juntakk/meals",
     info: "Planification de repas, organisation et recherche de recettes, cette application permet à l'utilisateur de s'inspirer et de contrôler son alimentation. Il peut aussi trier toutes les recettes dans la BDD pour faciliter le tout.",

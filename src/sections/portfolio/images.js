@@ -16,6 +16,11 @@ const images = {
     require("../../assets/screenshots/steem2.png"),
     require("../../assets/screenshots/steem3.png"),
   ],
+
+  mealScreenshots: [
+    require("../../assets/screenshots/meals_group1.png"),
+    require("../../assets/screenshots/meals_group2.png"),
+  ],
 };
 
 export default images;

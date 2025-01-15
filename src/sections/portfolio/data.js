@@ -104,10 +104,10 @@ const data = [
     category: "Mobile",
     image: images.Image12,
     title: "Recipe App",
-    icons: [icons.flutter, icons.dart],
-    desc: "Flutter | Riverpod | Clean",
+    icons: [icons.flutter, icons.dart, icons.firebase],
+    desc: "Riverpod | Clean Architecture | TDD",
     demo: "",
-    screenshots: images.steemScreenshots,
+    screenshots: images.mealScreenshots,
 
     github: "https://github.com/Juntakk/meals",
     info: "Meal planning, organization, and recipe search app that allows users to get inspired and manage their diet. They can also sort all recipes in the database to make everything easier.",

@@ -18,6 +18,7 @@ import { SiNumpy } from "react-icons/si";
 import { RiTailwindCssFill } from "react-icons/ri";
 import { IoLogoAndroid } from "react-icons/io";
 import { SiDart } from "react-icons/si";
+import { SiFirebase } from "react-icons/si";
 
 const icons = {
   react: [<FaReact />, "React"],
@@ -30,15 +31,16 @@ const icons = {
   flutter: [<FaFlutter />, "Flutter"],
   cplusplus: [<BiLogoCPlusPlus />, "C++"],
   raylib: [<SiRaylib />, "Raylib"],
-  unreal: [<SiUnrealengine />, "Unreal Engine"],
+  unreal: [<SiUnrealengine />, "Unreal"],
   java: [<FaJava />, "Java"],
   godot: [<SiGodotengine />, "Godot"],
   sql: [<GrMysql />, "SQL"],
   django: [<TbBrandDjango />, "Django"],
   numpy: [<SiNumpy />, "NumPy"],
   tailwind: [<RiTailwindCssFill />, "Tailwind"],
-  android: [<IoLogoAndroid />, "Android Studio"],
+  android: [<IoLogoAndroid />, "Android"],
   dart: [<SiDart />, "Dart"],
+  firebase: [<SiFirebase />, "Firebase"],
 };
 
 export default icons;
