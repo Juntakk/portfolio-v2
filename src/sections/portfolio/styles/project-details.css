@@ -143,7 +143,7 @@
   .theme__modal {
     transform: translate(-50%, -50%);
     padding: 0rem;
-    height: 70%;
+    height: 80%;
     margin: 0;
     bottom: 0% !important;
   }
@@ -184,6 +184,8 @@
 
   .icon {
     font-size: 3.3rem;
+    display: flex;
+    flex-direction: column;
   }
 
   .icon span {
@@ -202,7 +204,7 @@
   .theme__modal {
     transform: translate(-50%, -50%);
     padding: 0rem;
-    height: 60%;
+    height: 70%;
     margin: 0;
     bottom: 0% !important;
   }
@@ -210,20 +212,21 @@
     color: var(--color-primary);
     font-family: "Iceland";
     font-weight: lighter;
-    font-size: 3rem;
+    font-size: 2rem;
   }
   .modal__title {
-    font-size: 4rem;
+    font-size: 2rem;
   }
   .modal__body {
+    padding: 1rem;
     height: 50%;
     justify-content: space-around;
     align-items: center;
   }
   .modal__info {
-    font-size: 1.6rem;
+    font-size: 1.2rem;
     color: var(--color-primary);
-    max-width: 75%;
+    max-width: 100%;
   }
 
   .modal__image-container {
@@ -235,24 +238,26 @@
   }
 
   .modal__icons {
-    gap: 0.5rem;
+    gap: 1.25rem;
     flex-direction: row;
     margin: 0;
     padding: 0;
-    width: 25%;
-    margin-right: 3rem;
+    width: 40%;
+    margin-right: 0rem;
   }
 
   .icon {
-    font-size: 3rem;
+    font-size: 1.75rem;
+    display: flex;
+    flex-direction: column;
   }
 
   .icon span {
-    font-size: 1.3rem;
+    font-size: 1rem;
   }
 
   .git__btn {
-    font-size: 2.5rem;
+    font-size: 1.5rem;
     padding: 0rem;
     margin-bottom: 0rem;
   }
