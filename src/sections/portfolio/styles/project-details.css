@@ -7,7 +7,7 @@
   background-color: var(--color-secondary);
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   padding: 2rem;
   font-family: "Iceland";
@@ -66,7 +66,7 @@
   justify-content: flex-start;
   align-items: flex-start;
   padding-top: 1rem;
-  color: var(--color-quaternary);
+  color: var(--color-primary);
   max-width: 28rem;
 }
 
@@ -79,8 +79,8 @@
 .btn__container {
   width: 100%;
   display: flex;
-  justify-content: flex-start;
-  align-items: flex-start;
+  justify-content: space-between;
+  align-items: center;
   padding: 1rem;
   gap: 2rem;
 }
@@ -88,11 +88,14 @@
 .git__btn {
   background-color: transparent;
   color: var(--color-primary);
-  font-size: 1.6rem;
+  font-size: 2.6rem;
   font-family: "Iceland";
   padding: 0.5rem;
   cursor: pointer;
   transition: all 2s ease;
+}
+.btn__container span {
+  font-size: 2rem;
 }
 
 .git__btn:hover {
@@ -137,37 +140,10 @@
 
 /* Responsive Styles for Viewports Under 1025px */
 @media (max-width: 1025px) {
-  .modal__body {
-    flex-direction: column;
-    align-items: center;
-    gap: 2rem;
-  }
-
-  .modal__image-container {
-    max-height: 350px;
-  }
-
-  .modal__image {
-    height: 15rem;
-  }
-
-  .modal__text {
-    max-width: 100%;
-    padding: 1rem;
-  }
-
-  .btn__container {
-    justify-content: center;
-    gap: 1.5rem;
-  }
-}
-
-/* Responsive Styles for Viewports Under 700px */
-@media (max-width: 700px) {
   .theme__modal {
     transform: translate(-50%, -50%);
     padding: 0rem;
-    height: 80%;
+    height: 70%;
     margin: 0;
     bottom: 0% !important;
   }
@@ -176,7 +152,6 @@
     justify-content: space-between;
     align-items: center;
   }
-
   .btn__container span {
     color: var(--color-primary);
     font-family: "Iceland";
@@ -188,14 +163,71 @@
   }
 
   .modal__info {
-    font-size: 1.2rem;
+    font-size: 1.8rem;
     color: var(--color-primary);
   }
 
   .modal__image-container {
-    height: 15rem;
+    height: 35rem;
+  }
 
-    margin-bottom: auto;
+  .modal__image {
+    height: 25rem;
+  }
+
+  .modal__icons {
+    gap: 1.5rem;
+    flex-direction: row;
+    margin: 0;
+    padding: 0;
+  }
+
+  .icon {
+    font-size: 3.3rem;
+  }
+
+  .icon span {
+    font-size: 1.1rem;
+  }
+
+  .git__btn {
+    font-size: 2rem;
+    padding: 0rem;
+    margin-bottom: 0rem;
+  }
+}
+
+/* Responsive Styles for Viewports Under 700px */
+@media (max-width: 700px) {
+  .theme__modal {
+    transform: translate(-50%, -50%);
+    padding: 0rem;
+    height: 60%;
+    margin: 0;
+    bottom: 0% !important;
+  }
+  .btn__container span {
+    color: var(--color-primary);
+    font-family: "Iceland";
+    font-weight: lighter;
+    font-size: 3rem;
+  }
+  .modal__title {
+    font-size: 4rem;
+  }
+  .modal__body {
+    height: 50%;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .modal__info {
+    font-size: 1.6rem;
+    color: var(--color-primary);
+    max-width: 75%;
+  }
+
+  .modal__image-container {
+    height: 15rem;
   }
 
   .modal__image {
@@ -207,18 +239,20 @@
     flex-direction: row;
     margin: 0;
     padding: 0;
+    width: 25%;
+    margin-right: 3rem;
   }
 
   .icon {
-    font-size: 2rem;
+    font-size: 3rem;
   }
 
   .icon span {
-    font-size: 0.8rem;
+    font-size: 1.3rem;
   }
 
   .git__btn {
-    font-size: 1.4rem;
+    font-size: 2.5rem;
     padding: 0rem;
     margin-bottom: 0rem;
   }
