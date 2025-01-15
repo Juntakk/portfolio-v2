@@ -282,23 +282,8 @@ h2.none {
     opacity: 1;
     transition: all 1s ease-in-out;
   }
-  .statistics__row .none {
-    opacity: 0;
-  }
-  .statistic {
-    text-align: center;
-  }
-  .statistic h3 {
-    font-family: "Iceland", serif;
-    font-size: 3.5rem;
-    color: var(--color-tertiary);
-    margin-bottom: 0.5rem;
-  }
-  .statistic p {
-    color: var(--color-primary);
-    font-family: "Iceland", serif;
-    font-size: 1.7rem;
-    font-weight: bold;
+  .statistics__row {
+    display: none;
   }
 }
 @media (max-width: 1000px) {

@@ -168,7 +168,9 @@
 /* Responsive Styles for Viewports Under 700px */
 @media (max-width: 700px) {
   .theme__modal {
-    padding: 1rem;
+    padding: 0rem;
+    height: 50%;
+    top: 40%;
   }
 
   .modal__title {
@@ -181,6 +183,7 @@
 
   .modal__image-container {
     max-height: 200px;
+    min-height: 100px;
   }
 
   .modal__image {
@@ -208,6 +211,7 @@
 
   .git__btn {
     font-size: 1.4rem;
-    padding: 0.4rem;
+    padding: 0rem;
+    margin-bottom: 1rem;
   }
 }
