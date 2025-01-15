@@ -6,6 +6,7 @@
   justify-content: space-evenly;
   align-items: center;
   flex-direction: column;
+  overflow: hidden;
 }
 #services h2 {
   margin-top: 2rem;
