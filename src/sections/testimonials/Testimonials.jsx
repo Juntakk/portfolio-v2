@@ -20,37 +20,35 @@ const Testimonials = () => {
 
   return (
     <section id="testimonials" ref={ref}>
-      <h2 className={`${isVisible ? "magictime slideLeftReturn" : "none"} `}>
+      {/* <h2 className={`${isVisible ? "magictime slideLeftReturn" : "none"} `}>
         {language === "en"
           ? "What My Clients and Colleagues Have to Say"
           : "Les témoignages de mes clients et collègues"}
-      </h2>
-      <div className="container">
-        <Swiper
-          slidesPerView={1}
-          spaceBetween={30}
-          breakpoints={{
-            600: { slidesPerView: 1 },
-            700: { slidesPerView: 2 },
-            1325: { slidesPerView: 2 },
-          }}
-          modules={[Pagination, Autoplay]}
-          autoplay={true}
-          className={`mySwiper ${isVisible ? "magicTimeLeftReturn" : "none"}`}
-        >
-          {language === "en"
-            ? testimonialsEn.map((testimonial) => (
-                <SwiperSlide key={testimonial.id}>
-                  <Testimonial testimonial={testimonial} />
-                </SwiperSlide>
-              ))
-            : testimonialsFr.map((testimonial) => (
-                <SwiperSlide key={testimonial.id}>
-                  <Testimonial testimonial={testimonial} />
-                </SwiperSlide>
-              ))}
-        </Swiper>
-      </div>
+      </h2> */}
+      <Swiper
+        slidesPerView={1}
+        spaceBetween={30}
+        breakpoints={{
+          600: { slidesPerView: 1 },
+          700: { slidesPerView: 1 },
+          1025: { slidesPerView: 2 },
+        }}
+        modules={[Pagination, Autoplay]}
+        autoplay={true}
+        className={`mySwiper ${isVisible ? "magicTimeLeftReturn" : "none"}`}
+      >
+        {language === "en"
+          ? testimonialsEn.map((testimonial) => (
+              <SwiperSlide key={testimonial.id}>
+                <Testimonial testimonial={testimonial} />
+              </SwiperSlide>
+            ))
+          : testimonialsFr.map((testimonial) => (
+              <SwiperSlide key={testimonial.id}>
+                <Testimonial testimonial={testimonial} />
+              </SwiperSlide>
+            ))}
+      </Swiper>
     </section>
   );
 };

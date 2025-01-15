@@ -63,7 +63,7 @@ const Navbar = ({ toggleTheme, isDarkMode }) => {
     }
   }, [activeSection]);
   useEffect(() => {
-    setIsMobile(window.innerWidth < 700);
+    setIsMobile(window.innerWidth < 1025);
     setIsOpen(isMobile);
   }, [isMobile]);
   useEffect(() => {
