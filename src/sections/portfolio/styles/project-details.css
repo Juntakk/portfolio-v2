@@ -43,7 +43,7 @@
 
 .modal__image-container {
   width: 100%;
-  max-height: 200px;
+  max-height: 300px;
   overflow: hidden;
   border-radius: 0px;
 }
@@ -144,7 +144,7 @@
   }
 
   .modal__image-container {
-    max-height: 250px;
+    max-height: 350px;
   }
 
   .modal__image {
@@ -165,15 +165,26 @@
 /* Responsive Styles for Viewports Under 700px */
 @media (max-width: 700px) {
   .theme__modal {
-    transform: translate(-50%, -90%);
+    transform: translate(-50%, -50%);
     padding: 0rem;
-    height: 60%;
+    height: 80%;
     margin: 0;
     bottom: 0% !important;
   }
+  .btn__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
 
-  .modal__title {
+  .btn__container span {
+    color: var(--color-primary);
+    font-family: "Iceland";
+    font-weight: lighter;
     font-size: 2rem;
+  }
+  .modal__title {
+    font-size: 3rem;
   }
 
   .modal__info {
@@ -181,12 +192,13 @@
   }
 
   .modal__image-container {
-    max-height: 180px;
-    min-height: 100px;
+    height: 15rem;
+
+    margin-bottom: auto;
   }
 
   .modal__image {
-    max-height: 10rem;
+    height: 15rem;
   }
 
   .modal__icons {
@@ -204,15 +216,9 @@
     font-size: 0.8rem;
   }
 
-  .btn__container {
-    flex-direction: row;
-    align-items: center;
-    gap: 1rem;
-  }
-
   .git__btn {
     font-size: 1.4rem;
     padding: 0rem;
-    margin-bottom: 1rem;
+    margin-bottom: 0rem;
   }
 }

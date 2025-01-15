@@ -6,7 +6,7 @@ import "./styles/project-details.css";
 import { useLanguage } from "../../theme/LanguageContext";
 
 const ProjectDetails = () => {
-  const { modalData } = useModalContext();
+  const { modalData, closeModalHandler } = useModalContext();
   const { language } = useLanguage();
   const [hasDemo, setHasDemo] = useState(false);
 
@@ -57,6 +57,7 @@ const ProjectDetails = () => {
             Demo{" "}
           </button>
         )}
+        <span onClick={closeModalHandler}>X</span>
       </div>
     </Modal>
   );
