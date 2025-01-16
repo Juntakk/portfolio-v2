@@ -5,6 +5,8 @@ import { useModalContext } from "../../context/modal-context";
 import "./styles/project-details.css";
 import { useLanguage } from "../../theme/LanguageContext";
 import { RxCross1 } from "react-icons/rx";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay, Navigation, Pagination } from "swiper/modules";
 
 const ProjectDetails = () => {
   const { modalData, closeModalHandler } = useModalContext();
@@ -22,13 +24,23 @@ const ProjectDetails = () => {
 
   if (!modalData || !modalData.projectData) return null;
 
-  const { title, info, icons, image, github, demo } = modalData.projectData;
+  const { title, info, icons, screenShot, github, demo } =
+    modalData.projectData;
 
   return (
     <Modal className="theme__modal">
-      <div className="modal__image-container">
-        <img src={image} alt={title} className="modal__image" />
-      </div>
+      <Swiper
+        className="modal__image-container"
+        modules={[Pagination, Navigation, Autoplay]}
+        autoplay={true}
+        loop={true}
+      >
+        {screenShot.map((item, key) => (
+          <SwiperSlide>
+            <img src={item} alt={title} className="modal__image" />
+          </SwiperSlide>
+        ))}
+      </Swiper>
       <div className="modal__body">
         <div className="modal__text">
           <h1 className="modal__title">{title}</h1>

@@ -8,7 +8,7 @@ const data = [
     image: images.ChatImage,
     title: "Chatbot",
     icons: [icons.python, icons.django, icons.numpy, icons.html],
-
+    screenShot: images.chatbotScreenShot,
     desc: "Python | Django | NumPy",
     demo: "",
     github: "https://github.com/Juntakk/chat-bot",
@@ -20,7 +20,7 @@ const data = [
     image: images.seeFlix,
     title: "Seeflix",
     icons: [icons.react, icons.node, icons.mongo, icons.tailwind],
-
+    screenShot: images.seeflixScreenshots,
     desc: "ReactJS | NodeJS | MongoDB",
     demo: "https://seeflix.netlify.app/",
     github: "https://github.com/Juntakk/SeeFlix",
@@ -44,7 +44,7 @@ const data = [
     image: images.Image9,
     title: "E-Commerce",
     icons: [icons.react, icons.node, icons.mongo, icons.css],
-
+    screenShot: images.steemScreenshots,
     desc: "ReactJS | NodeJS | MongoDB",
     demo: "",
     github: "https://github.com/Juntakk/Steem",
@@ -56,7 +56,7 @@ const data = [
     image: images.Image3,
     title: "Jeu de Combat",
     icons: [icons.cplusplus, icons.godot],
-
+    screenShot: images.survivorsScreenshots,
     desc: "C++ | Godot | GDscript",
     demo: "",
     github: "https://github.com/Juntakk/survivors",
@@ -78,9 +78,9 @@ const data = [
     image: images.Image7,
     title: "Mini RPG",
     icons: [icons.cplusplus, icons.raylib, icons.unreal],
-
     desc: "C++ | Raylib | Unreal Engine",
     demo: "",
+    screenShot: images.game3ScreenShot,
     github: "https://github.com/Juntakk/mini-game-3",
     info: "RPG en 2D vu de dessus, le joueur choisit son personnage et est lancé dans un monde médiéval et fantastique où il doit combattre des ennemis, remplir son inventaire d'items puissants pour survivre.",
   },
@@ -100,7 +100,7 @@ const data = [
     image: images.Image12,
     title: "Recettes",
     icons: [icons.flutter, icons.dart],
-
+    screenShot: images.mealsScreenshot,
     desc: "Flutter | Riverpod | Clean",
     demo: "",
     github: "https://github.com/Juntakk/meals",
@@ -122,7 +122,7 @@ const data = [
     image: images.Image14,
     title: "Voyages",
     icons: [icons.flutter, icons.dart],
-
+    screenShot: images.placesScreenShot,
     desc: "Flutter | Bloc | MVC",
     demo: "",
     github: "https://github.com/Juntakk/favoritePlaces",
@@ -134,7 +134,7 @@ const data = [
     image: images.BlogImage,
     title: "Blog",
     icons: [icons.flutter, icons.dart],
-
+    screenShot: images.blogScreenshot,
     desc: "Flutter | Bloc | Clean",
     demo: "",
     github: "https://github.com/Juntakk/blog_app",
