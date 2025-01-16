@@ -82,7 +82,7 @@ const Socials = () => {
       }`}
     >
       <a
-        href="https://www.linkedin.com/in/nickhabashigauthier/"
+        href="https://www.linkedin.com/in/nicolasgauthierdev/"
         className={`${!isVisible ? "center" : ""}`}
         target="_blank"
         rel="noopner noreferrer"

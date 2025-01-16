@@ -7,7 +7,8 @@ import { useLanguage } from "../../theme/LanguageContext";
 import LanguageToggle from "../../theme/LanguageToggle";
 import { LiaCloudDownloadAltSolid } from "react-icons/lia";
 import { useEffect, useState } from "react";
-import CV from "../../assets/NicolasGauthier_Dev.pdf";
+import CV_en from "../../assets/NicolasGauthier_DEV.pdf";
+import CV_fr from "../../assets/NicolasGauthier_DEV_fr.pdf";
 import data_en from "./data";
 import data_fr from "./data_fr";
 import "./navbar.css";
@@ -18,7 +19,6 @@ const Navbar = ({ toggleTheme, isDarkMode }) => {
   const data = language === "en" ? data_en : data_fr;
   const [activeSection, setActiveSection] = useState(1);
   const [isMobile, setIsMobile] = useState(false);
-  const [isMobile2, setIsMobile2] = useState(true);
   const [completed, setCompleted] = useState(false);
   const [isScrolling, setIsScrolling] = useState(false);
   const [scrollingTimeout, setScrollingTimeout] = useState(null);
@@ -166,11 +166,11 @@ const Navbar = ({ toggleTheme, isDarkMode }) => {
           ))}
         </ul>
         <a
-          href={CV}
+          href={language === "en" ? CV_en : CV_fr}
           download={
             language === "en"
-              ? "NicolasGauthier_Dev.pdf"
-              : "NicolasGauthier_Dev_fr.pdf"
+              ? "NicolasGauthier_DEV.pdf"
+              : "NicolasGauthier_DEV_fr.pdf"
           }
           className="cv"
         >
