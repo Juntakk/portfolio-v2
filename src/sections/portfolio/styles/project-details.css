@@ -1,86 +1,85 @@
 .theme__modal {
   position: fixed;
   top: 50%;
-  transform: translate(-50%, -50%);
   left: 50%;
+  transform: translate(-50%, -50%);
   border: 2px solid var(--color-quaternary);
   background-color: var(--color-secondary);
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: flex-start; /* Changed for more predictable layout */
   align-items: center;
-  padding: 0rem;
-  font-family: "Iceland";
-  overflow: hidden;
+  padding: 1rem;
   border-radius: 8px;
   z-index: 101;
-  max-width: 550px;
+  max-width: 90%; /* Use percentage for consistent width */
   opacity: 1;
-  height: 85%;
-  transition: opacity 1s ease-in-out;
+  height: auto; /* Ensure it adapts to content */
+  transition: opacity 0.5s ease-in-out;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* Add some shadow for better visibility */
 }
+
 .modal__image-container {
   width: 100%;
-  max-height: 100%;
+  max-height: 300px; /* Set a fixed max-height for image */
   overflow: hidden;
   flex-shrink: 0;
-
-  border-top-left-radius: 8px;
-  border-top-right-radius: 8px;
+  border-radius: 8px;
 }
+
 .modal__image {
   width: 100%;
-  height: 100%;
+  height: auto; /* Ensure image scales proportionally */
   object-fit: contain;
-  border-top-left-radius: 8px;
-  border-top-right-radius: 8px;
 }
+
 .modal__body {
   display: flex;
-  flex-direction: row;
+  flex-direction: column; /* Adjust for better stacking */
   justify-content: center;
-  align-self: center;
-  box-sizing: border-box;
-  padding-block: 1rem;
-  width: 90%;
-  margin-top: 1rem;
+  align-items: center;
+  padding: 1rem;
+  width: 100%;
 }
 
 .modal__title {
-  margin: 0;
-  font-size: 2.5rem;
+  font-size: 2rem;
   font-weight: bold;
   color: var(--color-primary);
+  margin: 0;
 }
 
 .modal__text {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  align-items: flex-start;
+  align-items: center; /* Ensure text aligns well */
   color: var(--color-primary);
 }
 
 .modal__info {
-  font-size: 1.5rem;
-  line-height: 1.3;
+  font-size: 1.2rem;
+  line-height: 1.5;
 }
+
 .icon {
   color: var(--color-primary);
   font-size: 2rem;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
   align-items: center;
   width: 100%;
 }
+
 .icon span {
-  font-size: 1rem;
+  font-size: 1.2rem;
 }
+
 .modal__icons {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
-  align-items: flex-start;
+  justify-content: space-evenly;
+  align-items: center;
   flex-wrap: wrap;
   gap: 1rem;
   width: 100%;
@@ -91,32 +90,32 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1.5rem;
+  padding: 1rem;
 }
 
 .git__btn {
   background-color: transparent;
   color: var(--color-primary);
-  font-size: 2.2rem;
+  font-size: 2rem;
   font-family: "Iceland";
   font-weight: 100;
-  padding: 0rem;
-  font-style: italic;
+  padding: 0.5rem 1rem;
   cursor: pointer;
-  transition: all 2s ease;
+  transition: transform 0.3s ease;
+  border: 1px solid var(--color-primary);
 }
+
 .btn__container span {
   font-size: 1.5rem;
-  font-family: "Iceland";
   color: var(--color-primary);
   cursor: pointer;
 }
 
 .git__btn:hover {
   transform: scale(1.05);
-  transition: all 0.75s ease;
 }
 
+/* Backdrop */
 #backdrop,
 .modal-backdrop {
   position: fixed;
@@ -129,85 +128,49 @@
   backdrop-filter: blur(5px);
 }
 
-@keyframes animateModal {
-  to {
-    opacity: 1;
-  }
-}
-
-/* Responsive Styles for Viewports Under 1025px */
+/* Responsive Styles for Viewports Under 1025px (Tablet) */
 @media (max-width: 1025px) {
   .theme__modal {
-    transform: translate(-50%, -50%);
-    padding: 0rem;
-    height: 80%;
+    width: 90%; /* Ensure modal width is responsive */
+    height: auto;
+    padding: 1rem;
     margin: 0;
-    bottom: 0% !important;
   }
-  .btn__container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  .btn__container span {
-    color: var(--color-primary);
-    font-family: "Iceland";
-    font-weight: lighter;
-    font-size: 2rem;
-  }
+
   .modal__title {
-    font-size: 2.5rem;
-  }
-
-  .modal__info {
-    font-size: 1.5rem;
-    line-height: 1.2;
-    color: var(--color-primary);
-  }
-
-  .icon {
     font-size: 2.2rem;
   }
 
-  .icon span {
-    font-size: 1.1rem;
+  .modal__info {
+    font-size: 1.3rem;
+  }
+
+  .modal__body {
+    padding: 1rem;
+  }
+
+  .btn__container span {
+    font-size: 1.2rem;
   }
 
   .git__btn {
-    font-size: 2rem;
-    padding: 0rem;
-    margin-bottom: 0rem;
+    font-size: 1.8rem;
   }
 }
 
-/* Responsive Styles for Viewports Under 700px */
-@media (max-width: 550px) {
+/* Responsive Styles for Viewports Under 700px (Mobile) */
+@media (max-width: 700px) {
   .theme__modal {
-    transform: translate(-50%, -50%);
-    padding: 0rem;
-    height: 80%;
-    margin: 0;
     width: 95%;
+    height: auto;
+    padding: 1rem;
+    margin: 0;
   }
-  .btn__container span {
-    color: var(--color-primary);
-    font-family: "Iceland";
-    font-weight: lighter;
-    font-size: 1rem;
-  }
-  .btn__container {
-    padding: 0.5rem;
-  }
+
   .modal__title {
-    font-size: 2rem;
+    font-size: 1.8rem;
   }
-  .modal__body {
-    padding-block: 0rem;
-    margin-top: 0rem;
-    height: 50%;
-    justify-content: center;
-    align-items: center;
-  }
+
   .modal__info {
     font-size: 1rem;
     line-height: 1.4;
@@ -217,25 +180,21 @@
 
   .modal__icons {
     gap: 0.5rem;
-    flex-direction: row;
-    margin: 0;
-    padding: 0;
-    margin-right: 0rem;
   }
 
   .icon {
     font-size: 1.5rem;
-    display: flex;
-    flex-direction: column;
-  }
-
-  .icon span {
-    font-size: 1rem;
   }
 
   .git__btn {
     font-size: 1.5rem;
-    padding: 0rem;
-    margin-bottom: 0rem;
+  }
+
+  .btn__container {
+    padding: 0.5rem;
+  }
+
+  .btn__container span {
+    font-size: 1rem;
   }
 }
