@@ -39,7 +39,12 @@ const ProjectDetails = () => {
       >
         {screenShot.map((item, key) => (
           <SwiperSlide>
-            <img src={item} alt={title} className="modal__image" />
+            <img
+              src={item}
+              alt={title}
+              className="modal__image"
+              onClick={() => window.open(github, "_blank")}
+            />
           </SwiperSlide>
         ))}
       </Swiper>
