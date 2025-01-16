@@ -55,7 +55,7 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  align-items: center; /* Ensure text aligns well */
+  align-items: flex-start; /* Ensure text aligns well */
   color: var(--color-primary);
 }
 
@@ -93,6 +93,7 @@
   justify-content: space-between;
   align-items: center;
   padding: 0rem;
+  margin-top: 2rem;
 }
 
 .git__btn {
@@ -101,7 +102,7 @@
   font-size: 2rem;
   font-family: "Iceland";
   font-weight: 100;
-  padding: 0.5rem 1rem;
+  padding: 0rem;
   cursor: pointer;
   transition: transform 0.3s ease;
 }

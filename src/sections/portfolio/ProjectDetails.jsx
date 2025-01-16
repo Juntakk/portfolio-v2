@@ -32,7 +32,9 @@ const ProjectDetails = () => {
       <Swiper
         className="modal__image-container"
         modules={[Pagination, Navigation, Autoplay]}
-        autoplay={true}
+        autoplay={{
+          delay: 2500,
+        }}
         loop={true}
       >
         {screenShot.map((item, key) => (

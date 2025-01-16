@@ -5,6 +5,7 @@
   align-items: center;
   padding-inline: 12rem;
   gap: 2rem;
+  margin-bottom: 2rem;
 }
 @media screen and (max-width: 975px) {
   .portfolio__projects {
