@@ -6,6 +6,16 @@
   list-style: none;
   text-decoration: none;
   box-sizing: border-box;
+  -webkit-text-size-adjust: 100%;
+}
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+body {
+  margin: 0;
+  padding: 0;
 }
 /* width */
 ::-webkit-scrollbar {

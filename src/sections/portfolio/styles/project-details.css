@@ -205,7 +205,7 @@
     padding-block: 0rem;
     margin-top: 0rem;
     height: 50%;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
   }
   .modal__info {
