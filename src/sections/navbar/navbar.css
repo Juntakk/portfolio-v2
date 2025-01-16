@@ -221,6 +221,7 @@ nav {
     flex-direction: row;
     justify-content: start;
     padding: 0.25rem;
+    background-color: var(--color-quaternary);
   }
   .nav__container.hide {
     transform: translateX(-100%);
