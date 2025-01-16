@@ -12,11 +12,12 @@
   padding: 1rem;
   border-radius: 8px;
   z-index: 101;
-  max-width: 90%; /* Use percentage for consistent width */
+  max-width: 50%; /* Use percentage for consistent width */
   opacity: 1;
   height: auto; /* Ensure it adapts to content */
   transition: opacity 0.5s ease-in-out;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* Add some shadow for better visibility */
+  font-family: "Iceland";
 }
 
 .modal__image-container {
@@ -35,7 +36,7 @@
 
 .modal__body {
   display: flex;
-  flex-direction: column; /* Adjust for better stacking */
+  flex-direction: row; /* Adjust for better stacking */
   justify-content: center;
   align-items: center;
   padding: 1rem;
@@ -69,15 +70,15 @@
   justify-content: center;
   align-items: center;
   width: 100%;
+  flex: 0 0 45%;
 }
 
 .icon span {
-  font-size: 1.2rem;
+  font-size: 1rem;
 }
 
 .modal__icons {
   display: flex;
-  flex-direction: row;
   justify-content: space-evenly;
   align-items: center;
   flex-wrap: wrap;
@@ -90,7 +91,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem;
+  padding: 0rem;
 }
 
 .git__btn {
@@ -102,7 +103,6 @@
   padding: 0.5rem 1rem;
   cursor: pointer;
   transition: transform 0.3s ease;
-  border: 1px solid var(--color-primary);
 }
 
 .btn__container span {
@@ -156,6 +156,9 @@
   .git__btn {
     font-size: 1.8rem;
   }
+  .icon {
+    flex: 0;
+  }
 }
 
 /* Responsive Styles for Viewports Under 700px (Mobile) */
@@ -170,7 +173,9 @@
   .modal__title {
     font-size: 1.8rem;
   }
-
+  .modal__body {
+    flex-direction: column;
+  }
   .modal__info {
     font-size: 1rem;
     line-height: 1.4;
@@ -179,19 +184,26 @@
   }
 
   .modal__icons {
+    margin-top: 0.5rem;
+    flex-direction: row;
+    flex-wrap: nowrap;
     gap: 0.5rem;
   }
 
   .icon {
+    padding: 0.5rem;
     font-size: 1.5rem;
+  }
+  .icon span {
+    display: none;
   }
 
   .git__btn {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
   }
 
   .btn__container {
-    padding: 0.5rem;
+    padding: 0rem;
   }
 
   .btn__container span {
