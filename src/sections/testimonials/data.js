@@ -15,21 +15,13 @@ const data = [
   {
     id: 2,
     quote:
-      "Nick's expertise in web development is truly impressive. He delivered a website that not only looks amazing but is also highly responsive and user-friendly. I couldn't be happier with the results!",
-    avatar: Avatar2,
-    name: "Ernest Jykrell",
-    profession: "Web Developer",
-  },
-  {
-    id: 3,
-    quote:
       "I had the pleasure of collaborating with Nick on a branding project. His creative ideas and ability to bring concepts to life are truly inspiring. I look forward to working with him again in the future.",
     avatar: Avatar3,
     name: "Daniel Vinyo",
     profession: "Graphic Designer",
   },
   {
-    id: 4,
+    id: 3,
     quote:
       "Nick is a true professional. He developed an app for me that perfectly captured my vision and went above and beyond to ensure everything was flawless. Highly recommended!",
     avatar: Avatar4,

@@ -4,6 +4,7 @@ import "../../index.css";
 import { useModalContext } from "../../context/modal-context";
 import "./styles/project-details.css";
 import { useLanguage } from "../../theme/LanguageContext";
+import { RxCross1 } from "react-icons/rx";
 
 const ProjectDetails = () => {
   const { modalData, closeModalHandler } = useModalContext();
@@ -47,7 +48,7 @@ const ProjectDetails = () => {
           className="git__btn"
           onClick={() => window.open(github, "_blank")}
         >
-          {language === "en" ? "See code" : "Voir code"}
+          {language === "en" ? "See more" : "Voir plus"}
         </button>
         {hasDemo && (
           <button
@@ -57,7 +58,9 @@ const ProjectDetails = () => {
             Demo{" "}
           </button>
         )}
-        <span onClick={closeModalHandler}>X</span>
+        <span onClick={closeModalHandler}>
+          <RxCross1 />
+        </span>
       </div>
     </Modal>
   );

@@ -42,7 +42,7 @@ const data = [
     title: "E-Commerce",
     icons: [icons.react, icons.node, icons.mongo, icons.css],
     desc: "ReactJS | NodeJS | MongoDB",
-    demo: "https://steem-frontend.onrender.com/",
+    demo: "",
     github: "https://github.com/Juntakk/Steem",
     info: "Commerce and management platform that allows users to browse all video games in a Mongoose database, sort them by category, and add them to their wishlist.",
   },

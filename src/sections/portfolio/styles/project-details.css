@@ -17,6 +17,7 @@
   max-width: 800px;
   width: 100%;
   opacity: 1;
+  height: 90%;
   transition: opacity 1s ease-in-out;
 }
 
@@ -81,25 +82,30 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem;
-  gap: 2rem;
+  padding: 0rem;
 }
 
 .git__btn {
   background-color: transparent;
   color: var(--color-primary);
-  font-size: 2.6rem;
+  font-size: 2.2rem;
   font-family: "Iceland";
+  font-weight: 700;
   padding: 0.5rem;
   cursor: pointer;
   transition: all 2s ease;
+  text-decoration: underline;
 }
 .btn__container span {
   font-size: 2rem;
+  font-family: "Iceland";
+  color: var(--color-primary);
+  cursor: pointer;
 }
 
 .git__btn:hover {
-  border-bottom: 1px solid var(--color-primary);
+  transform: scale(1.05);
+  transition: all 0.75s ease;
 }
 
 .modal__info {
