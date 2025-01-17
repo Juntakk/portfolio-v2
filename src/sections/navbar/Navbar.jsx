@@ -7,7 +7,6 @@ import { useLanguage } from "../../theme/LanguageContext";
 import LanguageToggle from "../../theme/LanguageToggle";
 import { LiaCloudDownloadAltSolid } from "react-icons/lia";
 import { useEffect, useState } from "react";
-import CV_en from "../../assets/NicolasGauthier_DEV.pdf";
 import CV_fr from "../../assets/NicolasGauthier_DEV_fr.pdf";
 import data_en from "./data";
 import data_fr from "./data_fr";
@@ -165,7 +164,7 @@ const Navbar = ({ toggleTheme, isDarkMode }) => {
           ))}
         </ul>
         <a
-          href={language === "en" ? CV_en : CV_fr}
+          href={language === "en" ? CV_fr : CV_fr}
           download={
             language === "en"
               ? "NicolasGauthier_DEV.pdf"
