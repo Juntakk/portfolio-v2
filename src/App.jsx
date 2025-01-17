@@ -19,7 +19,6 @@ import { useThemeContext } from "./context/theme-context";
 import Footer from "./components/Footer";
 import ProjectDetails from "./sections/portfolio/ProjectDetails";
 import Modal from "./components/Modal";
-import Card from "./components/Card";
 
 const App = () => {
   const mainRef = useRef();
