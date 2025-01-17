@@ -14,14 +14,10 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.(pdf|woff|woff2|ttf|eot)$/,
+        test: /\.(pdf|woff|woff2|ttf|eot|js|jsx)$/,
         exclude: /node_modules/,
         use: {
           loader: "babel-loader",
-          options: {
-            name: "[name].[hash].[ext]",
-            outputPath: "assets/",
-          },
         },
       },
       {
@@ -38,7 +34,6 @@ module.exports = {
           {
             loader: "file-loader",
             options: {
-              name: "[name].[hash].[ext]", // Customize the filename and location
               outputPath: "pdfs/", // Save PDFs in the 'pdfs' folder inside 'dist'
             },
           },
