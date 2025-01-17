@@ -4,23 +4,25 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 module.exports = {
   entry: "./src/index.js",
   output: {
-    filename: "[name].bundle.js", // Use the chunk's name to generate unique filenames
-    chunkFilename: "[name].[contenthash].js", // Ensure unique chunk names for dynamically imported chunks
+    filename: "[name].[contenthash].bundle.js", // Ensure unique output filenames
+    chunkFilename: "[name].[contenthash].js",
     path: path.resolve(__dirname, "dist"),
+    clean: true, // Clean the output directory before building
   },
   optimization: {
     splitChunks: {
       chunks: "all",
-      name: false, // Split all chunks (both synchronous and asynchronous)
+      name: (module, chunks, cacheGroupKey) =>
+        `${cacheGroupKey}-${chunks[0].name || "chunk"}`,
     },
   },
   resolve: {
-    extensions: [".js", ".jsx"], // Allow importing without specifying extensions
+    extensions: [".js", ".jsx"],
   },
   module: {
     rules: [
       {
-        test: /\.(pdf|woff|woff2|ttf|eot|js|jsx)$/,
+        test: /\.(js|jsx)$/,
         exclude: /node_modules/,
         use: {
           loader: "babel-loader",
@@ -28,27 +30,23 @@ module.exports = {
       },
       {
         test: /\.css$/,
-        use: ["style-loader", "css-loader"], // Load CSS files
+        use: ["style-loader", "css-loader"],
       },
       {
         test: /\.(png|jpe?g|gif|svg)$/i,
-        type: "asset/resource", // Automatically uses file-loader in Webpack 5+
+        type: "asset/resource",
+        generator: {
+          filename: "images/[name][hash][ext]",
+        },
       },
       {
         test: /\.pdf$/,
-        use: [
-          {
-            loader: "file-loader",
-            options: {
-              outputPath: "pdfs/", // Save PDFs in the 'pdfs' folder inside 'dist'
-            },
-          },
-        ],
+        type: "asset/resource",
+        generator: {
+          filename: "pdfs/[name][ext]",
+        },
       },
     ],
-  },
-  resolve: {
-    extensions: [".js", ".jsx"],
   },
   plugins: [
     new HtmlWebpackPlugin({
@@ -58,7 +56,7 @@ module.exports = {
   ],
   devServer: {
     static: "./dist",
-    port: 3000 || 3001, // Change port if needed
-    open: true, // Automatically opens the browser
+    port: 3000,
+    open: true,
   },
 };
