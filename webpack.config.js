@@ -4,9 +4,15 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 module.exports = {
   entry: "./src/index.js",
   output: {
+    filename: "[name].bundle.js", // Use the chunk's name to generate unique filenames
+    chunkFilename: "[name].[contenthash].js", // Ensure unique chunk names for dynamically imported chunks
     path: path.resolve(__dirname, "dist"),
-    filename: "bundle.js",
-    clean: true, // Cleans up the dist folder before each build
+  },
+  optimization: {
+    splitChunks: {
+      chunks: "all",
+      name: false, // Split all chunks (both synchronous and asynchronous)
+    },
   },
   resolve: {
     extensions: [".js", ".jsx"], // Allow importing without specifying extensions
