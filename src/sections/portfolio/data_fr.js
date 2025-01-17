@@ -46,7 +46,7 @@ const data = [
     icons: [icons.react, icons.node, icons.mongo, icons.css],
     screenShot: images.steemScreenshots,
     desc: "ReactJS | NodeJS | MongoDB",
-    demo: "",
+    demo: "https://steemgames.netlify.app/",
     github: "https://github.com/Juntakk/Steem",
     info: "Plateforme de commerce et de gestion, permet aux utilisateurs de parcourir tous les jeux vidéo dans une base de donnée Mongoose, de trier ceux-ci par catégorie et des les mettre dans leur liste de souhaits.",
   },
