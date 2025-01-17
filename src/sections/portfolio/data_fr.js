@@ -47,7 +47,7 @@ const data = [
     screenShot: images.steemScreenshots,
     desc: "ReactJS | NodeJS | MongoDB",
     demo: "https://steemgames.netlify.app/",
-    github: "https://github.com/Juntakk/Steem",
+    github: "https://github.com/Juntakk/steem",
     info: "Plateforme de commerce et de gestion, permet aux utilisateurs de parcourir tous les jeux vidéo dans une base de donnée Mongoose, de trier ceux-ci par catégorie et des les mettre dans leur liste de souhaits.",
   },
   {
