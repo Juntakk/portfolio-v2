@@ -43,7 +43,7 @@ const ProjectDetails = () => {
               src={item}
               alt={title}
               className="modal__image"
-              onClick={() => window.open(github, "_blank")}
+              onClick={() => window.open(hasDemo ? demo : github, "_blank")}
             />
           </SwiperSlide>
         ))}
@@ -67,7 +67,7 @@ const ProjectDetails = () => {
           className="git__btn"
           onClick={() => window.open(github, "_blank")}
         >
-          {language === "en" ? "See more" : "Voir plus"}
+          Code
         </button>
         {hasDemo && (
           <button

@@ -102,7 +102,7 @@
   font-size: 2rem;
   font-family: "Iceland";
   font-weight: 100;
-  padding: 0rem;
+  padding: 0.25rem;
   cursor: pointer;
   transition: transform 0.3s ease;
 }
