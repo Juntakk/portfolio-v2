@@ -1,3 +1,4 @@
+import React from "react";
 import { MdDarkMode } from "react-icons/md";
 import { MdOutlineWbSunny } from "react-icons/md";
 import { MdKeyboardDoubleArrowLeft } from "react-icons/md";
@@ -12,7 +13,6 @@ import CV_fr from "../../assets/NicolasGauthier_DEV_fr.pdf";
 import data_en from "./data";
 import data_fr from "./data_fr";
 import "./navbar.css";
-import React from "react";
 
 const Navbar = ({ toggleTheme, isDarkMode }) => {
   const { language } = useLanguage();

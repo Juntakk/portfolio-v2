@@ -14,10 +14,14 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.(js|jsx)$/,
+        test: /\.(pdf|woff|woff2|ttf|eot)$/,
         exclude: /node_modules/,
         use: {
           loader: "babel-loader",
+          options: {
+            name: "[name].[hash].[ext]",
+            outputPath: "assets/",
+          },
         },
       },
       {
