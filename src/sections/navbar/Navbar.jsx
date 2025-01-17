@@ -3,7 +3,6 @@ import { MdDarkMode } from "react-icons/md";
 import { MdOutlineWbSunny } from "react-icons/md";
 import { MdKeyboardDoubleArrowLeft } from "react-icons/md";
 import { MdKeyboardDoubleArrowRight } from "react-icons/md";
-
 import { useLanguage } from "../../theme/LanguageContext";
 import LanguageToggle from "../../theme/LanguageToggle";
 import { LiaCloudDownloadAltSolid } from "react-icons/lia";
@@ -174,7 +173,7 @@ const Navbar = ({ toggleTheme, isDarkMode }) => {
           }
           className="cv"
         >
-          <span className="cv__text">{language === "en" ? "CV" : "CV"}</span>{" "}
+          <span className="cv__text">CV</span>{" "}
           <LiaCloudDownloadAltSolid className="icon" />
         </a>
       </div>
