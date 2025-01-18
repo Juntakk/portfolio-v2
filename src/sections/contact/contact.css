@@ -58,7 +58,7 @@ input:-webkit-autofill:focus {
 }
 .form__field {
   font-family: inherit;
-  width: 100%;
+  width: 90%;
   border: none;
   border-bottom: 1px solid var(--color-quinquenary);
   outline: 0;
