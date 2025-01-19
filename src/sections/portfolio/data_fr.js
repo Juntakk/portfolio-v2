@@ -19,7 +19,7 @@ const data = [
     id: 2,
     category: "Web",
     image: images.seeFlix,
-    title: "Outil de recherche de films",
+    title: "Seeflix",
     icons: [icons.react, icons.node, icons.mongo, icons.tailwind],
     screenshots: images.steemScreenshots,
 
@@ -28,21 +28,21 @@ const data = [
     github: "https://github.com/Juntakk/SeeFlix",
     info: "Plateforme de recherche de films, permettant la recherche et le visionnage des détails de milliers de films. Utilisant l'API de IMDB les utilisateurs peuvent parcourir ce site en temps réel.",
   },
+  //   {
+  //     id: 3,
+  //     category: "Mobile",
+  //     image: images.Image1,
+  //     title: "Application d'entreprise",
+  //     icons: [icons.java, icons.sql, icons.android],
+  //     screenshots: images.steemScreenshots,
+
+  //     desc: "Java | Android Studio | SQL",
+  //     demo: "",
+  //     github: "https://github.com/Juntakk/Android-Camping-App",
+  //     info: "Application de réservation d'activités et de terrains pour une entreprise de camping, permet aux clients de choisir parmi plusieurs choix à partir d'une base de données SQL.",
+  //   },
   {
     id: 3,
-    category: "Mobile",
-    image: images.Image1,
-    title: "Application d'entreprise",
-    icons: [icons.java, icons.sql, icons.android],
-    screenshots: images.steemScreenshots,
-
-    desc: "Java | Android Studio | SQL",
-    demo: "",
-    github: "https://github.com/Juntakk/Android-Camping-App",
-    info: "Application de réservation d'activités et de terrains pour une entreprise de camping, permet aux clients de choisir parmi plusieurs choix à partir d'une base de données SQL.",
-  },
-  {
-    id: 4,
     category: "Web",
     image: images.Image9,
     title: "E-Commerce",
@@ -55,7 +55,7 @@ const data = [
     info: "Plateforme de commerce et de gestion, permet aux utilisateurs de parcourir tous les jeux vidéo dans une base de donnée Mongoose, de trier ceux-ci par catégorie et des les mettre dans leur liste de souhaits.",
   },
   {
-    id: 5,
+    id: 4,
     category: "Jeux",
     image: images.Image3,
     title: "Jeu de Combat",
@@ -78,10 +78,10 @@ const data = [
   //   info: "Planificateur de tâches et d'événements. Avec des fonctionnalités CRUD de base, les tâches de l'utilisateur sont sauvegardées localement, il peut les trier, les organiser par catégorie et modifier l'apparence de sa page.",
   // },
   {
-    id: 6,
+    id: 5,
     category: "Jeux",
     image: images.Image7,
-    title: "Mini RPG",
+    title: "RPG",
     icons: [icons.cplusplus, icons.raylib, icons.unreal],
     screenshots: images.steemScreenshots,
 
@@ -101,10 +101,10 @@ const data = [
   //   info: "Application éducative sur le système solaire, l'utilisateur se voit transporter dans notre galaxie où il peut interagir avec nos planètes pour en apprendre davantage sur celles-ci.",
   // },
   {
-    id: 7,
+    id: 6,
     category: "Mobile",
     image: images.Image12,
-    title: "Application de recettes",
+    title: "Recettes",
     icons: [icons.flutter, icons.dart, icons.firebase],
     screenshots: images.mealScreenshots,
 
@@ -124,10 +124,10 @@ const data = [
   //   info: "Application de chat mobile permettant à l'utilisateur de communiquer avec notre utilisateurs présents dans la BDD en temps réel. Il peut aussi supprimer ou modifier les messages qu'il a envoyé.",
   // },
   {
-    id: 8,
+    id: 7,
     category: "Mobile",
     image: images.Image14,
-    title: "Souvenirs de Voyages",
+    title: "Voyages",
     icons: [icons.flutter, icons.dart],
     screenshots: images.steemScreenshots,
 
@@ -137,10 +137,10 @@ const data = [
     info: "Application de voyage permettant aux utilisateurs de prendre des photo, de les sauvegarder dans l'application avec l'endroit exact qu'elles ont été prises et le tout est sauvegarder localement avec l'aide de l'API Google Maps.",
   },
   {
-    id: 9,
+    id: 8,
     category: "Mobile",
     image: images.BlogImage,
-    title: "Application de blog",
+    title: "Blog",
     icons: [icons.flutter, icons.dart],
     screenshots: images.steemScreenshots,
 

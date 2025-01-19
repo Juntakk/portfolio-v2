@@ -1,19 +1,21 @@
 .theme__modal {
-  background-color: var(--color-quinquenary);
+  background-color: var(--color-secondary);
   display: flex;
   flex-direction: row;
   align-items: flex-start;
-  width: 65%;
+  width: 75%;
   position: fixed;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   border-radius: 8px;
   z-index: 101;
-  height: 80vh;
+  height: 70vh;
   padding: 0;
   margin: 0;
   overflow: hidden;
+  min-width: 45%;
+  max-width: 50%;
 }
 
 .modal__body {
@@ -23,7 +25,9 @@
   align-items: flex-start;
   padding: 1rem;
   height: 100%;
-  background-color: var(--color-secondary);
+  max-width: 0%;
+  min-width: 35%;
+  background-color: var(--color-quinquenary);
 }
 
 .modal__text {
@@ -35,31 +39,38 @@
 }
 
 .modal__title {
-  font-size: 4rem;
+  font-size: 3rem;
   font-weight: 500;
+  width: 100%;
   font-family: "Iceland";
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
   color: var(--color-primary);
 }
-
+.close__btn {
+  font-size: 2rem;
+}
 .modal__info {
   font-family: "Iceland";
   margin-top: 2rem;
-  font-size: 1.75rem;
+  font-size: 1.5rem;
   font-weight: 100;
-  line-height: 1.6;
+  line-height: 1.7;
 }
 
 .swiper__container {
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
+  justify-content: space-around;
+  align-items: center;
   height: 100%;
-  flex: 1;
+  max-width: 100%;
 }
 
 .myDetailsSwiper {
-  height: 50vh;
+  height: 35vh;
   margin-inline: 0;
   margin-block: 0;
 }
@@ -98,8 +109,9 @@
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  padding-top: 4rem;
-  gap: 2rem;
+  height: 20%;
+  gap: 1rem;
+  padding: 1rem;
   width: 100%;
 }
 
@@ -160,66 +172,21 @@
 /* Tablet */
 @media only screen and (min-width: 768px) and (max-width: 1025px) {
   .theme__modal {
-    height: 70%;
-    width: 75%;
-    padding: 0rem;
-  }
-
-  .swiper__container {
-    max-height: 70%;
-  }
-
-  .myDetailsSwiper {
-    height: 100%;
-    width: 100%;
-  }
-  .modal__title {
-    font-size: 2rem;
-    padding: 1rem;
-  }
-
-  .modal__info {
-    font-size: 1.2rem;
-    margin-top: 0rem;
-    padding: 1rem;
-  }
-  .icon {
-    font-size: 2rem;
-  }
-  .icon span {
-    font-size: 1.2rem;
-  }
-  .modal__icons {
-    padding-top: 1.3rem;
+    background-color: var(--color-secondary);
     display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 3rem;
-    margin-bottom: 1rem;
-  }
-  .btn__container {
-    width: 100%;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    margin-top: auto;
-    padding: 0.75rem;
-    margin-top: 1rem;
-    gap: 2rem;
-  }
-}
-/* Mobile landscape */
-@media only screen and (min-width: 480px) and (max-width: 767px) {
-}
-
-/* Mobile portrait */
-@media only screen and (min-width: 320px) and (max-width: 479px) {
-  .theme__modal {
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 95%;
-    height: 60vh;
+    flex-direction: row;
+    align-items: flex-start;
+    width: 85%;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 8px;
+    z-index: 101;
+    height: 70vh;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
   }
 
   .modal__body {
@@ -228,8 +195,9 @@
     justify-content: flex-start;
     align-items: flex-start;
     padding: 1rem;
-    max-height: 70%;
-    background-color: var(--color-secondary);
+    height: 100%;
+    width: 45%;
+    background-color: var(--color-quinquenary);
   }
 
   .modal__text {
@@ -241,29 +209,68 @@
   }
 
   .modal__title {
+    font-size: 3rem;
+    font-weight: 500;
+    width: 100%;
+    font-family: "Iceland";
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--color-primary);
+  }
+  .close__btn {
     font-size: 2rem;
   }
-
   .modal__info {
-    margin-top: 1rem;
-    font-size: 1.6rem;
-    line-height: 1.2;
+    font-family: "Iceland";
+    margin-top: 2rem;
+    font-size: 1.5rem;
+    font-weight: 100;
+    line-height: 1.7;
+  }
+
+  .swiper__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 100%;
   }
 
   .myDetailsSwiper {
-    display: none;
+    height: 35vh;
+    margin-inline: 0;
+    margin-block: 0;
+  }
+
+  .swiper-slide {
+    height: 100%;
+    border-radius: 10px;
+    margin-inline: 0;
+    margin-block: 0;
   }
 
   .swiper_img {
-    display: none;
+    max-width: 100%;
+    object-fit: fill;
+    border-radius: 5px;
+    height: 100%;
+    width: 100%;
+    margin-inline: 0;
+    padding: 0;
+    margin-block: 0;
   }
 
   .swiper-pagination-bullet {
-    display: none;
+    width: 12px;
+    height: 12px;
+    opacity: 0.8;
+    background-color: var(--color-quinquenary);
   }
 
   .swiper-pagination-bullet-active {
-    display: none;
+    background-color: var(--color-quaternary);
   }
 
   .modal__icons {
@@ -271,11 +278,10 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    padding: 0rem;
-    gap: 0rem;
-    margin-top: 1rem;
+    height: 40%;
+    gap: 1rem;
+    padding: 1rem;
     width: 100%;
-    height: 100%;
   }
 
   .icon {
@@ -285,7 +291,6 @@
 
   .icon span {
     font-size: 1rem;
-    padding: 1rem;
     font-family: "Iceland";
     cursor: default;
   }
@@ -313,5 +318,200 @@
 
   .git__btn:hover {
     border-bottom: 1px solid var(--color-primary);
+  }
+}
+/* Mobile landscape */
+@media only screen and (min-width: 480px) and (max-width: 768px) {
+  .theme__modal {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 85%;
+    height: 50vh;
+  }
+
+  .modal__body {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 1rem;
+    max-height: 60%;
+    background-color: var(--color-secondary);
+    width: 100%;
+  }
+
+  .modal__text {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    color: var(--color-primary);
+  }
+
+  .modal__title {
+    font-size: 2.8rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .close__btn {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+    margin-left: auto;
+    font-size: 2rem;
+    margin-bottom: auto;
+  }
+
+  .modal__info {
+    margin-top: 0rem;
+    font-size: 1.6rem;
+    line-height: 1.2;
+  }
+
+  .swiper__container {
+    width: 100%;
+  }
+
+  .myDetailsSwiper {
+    display: none;
+  }
+
+  .swiper_img {
+    display: none;
+  }
+
+  .swiper-pagination-bullet {
+    display: none;
+  }
+
+  .swiper-pagination-bullet-active {
+    display: none;
+  }
+
+  .modal__icons {
+    padding: 0rem;
+    gap: 2rem;
+    margin-top: 1rem;
+    width: 100%;
+    height: 100%;
+  }
+
+  .icon {
+    font-size: 3.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .btn__container {
+    padding: 1rem;
+    gap: 2rem;
+  }
+
+  .git__btn {
+    font-size: 2rem;
+  }
+}
+
+/* Mobile portrait */
+@media only screen and (min-width: 320px) and (max-width: 480px) {
+  .theme__modal {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 95%;
+    height: 50vh;
+  }
+
+  .modal__body {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 1rem;
+    max-height: 60%;
+    background-color: var(--color-secondary);
+    width: 100%;
+  }
+
+  .modal__text {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    color: var(--color-primary);
+  }
+
+  .modal__title {
+    font-size: 2.5rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .close__btn {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+    margin-left: auto;
+    font-size: 2rem;
+    margin-bottom: auto;
+  }
+
+  .modal__info {
+    margin-top: 1rem;
+    font-size: 1.5rem;
+    line-height: 1.2;
+  }
+
+  .swiper__container {
+    width: 100%;
+  }
+
+  .myDetailsSwiper {
+    display: none;
+  }
+
+  .swiper_img {
+    display: none;
+  }
+
+  .swiper-pagination-bullet {
+    display: none;
+  }
+
+  .swiper-pagination-bullet-active {
+    display: none;
+  }
+
+  .modal__icons {
+    padding: 0rem;
+    gap: 2rem;
+    margin-top: 1rem;
+    width: 100%;
+    height: 100%;
+  }
+
+  .icon {
+    font-size: 3.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .btn__container {
+    padding: 1rem;
+    gap: 2rem;
+  }
+
+  .git__btn {
+    font-size: 2rem;
   }
 }

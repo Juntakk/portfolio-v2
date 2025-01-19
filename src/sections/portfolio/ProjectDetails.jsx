@@ -8,9 +8,10 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
+import { RxCross1 } from "react-icons/rx";
 
 const ProjectDetails = () => {
-  const { modalData } = useModalContext();
+  const { modalData, closeModalHandler } = useModalContext();
   const { language } = useLanguage();
   const [hasDemo, setHasDemo] = useState(false);
 
@@ -32,7 +33,13 @@ const ProjectDetails = () => {
     <Modal className="theme__modal">
       <div className="modal__body">
         <div className="modal__text">
-          <h1 className="modal__title">{title}</h1>
+          <h1 className="modal__title">
+            {title}{" "}
+            <span className="close__btn" onClick={closeModalHandler}>
+              <RxCross1 />
+            </span>
+          </h1>
+
           <p className="modal__info">{info}</p>
         </div>
       </div>
