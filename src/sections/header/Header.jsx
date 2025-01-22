@@ -64,7 +64,7 @@ const Header = ({ isLoading, setIsLoading }) => {
             color: "var(--color-black)",
           }}
         >
-          <span className="typing iceland-regular">Nicolas H. Gauthier</span>
+          <span className="typing iceland-regular">Nicolas Gauthier</span>
         </h1>
         <p
           className={`desc_p typing-effect ${
