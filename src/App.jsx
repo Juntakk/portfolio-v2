@@ -181,8 +181,8 @@ const App = () => {
         <Portfolio />
         <div className="spacing3"></div>
         <Donut />
-        {/* <div className="spacing2"></div>
-        <Testimonials /> */}
+        <div className="spacing2"></div>
+        <Testimonials />
         <div className="spacing2"></div>
         <Contact />
         <Footer />
