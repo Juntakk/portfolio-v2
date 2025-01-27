@@ -31,7 +31,7 @@
 .desc_p {
   font-size: 1.75rem;
   font-family: "Iceland", serif;
-  color: var(--color-primary);
+  color: var(--color-tertiary) !important;
   margin-bottom: 1rem;
 }
 .down__arrow {

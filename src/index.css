@@ -55,18 +55,18 @@ html {
   --color-quinquenary: #f2f2f2;
 }
 main.color-1 {
-  --color-primary: #243127;
-  --color-secondary: #ffdf7c;
-  --color-tertiary: #feb640;
-  --color-quaternary: #a46379;
-  --color-quinquenary: #fdf8e7;
+  --color-primary: #0b0c10;
+  --color-secondary: #45a29e;
+  --color-tertiary: #1f2833;
+  --color-quaternary: #58d1c9;
+  --color-quinquenary: #ffffff;
 }
 main.color-2 {
-  --color-primary: #eef3f9;
-  --color-secondary: #1d3f58;
-  --color-tertiary: #b3cde4;
-  --color-quaternary: #537692;
-  --color-quinquenary: #001b2e;
+  --color-primary: #ffffff;
+  --color-secondary: #1f2833;
+  --color-tertiary: #66fcf1;
+  --color-quaternary: #45a29e;
+  --color-quinquenary: #0b0c10;
 }
 
 .container {

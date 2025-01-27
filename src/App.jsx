@@ -30,8 +30,8 @@ const App = () => {
   const { themeState, themeHandler } = useThemeContext();
 
   const colorMap = {
-    "color-1": "#feb640",
-    "color-2": "#537692",
+    "color-1": "#45a29e",
+    "color-2": "#45a29e",
   };
 
   const handleParticleColor = (theme) => colorMap[theme] || "color-1";
