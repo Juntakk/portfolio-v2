@@ -1,22 +1,21 @@
 .cursor {
   position: fixed;
-
   background-color: var(--color-quinquenary);
   border-radius: 50%;
-  border: 2px dashed var(--color-quaternary);
+  border: 2px dashed orangered;
   transform: translate(-50%, -50%) rotate(0deg);
   transition: width 0.3s, height 0.3s, background-color 0.7s ease-in-out,
     border 0.7s ease-in-out;
   z-index: 999;
   pointer-events: none;
-  animation: spin 10s linear infinite;
+  animation: spin 7.5s linear infinite;
 }
 
 .hover-cursor {
   width: 2rem;
   height: 2rem;
   background-color: transparent;
-  border: 2px dashed var(--color-primary);
+  border: 2px dashed orangered;
 }
 
 @keyframes spin {
