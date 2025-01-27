@@ -17,11 +17,11 @@ const mockData = [
   { name: "NodeJs" },
   { name: "Volleyball" },
   { name: "Java" },
-  { name: "Html" },
-  { name: "WordPress" },
-  { name: "Shopify" },
-  { name: "CSS" },
-  { name: "Laravel" },
+  //   { name: "Html" },
+  //   { name: "WordPress" },
+  //   { name: "Shopify" },
+  //   { name: "CSS" },
+  //   { name: "Laravel" },
 ];
 
 const pieLayout = pie()
@@ -36,7 +36,7 @@ const Donut = () => {
   const updateArcs = useCallback(() => {
     const data = mockData.map(({ name }) => ({
       name,
-      value: getRandom(45, 55),
+      value: getRandom(10, 55),
     }));
     setArcs(pieLayout(sortBy(data, (d) => d.name)));
   }, []);
@@ -215,7 +215,7 @@ const Donut = () => {
             data-aos-duration="2000"
           >
             Allô, je m'appelle <span className="nick">Nick</span>.<br></br> Je
-            créer des <br></br>
+            crée des <br></br>
             <span className="nick">{currentText || "\u200B"}</span>
           </p>
         )}
