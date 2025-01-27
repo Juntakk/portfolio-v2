@@ -17,6 +17,7 @@ export const ModalProvider = ({ children }) => {
     setShowModal(false);
     setThemeClass("");
     document.body.style.overflow = "";
+    console.log("closed");
   };
 
   return (

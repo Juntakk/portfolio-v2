@@ -38,7 +38,11 @@ const Project = ({ project, data }) => {
   };
   return (
     <>
-      <div className="portfolio__project">
+      <div
+        className="portfolio__project"
+        data-aos="fade-left"
+        data-aos-duration="1500"
+      >
         <div className="inner_card">
           <div className="front">
             <img src={projectData.image} alt="" />

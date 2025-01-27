@@ -11,8 +11,10 @@ const ProjectsCategories = ({ categories, onFilterProjects }) => {
   }, [activeCategory, onFilterProjects]);
 
   const changeCategoryHandler = (activeCat) => {
-    setActiveCategory(activeCat);
-    onFilterProjects(activeCat);
+    setTimeout(() => {
+      setActiveCategory(activeCat);
+      onFilterProjects(activeCat);
+    }, 200);
   };
 
   return (

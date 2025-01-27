@@ -19,6 +19,7 @@ import { useThemeContext } from "./context/theme-context";
 import Footer from "./components/Footer";
 import ProjectDetails from "./sections/portfolio/ProjectDetails";
 import Modal from "./components/Modal";
+import Cursor from "./components/Cursor";
 
 const App = () => {
   const mainRef = useRef();
@@ -77,10 +78,10 @@ const App = () => {
     if (loadingElement) {
       setTimeout(() => {
         loadingElement.classList.add("fade-in");
-        setTimeout(() => setIsLoading(false), 2000); // Matches transition time
+        setTimeout(() => setIsLoading(false), 2000);
       }, 2000);
     } else {
-      setIsLoading(false); // Fallback if element doesn't exist
+      setIsLoading(false);
     }
   }, []);
 
@@ -188,6 +189,7 @@ const App = () => {
         <Footer />
         <ProjectDetails />
         <Modal />
+        <Cursor />
         {/* <Card /> */}
         <FloatingNav />
       </main>

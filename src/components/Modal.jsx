@@ -11,15 +11,14 @@ const Modal = ({ className, children }) => {
   if (!showModal) return null;
 
   return (
-    <main className={themeState.primary}>
-      {/* Backdrop */}
+    <>
       <div
         id="backdrop"
         className="modal-backdrop"
         onClick={closeModalHandler}
       ></div>
       <div className={`modal-content ${className}`}>{children}</div>
-    </main>
+    </>
   );
 };
 

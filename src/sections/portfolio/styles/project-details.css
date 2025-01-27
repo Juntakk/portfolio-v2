@@ -20,6 +20,10 @@
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* Add some shadow for better visibility */
   font-family: "Iceland";
 }
+.close_modal {
+  width: 2rem;
+  height: 2rem;
+}
 
 .modal__image-container {
   width: 100%;
@@ -62,6 +66,7 @@
 .modal__info {
   font-size: 1.2rem;
   line-height: 1.5;
+  z-index: 1000;
 }
 
 .icon {
@@ -103,18 +108,19 @@
   font-family: "Iceland";
   font-weight: 100;
   padding: 0.25rem;
-  cursor: pointer;
   transition: transform 0.3s ease;
+  &:hover {
+    transform: scale(1.2);
+  }
 }
 
 .btn__container span {
   font-size: 1.5rem;
   color: var(--color-primary);
-  cursor: pointer;
-}
-
-.git__btn:hover {
-  transform: scale(1.05);
+  transition: all 0.5s ease-in-out;
+  &:hover {
+    transform: rotate(90deg) scale(1.2);
+  }
 }
 
 /* Backdrop */

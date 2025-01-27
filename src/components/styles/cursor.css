@@ -1,0 +1,29 @@
+.cursor {
+  position: fixed;
+
+  background-color: var(--color-quinquenary);
+  border-radius: 50%;
+  border: 2px dashed var(--color-quaternary);
+  transform: translate(-50%, -50%) rotate(0deg);
+  transition: width 0.3s, height 0.3s, background-color 0.7s ease-in-out,
+    border 0.7s ease-in-out;
+  z-index: 999;
+  pointer-events: none;
+  animation: spin 10s linear infinite;
+}
+
+.hover-cursor {
+  width: 2rem;
+  height: 2rem;
+  background-color: transparent;
+  border: 2px dashed var(--color-primary);
+}
+
+@keyframes spin {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}

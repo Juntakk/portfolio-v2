@@ -7,9 +7,9 @@ const Footer = () => {
   return (
     <div className="footer__1">
       {language === "en" ? (
-        <p>&copy; 2025 Nicolas H. Gauthier. All rights reserved.</p>
+        <p>&copy; 2025 Nicolas Gauthier. All rights reserved.</p>
       ) : (
-        <p>&copy; 2025 Nicolas H. Gauthier. Tous droits réservés.</p>
+        <p>&copy; 2025 Nicolas Gauthier. Tous droits réservés.</p>
       )}
     </div>
   );

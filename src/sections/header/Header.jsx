@@ -10,8 +10,8 @@ const Header = ({ isLoading, setIsLoading }) => {
   const { language } = useLanguage();
   const texts =
     language === "en"
-      ? ["Web", "Mobile", "Video Game"]
-      : ["Web", "Mobile", "de Jeux Vidéo"];
+      ? ["Web", "Mobile", "Video Game", "Software"]
+      : ["Web", "Mobile", "Jeux Vidéo", "Logiciels"];
   const [currentText, setCurrentText] = useState("");
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
