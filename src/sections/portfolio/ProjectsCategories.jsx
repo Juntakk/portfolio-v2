@@ -2,9 +2,13 @@ import { useState, useEffect } from "react";
 import CategoryButton from "./CategoryButton";
 import React from "react";
 import "./styles/project-categories.css";
+import { useLanguage } from "../../theme/LanguageContext";
 
 const ProjectsCategories = ({ categories, onFilterProjects }) => {
-  const [activeCategory, setActiveCategory] = useState("Web");
+  const language = useLanguage();
+  const [activeCategory, setActiveCategory] = useState(
+    language === "en" ? "All" : "Tout"
+  );
 
   useEffect(() => {
     onFilterProjects(activeCategory);

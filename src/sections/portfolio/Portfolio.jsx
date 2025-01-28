@@ -5,16 +5,16 @@ import data_en from "./data";
 import data_fr from "./data_fr";
 import { useState, useMemo, useCallback, useRef } from "react";
 import { useLanguage } from "../../theme/LanguageContext";
-import useVisibility from "../../hooks/useVisibility";
 import React from "react";
 
 const Portfolio = () => {
   const { language } = useLanguage();
   const data = language === "en" ? data_en : data_fr;
   const myRef = useRef();
-  const isVisible = useVisibility(myRef, 0.5);
   const [projects, setProjects] = useState(() =>
-    data.filter((project) => project.category === "Web")
+    data.filter((project) =>
+      (project.category === language) === "en" ? "All" : "Tout"
+    )
   );
 
   const categories = useMemo(() => {
