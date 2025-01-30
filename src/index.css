@@ -48,11 +48,11 @@ html {
   scroll-behavior: smooth;
 }
 :root {
-  --color-primary: #333333;
-  --color-secondary: #92a8d1;
-  --color-tertiary: #666666;
-  --color-quaternary: #f7cac9;
-  --color-quinquenary: #f2f2f2;
+  --color-primary: #ffffff;
+  --color-secondary: #1f2833;
+  --color-tertiary: #66fcf1;
+  --color-quaternary: #45a29e;
+  --color-quinquenary: #0b0c10;
 }
 main.color-1 {
   --color-primary: #0b0c10;
