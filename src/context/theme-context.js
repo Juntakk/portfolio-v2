@@ -6,11 +6,11 @@ export const ThemeContext = createContext();
 let initialThemeState;
 try {
   initialThemeState = JSON.parse(localStorage.getItem("themeSettings")) || {
-    primary: "color-2",
+    primary: "color-1",
   };
 } catch (error) {
   console.error("Error parsing theme settings from localStorage:", error);
-  initialThemeState = { primary: "color-2" };
+  initialThemeState = { primary: "color-1" };
 }
 
 export const ThemeProvider = ({ children }) => {

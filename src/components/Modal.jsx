@@ -6,7 +6,6 @@ import { useThemeContext } from "../context/theme-context";
 
 const Modal = ({ className, children }) => {
   const { showModal, closeModalHandler } = useModalContext();
-  const { themeState } = useThemeContext();
 
   if (!showModal) return null;
 
