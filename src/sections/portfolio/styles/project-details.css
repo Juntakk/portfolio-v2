@@ -8,16 +8,6 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-<<<<<<< Updated upstream
-=======
-  border: 2px solid var(--color-secondary);
-  background-color: var(--color-primary);
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start; /* Changed for more predictable layout */
-  align-items: center;
-  padding: 1rem;
->>>>>>> Stashed changes
   border-radius: 8px;
   z-index: 101;
   height: 70vh;
@@ -34,28 +24,16 @@
   justify-content: flex-start;
   align-items: flex-start;
   padding: 1rem;
-<<<<<<< Updated upstream
   height: 100%;
   max-width: 0%;
   min-width: 35%;
   background-color: var(--color-quinquenary);
-=======
-  width: 100%;
-}
-
-.modal__title {
-  font-size: 2rem;
-  font-weight: bold;
-  color: var(--color-secondary);
-  margin: 0;
->>>>>>> Stashed changes
 }
 
 .modal__text {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-<<<<<<< Updated upstream
   align-items: flex-start;
   color: var(--color-primary);
 }
@@ -63,24 +41,6 @@
 .modal__title {
   font-size: 3rem;
   font-weight: 500;
-=======
-  align-items: flex-start; /* Ensure text aligns well */
-  color: var(--color-secondary);
-}
-
-.modal__info {
-  font-size: 1.2rem;
-  line-height: 1.5;
-  z-index: 1000;
-}
-
-.icon {
-  color: var(--color-secondary);
-  font-size: 2rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
->>>>>>> Stashed changes
   width: 100%;
   font-family: "Iceland";
   display: flex;
@@ -149,12 +109,7 @@
   flex-direction: row;
   justify-content: center;
   align-items: center;
-<<<<<<< Updated upstream
   height: 20%;
-=======
-  color: var(--color-secondary);
-  flex-wrap: wrap;
->>>>>>> Stashed changes
   gap: 1rem;
   padding: 1rem;
   width: 100%;
@@ -183,13 +138,8 @@
 
 .git__btn {
   background-color: transparent;
-<<<<<<< Updated upstream
   color: var(--color-primary);
   font-size: 1.6rem;
-=======
-  color: var(--color-secondary);
-  font-size: 2rem;
->>>>>>> Stashed changes
   font-family: "Iceland";
   padding: 0rem;
   cursor: pointer;
@@ -197,18 +147,8 @@
   border-bottom: 1px solid transparent;
 }
 
-<<<<<<< Updated upstream
 .git__btn:hover {
   border-bottom: 1px solid var(--color-primary);
-=======
-.btn__container span {
-  font-size: 1.5rem;
-  color: var(--color-secondary);
-  transition: all 0.5s ease-in-out;
-  &:hover {
-    transform: rotate(90deg) scale(1.2);
-  }
->>>>>>> Stashed changes
 }
 
 #backdrop,
@@ -283,7 +223,6 @@
     font-size: 2rem;
   }
   .modal__info {
-<<<<<<< Updated upstream
     font-family: "Iceland";
     margin-top: 2rem;
     font-size: 1.5rem;
@@ -313,10 +252,6 @@
   }
 
   .swiper_img {
-=======
-    font-size: 1rem;
-    line-height: 1.4;
->>>>>>> Stashed changes
     max-width: 100%;
     object-fit: fill;
     border-radius: 5px;

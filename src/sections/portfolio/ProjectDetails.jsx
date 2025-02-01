@@ -42,28 +42,6 @@ const ProjectDetails = () => {
 
   return (
     <Modal className="theme__modal">
-<<<<<<< Updated upstream
-=======
-      <Swiper
-        className="modal__image-container"
-        modules={[Pagination, Navigation, Autoplay]}
-        autoplay={{
-          delay: 1800,
-        }}
-        loop={true}
-      >
-        {screenShot.map((item, key) => (
-          <SwiperSlide>
-            <img
-              src={item}
-              alt={title}
-              className="modal__image"
-              onClick={() => window.open(hasDemo ? demo : github, "_blank")}
-            />
-          </SwiperSlide>
-        ))}
-      </Swiper>
->>>>>>> Stashed changes
       <div className="modal__body">
         <div className="modal__text">
           <h1 className="modal__title">
@@ -75,7 +53,6 @@ const ProjectDetails = () => {
 
           <p className="modal__info">{info}</p>
         </div>
-<<<<<<< Updated upstream
       </div>
       <div className="swiper__container">
         <Swiper
@@ -102,9 +79,6 @@ const ProjectDetails = () => {
           ))}
         </Swiper>
         <div className="modal__icons">
-=======
-        <div className="modal__icons hover-this">
->>>>>>> Stashed changes
           {icons.map(([icon, name], index) => (
             <div key={index} className="icon">
               {icon}
@@ -112,7 +86,6 @@ const ProjectDetails = () => {
             </div>
           ))}
         </div>
-<<<<<<< Updated upstream
         <div className="btn__container">
           <button
             className="git__btn"
@@ -129,27 +102,6 @@ const ProjectDetails = () => {
             </button>
           )}
         </div>
-=======
-      </div>
-      <div className="btn__container">
-        <button
-          className="git__btn hover-this"
-          onClick={() => window.open(github, "_blank")}
-        >
-          Code
-        </button>
-        {hasDemo && (
-          <button
-            className="git__btn hover-this"
-            onClick={() => window.open(demo, "_blank")}
-          >
-            Demo
-          </button>
-        )}
-        <span onClick={closeModalHandler} className="hover-this">
-          <RxCross1 />
-        </span>
->>>>>>> Stashed changes
       </div>
     </Modal>
   );

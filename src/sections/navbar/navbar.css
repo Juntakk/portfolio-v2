@@ -226,10 +226,6 @@ nav {
     flex-direction: row;
     justify-content: start;
     padding: 0.25rem;
-<<<<<<< Updated upstream
-=======
-    background-color: var(--color-primary);
->>>>>>> Stashed changes
   }
   .nav__container.hide {
     transform: translateX(-100%);

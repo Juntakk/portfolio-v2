@@ -64,13 +64,7 @@ const Header = ({ isLoading, setIsLoading }) => {
             color: "var(--color-black)",
           }}
         >
-<<<<<<< Updated upstream
           <span className="typing iceland-regular">Nicolas H. Gauthier</span>
-=======
-          <span className="typing iceland-regular hover-this">
-            Nicolas Gauthier
-          </span>
->>>>>>> Stashed changes
         </h1>
         <p
           className={`desc_p typing-effect ${

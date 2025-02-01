@@ -11,11 +11,7 @@ import CV from "../../assets/NicolasGauthier_Dev.pdf";
 import data_en from "./data";
 import data_fr from "./data_fr";
 import "./navbar.css";
-<<<<<<< Updated upstream
 import React from "react";
-=======
-import { useThemeContext } from "../../context/theme-context";
->>>>>>> Stashed changes
 
 const Navbar = ({ toggleTheme, isDarkMode }) => {
   const { language } = useLanguage();
@@ -27,7 +23,6 @@ const Navbar = ({ toggleTheme, isDarkMode }) => {
   const [isScrolling, setIsScrolling] = useState(false);
   const [scrollingTimeout, setScrollingTimeout] = useState(null);
   const [isHovered, setIsHovered] = useState(false);
-  const { themeState } = useThemeContext();
 
   useEffect(() => {
     if (isMobile) return;
@@ -174,15 +169,8 @@ const Navbar = ({ toggleTheme, isDarkMode }) => {
           }
           className="cv hover-this"
         >
-<<<<<<< Updated upstream
           <span className="cv__text">{language === "en" ? "CV" : "CV"}</span>{" "}
           <LiaCloudDownloadAltSolid className="icon" />
-=======
-          <span className="cv__text hover-this">CV</span>{" "}
-          <LiaCloudDownloadAltSolid
-            color={themeState.primary === "color-1" ? "white" : "black"}
-          />
->>>>>>> Stashed changes
         </a>
       </div>
       {/* Handle */}

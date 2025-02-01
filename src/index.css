@@ -36,7 +36,6 @@ html {
   scroll-behavior: smooth;
 }
 :root {
-<<<<<<< Updated upstream
   --color-primary: #333333;
   --color-secondary: #92a8d1;
   --color-tertiary: #666666;
@@ -56,27 +55,6 @@ main.color-2 {
   --color-tertiary: #b3cde4;
   --color-quaternary: #537692;
   --color-quinquenary: #001b2e;
-=======
-  --color-primary: #fff;
-  --color-secondary: #000;
-  --color-tertiary: #fff;
-  --color-quaternary: #000;
-  --color-quinquenary: #fff;
-}
-main.color-1 {
-  --color-primary: #000;
-  --color-secondary: #fff;
-  --color-tertiary: #000;
-  --color-quaternary: #fff;
-  --color-quinquenary: #000;
-}
-main.color-2 {
-  --color-primary: #fff;
-  --color-secondary: #000;
-  --color-tertiary: #fff;
-  --color-quaternary: #000;
-  --color-quinquenary: #fff;
->>>>>>> Stashed changes
 }
 
 .container {

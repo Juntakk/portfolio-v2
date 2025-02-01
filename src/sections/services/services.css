@@ -373,12 +373,4 @@ h2.none {
     height: 150px;
     transition: 0.5s;
   }
-<<<<<<< Updated upstream
-=======
-  .services__container .service__card .face.face2 .content p {
-    margin: 0;
-    padding: 0;
-    font-size: 1rem;
-  }
->>>>>>> Stashed changes
 }

@@ -30,13 +30,8 @@ const App = () => {
   const { themeState, themeHandler } = useThemeContext();
 
   const colorMap = {
-<<<<<<< Updated upstream
     "color-1": "#feb640",
     "color-2": "#537692",
-=======
-    "color-1": "#fff",
-    "color-2": "#000",
->>>>>>> Stashed changes
   };
 
   const handleParticleColor = (theme) => colorMap[theme] || "color-1";
