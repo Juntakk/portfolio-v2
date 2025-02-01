@@ -3,8 +3,8 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  border: 2px solid var(--color-quaternary);
-  background-color: var(--color-secondary);
+  border: 2px solid var(--color-secondary);
+  background-color: var(--color-primary);
   display: flex;
   flex-direction: column;
   justify-content: flex-start; /* Changed for more predictable layout */
@@ -51,7 +51,7 @@
 .modal__title {
   font-size: 2rem;
   font-weight: bold;
-  color: var(--color-primary);
+  color: var(--color-secondary);
   margin: 0;
 }
 
@@ -60,7 +60,7 @@
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start; /* Ensure text aligns well */
-  color: var(--color-primary);
+  color: var(--color-secondary);
 }
 
 .modal__info {
@@ -70,7 +70,7 @@
 }
 
 .icon {
-  color: var(--color-primary);
+  color: var(--color-secondary);
   font-size: 2rem;
   display: flex;
   justify-content: center;
@@ -87,6 +87,7 @@
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+  color: var(--color-secondary);
   flex-wrap: wrap;
   gap: 1rem;
   width: 100%;
@@ -103,7 +104,7 @@
 
 .git__btn {
   background-color: transparent;
-  color: var(--color-primary);
+  color: var(--color-secondary);
   font-size: 2rem;
   font-family: "Iceland";
   font-weight: 100;
@@ -116,7 +117,7 @@
 
 .btn__container span {
   font-size: 1.5rem;
-  color: var(--color-primary);
+  color: var(--color-secondary);
   transition: all 0.5s ease-in-out;
   &:hover {
     transform: rotate(90deg) scale(1.2);
@@ -187,7 +188,6 @@
   .modal__info {
     font-size: 1rem;
     line-height: 1.4;
-    color: var(--color-primary);
     max-width: 100%;
   }
 

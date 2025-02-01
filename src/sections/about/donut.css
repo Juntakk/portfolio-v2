@@ -11,7 +11,7 @@
   height: 100%;
   z-index: 20;
   opacity: 0.8;
-  color: var(--color-primary);
+  color: var(--color-secondary);
   font-family: "Iceland";
   display: flex;
   flex-direction: column;
@@ -39,7 +39,7 @@
 text {
   position: relative;
   font-weight: 500;
-  fill: var(--color-primary);
+  fill: var(--color-secondary);
   font-family: "Iceland";
 }
 polyline {
@@ -49,13 +49,14 @@ svg.donut {
   width: 100%;
 }
 .arc-path-reactjs {
-  fill: var(--color-tertiary);
+  fill: var(--color-primary);
+  border: 1px solid var(--color-primary);
 }
 .arc-path-python {
   fill: var(--color-quaternary);
 }
 .arc-path-NodeJs {
-  fill: var(--color-secondary);
+  fill: var(--color-primary);
 }
 .arc-path-volleyball {
   fill: var(--color-secondary);
@@ -98,7 +99,6 @@ svg.donut {
   text {
     position: relative;
     font-weight: 500;
-    fill: var(--color-primary);
     font-family: "Iceland";
   }
   #about {

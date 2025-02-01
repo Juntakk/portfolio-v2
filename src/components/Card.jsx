@@ -3,7 +3,7 @@ import "./styles/card.css";
 
 const Card = ({ children, className, onClick }) => {
   return (
-    <article className={`card ${className}`} onClick={onClick}>
+    <article className={`card hover-this ${className}`} onClick={onClick}>
       {children}
     </article>
   );

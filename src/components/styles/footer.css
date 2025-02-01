@@ -1,8 +1,8 @@
 .footer__1 {
   width: 100%;
   text-align: center;
-  color: var(--color-primary);
+  color: var(--color-secondary);
   font-family: "Iceland";
   cursor: default;
-  background-color: var(--color-quinquenary);
+  background-color: var(--color-primary);
 }

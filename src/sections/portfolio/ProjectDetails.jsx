@@ -10,8 +10,19 @@ import { Autoplay, Navigation, Pagination } from "swiper/modules";
 
 const ProjectDetails = () => {
   const { modalData, closeModalHandler } = useModalContext();
-  const { language } = useLanguage();
   const [hasDemo, setHasDemo] = useState(false);
+
+  useEffect(() => {
+    const handleEscape = (event) => {
+      if (event.key === "Escape") {
+        closeModalHandler();
+      }
+    };
+    window.addEventListener("keydown", handleEscape);
+    return () => {
+      window.removeEventListener("keydown", handleEscape);
+    };
+  }, [closeModalHandler]);
 
   useEffect(() => {
     if (modalData && modalData.projectData) {
@@ -20,7 +31,7 @@ const ProjectDetails = () => {
     } else {
       setHasDemo(false);
     }
-  }, [modalData]); // Re-run effect when modalData changes
+  }, [modalData]);
 
   if (!modalData || !modalData.projectData) return null;
 
@@ -33,7 +44,7 @@ const ProjectDetails = () => {
         className="modal__image-container"
         modules={[Pagination, Navigation, Autoplay]}
         autoplay={{
-          delay: 2500,
+          delay: 1800,
         }}
         loop={true}
       >
@@ -53,7 +64,7 @@ const ProjectDetails = () => {
           <h1 className="modal__title">{title}</h1>
           <p className="modal__info">{info}</p>
         </div>
-        <div className="modal__icons">
+        <div className="modal__icons hover-this">
           {icons.map(([icon, name], index) => (
             <div key={index} className="icon">
               {icon}
@@ -64,20 +75,20 @@ const ProjectDetails = () => {
       </div>
       <div className="btn__container">
         <button
-          className="git__btn"
+          className="git__btn hover-this"
           onClick={() => window.open(github, "_blank")}
         >
           Code
         </button>
         {hasDemo && (
           <button
-            className="git__btn"
+            className="git__btn hover-this"
             onClick={() => window.open(demo, "_blank")}
           >
-            Demo{" "}
+            Demo
           </button>
         )}
-        <span onClick={closeModalHandler}>
+        <span onClick={closeModalHandler} className="hover-this">
           <RxCross1 />
         </span>
       </div>

@@ -9,12 +9,12 @@
   padding: 1rem 3rem;
   font-size: 1.3rem;
   transition: all 0.75s ease-in-out;
-  color: var(--color-primary);
+  color: var(--color-secondary);
   border-radius: 5px;
-  border: 2px solid var(--color-primary) !important;
+  border: 2px solid var(--color-secondary) !important;
   z-index: 12;
   transition: all 0.5s ease;
-  background-color: var(--color-quaternary);
+  background-color: transparent;
   font-family: "Iceland";
 }
 .cat__btn.active {

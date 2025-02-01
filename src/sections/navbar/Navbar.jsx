@@ -12,6 +12,7 @@ import CV_en from "../../assets/NicolasGauthier_DEV.pdf";
 import data_en from "./data";
 import data_fr from "./data_fr";
 import "./navbar.css";
+import { useThemeContext } from "../../context/theme-context";
 
 const Navbar = ({ toggleTheme, isDarkMode }) => {
   const { language } = useLanguage();
@@ -22,6 +23,7 @@ const Navbar = ({ toggleTheme, isDarkMode }) => {
   const [isScrolling, setIsScrolling] = useState(false);
   const [scrollingTimeout, setScrollingTimeout] = useState(null);
   const [isHovered, setIsHovered] = useState(false);
+  const { themeState } = useThemeContext();
 
   useEffect(() => {
     if (isMobile) return;
@@ -134,11 +136,11 @@ const Navbar = ({ toggleTheme, isDarkMode }) => {
       onMouseLeave={!isMobile ? () => setIsHovered(false) : null}
     >
       <div className={`nav__container ${isOpen ? "show" : "hide"}`}>
-        <div className="nav__right">
+        <div className="nav__right hover-this">
           <button className="theme__icon" onClick={toggleTheme}>
             {isDarkMode ? <MdDarkMode /> : <MdOutlineWbSunny />}
           </button>
-          <span className="line">|</span>
+          <div className="line">|</div>
           <i className="nav__logo">
             <LanguageToggle />
           </i>
@@ -148,16 +150,11 @@ const Navbar = ({ toggleTheme, isDarkMode }) => {
             <li key={item.id}>
               <a
                 href={item.link}
-                className={`${
+                className={`hover-this ${
                   activeSection === item.link.replace("#", "")
                     ? `active ${completed ? "animation-complete" : ""}`
                     : ""
                 }`}
-                aria-current={
-                  activeSection === item.link.replace("#", "")
-                    ? "true"
-                    : "false"
-                }
               >
                 {item.title} - 0{item.id}
               </a>
@@ -171,19 +168,21 @@ const Navbar = ({ toggleTheme, isDarkMode }) => {
               ? "NicolasGauthier_DEV.pdf"
               : "NicolasGauthier_DEV_fr.pdf"
           }
-          className="cv"
+          className="cv hover-this"
         >
-          <span className="cv__text">CV</span>{" "}
-          <LiaCloudDownloadAltSolid className="icon" />
+          <span className="cv__text hover-this">CV</span>{" "}
+          <LiaCloudDownloadAltSolid
+            color={themeState.primary === "color-1" ? "white" : "black"}
+          />
         </a>
       </div>
       {/* Handle */}
       <div className="nav__handle" onClick={toggleNavbar}>
         <span>
           {isOpen ? (
-            <MdKeyboardDoubleArrowRight color="black" />
+            <MdKeyboardDoubleArrowRight />
           ) : (
-            <MdKeyboardDoubleArrowLeft color="black" />
+            <MdKeyboardDoubleArrowLeft />
           )}
         </span>
       </div>

@@ -20,7 +20,6 @@ const ProjectsCategories = ({ categories, onFilterProjects }) => {
       onFilterProjects(activeCat);
     }, 200);
   };
-
   return (
     <div
       className="portfolio__categories"
@@ -32,7 +31,9 @@ const ProjectsCategories = ({ categories, onFilterProjects }) => {
           key={category}
           category={category}
           onChangeCategory={() => changeCategoryHandler(category)}
-          className={`cat__btn ${activeCategory === category ? "active" : ""}`}
+          className={`cat__btn hover-this ${
+            activeCategory === category ? "active" : ""
+          }`}
         />
       ))}
     </div>

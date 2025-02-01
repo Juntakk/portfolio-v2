@@ -48,7 +48,7 @@ const Services = () => {
           </div>
           <div class="face face2">
             <div class="content">
-              <p>{data[0].text}</p>
+              <p className="hover-this">{data[0].text}</p>
             </div>
           </div>
         </div>
@@ -68,7 +68,7 @@ const Services = () => {
           </div>
           <div class="face face2">
             <div class="content">
-              <p>{data[1].text}</p>
+              <p className="hover-this">{data[1].text}</p>
             </div>
           </div>
         </div>
@@ -88,14 +88,14 @@ const Services = () => {
           </div>
           <div class="face face2">
             <div class="content">
-              <p>{data[2].text}</p>
+              <p className="hover-this">{data[2].text}</p>
             </div>
           </div>
         </div>
       </div>
       {!isMobile ? (
         <div
-          className={`statistics__row ${
+          className={`statistics__row hover-this ${
             isVisible ? "magictime slideLeftReturn" : "none"
           }`}
         >

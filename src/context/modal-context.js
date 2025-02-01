@@ -3,6 +3,7 @@ import React, { createContext, useContext, useState } from "react";
 const ModalContext = createContext();
 
 export const ModalProvider = ({ children }) => {
+  const cursor = document.querySelector(".cursor");
   const [showModal, setShowModal] = useState(false);
   const [modalData, setModalData] = useState(null);
   const [themeClass, setThemeClass] = useState("");
@@ -13,11 +14,13 @@ export const ModalProvider = ({ children }) => {
     document.body.style.overflow = "hidden";
   };
   const closeModalHandler = () => {
+    if (cursor) {
+      cursor.classList.remove("hover-cursor");
+    }
     setModalData(null);
     setShowModal(false);
     setThemeClass("");
     document.body.style.overflow = "";
-    console.log("closed");
   };
 
   return (

@@ -30,8 +30,8 @@ const App = () => {
   const { themeState, themeHandler } = useThemeContext();
 
   const colorMap = {
-    "color-1": "#45a29e",
-    "color-2": "#45a29e",
+    "color-1": "#fff",
+    "color-2": "#000",
   };
 
   const handleParticleColor = (theme) => colorMap[theme] || "color-1";
@@ -99,7 +99,7 @@ const App = () => {
           polygon: { nb_sides: 5 },
         },
         opacity: {
-          value: 0.6,
+          value: 0.3,
           random: true,
           anim: { enable: false, speed: 0.08, opacity_min: 0, sync: false },
         },
