@@ -14,8 +14,9 @@
   transition: transform 0.5s ease;
   transform-style: preserve-3d;
 }
-.portfolio__project:hover .inner_card {
-  transform: rotateY(180deg);
+.back:hover {
+  /* transform: rotateY(180deg); */
+  border: 3px solid var(--color-secondary);
 }
 .front,
 .back {
@@ -26,6 +27,7 @@
   overflow: hidden;
   border-radius: 0%;
   z-index: 333;
+  transition: all 0.3s ease-in-out;
 }
 .portfolio__project img {
   width: 100%;
@@ -33,31 +35,37 @@
   object-fit: cover;
 }
 .back {
-  background-color: var(--color-secondary);
+  background-color: var(--color-primary);
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+<<<<<<< Updated upstream
   padding: 0.75rem 0rem 0rem;
   border: 2px solid;
   border-color: var(--color-primary);
   transform: rotateY(180deg);
+=======
+  padding: 0rem;
+  border: 1px solid var(--color-secondary);
+  /* transform: rotateY(180deg); */
+>>>>>>> Stashed changes
   cursor: pointer;
 }
 .title {
   font-size: 2.5rem;
   font-weight: bold;
-  color: var(--color-primary);
+  color: var(--color-secondary);
 }
 .info {
-  color: var(--color-primary);
+  color: var(--color-secondary);
   font-size: 1.75rem;
   padding: 1.5rem;
   text-align: start;
 }
 .desc {
   margin-top: auto;
-  color: var(--color-primary);
+  color: var(--color-secondary);
   font-size: 1.5rem;
   margin-bottom: 0.7rem;
 }
@@ -71,19 +79,23 @@
   margin-top: 1rem;
   width: 100%;
 }
+.btn_div a:hover {
+  border-bottom: 1px solid var(--color-secondary);
+}
 .btn_div a {
   padding: 0.5rem 1.5rem;
   font-family: "Iceland";
-  color: var(--color-primary);
+  color: var(--color-secondary);
   width: 100%;
+<<<<<<< Updated upstream
+=======
+  opacity: 0.8;
+  text-decoration: none;
+>>>>>>> Stashed changes
   border-radius: 0px;
   font-weight: 200;
   font-size: 1rem;
   transition: all 0.2s linear;
-}
-.btn_div a:hover {
-  color: var(--color-primary);
-  border-bottom: 1px solid var(--color-primary);
 }
 .btn_demo {
   border-bottom-right-radius: 0px !important;

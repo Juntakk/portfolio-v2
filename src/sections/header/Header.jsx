@@ -64,7 +64,13 @@ const Header = ({ isLoading, setIsLoading }) => {
             color: "var(--color-black)",
           }}
         >
+<<<<<<< Updated upstream
           <span className="typing iceland-regular">Nicolas H. Gauthier</span>
+=======
+          <span className="typing iceland-regular hover-this">
+            Nicolas Gauthier
+          </span>
+>>>>>>> Stashed changes
         </h1>
         <p
           className={`desc_p typing-effect ${
@@ -80,7 +86,7 @@ const Header = ({ isLoading, setIsLoading }) => {
             ? currentText + " Developer"
             : "Développeur " + currentText}
         </p>
-        <a href="#services" className="down__arrow">
+        <a href="#services" className="down__arrow hover-this">
           <span>
             <MdKeyboardDoubleArrowDown />
           </span>

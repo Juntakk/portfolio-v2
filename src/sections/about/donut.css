@@ -1,6 +1,35 @@
 #about {
   background-color: var(--color-quinquenary);
   cursor: default;
+<<<<<<< Updated upstream
+=======
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.bio {
+  width: 100%;
+  height: 100%;
+  z-index: 20;
+  opacity: 0.8;
+  color: var(--color-secondary);
+  font-family: "Iceland";
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  overflow: hidden;
+}
+.bio__text {
+  font-size: 6rem;
+  width: 33rem;
+  overflow: hidden;
+  padding: 3rem;
+}
+.nick {
+  color: orangered;
+>>>>>>> Stashed changes
 }
 .donut {
   max-width: 100%;
@@ -13,8 +42,12 @@
 text {
   position: relative;
   font-weight: 500;
+<<<<<<< Updated upstream
   font-size: 3rem;
   fill: var(--color-primary);
+=======
+  fill: var(--color-secondary);
+>>>>>>> Stashed changes
   font-family: "Iceland";
 }
 polyline {
@@ -24,7 +57,8 @@ svg.donut {
   width: 100%;
 }
 .arc-path-reactjs {
-  fill: var(--color-tertiary);
+  fill: var(--color-primary);
+  border: 1px solid var(--color-primary);
 }
 .arc-path-python {
   fill: var(--color-quaternary);
@@ -75,8 +109,11 @@ svg.donut {
   text {
     position: relative;
     font-weight: 500;
+<<<<<<< Updated upstream
     font-size: 0.6rem;
     fill: var(--color-primary);
+=======
+>>>>>>> Stashed changes
     font-family: "Iceland";
   }
   #about {

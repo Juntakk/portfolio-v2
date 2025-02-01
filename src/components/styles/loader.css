@@ -5,7 +5,11 @@
   left: 0;
   width: 100%;
   height: 100%;
+<<<<<<< Updated upstream
   background: var(--color-quinquenary) !important;
+=======
+  background: rgb(0, 0, 0);
+>>>>>>> Stashed changes
   z-index: 9999;
   display: flex;
   justify-content: center;
@@ -13,7 +17,11 @@
 }
 .loader {
   transform: rotateZ(45deg);
+<<<<<<< Updated upstream
   color: var(--color-secondary);
+=======
+  color: var(--color-primary);
+>>>>>>> Stashed changes
   perspective: 1000px;
   width: 196px;
   height: 196px;
@@ -34,7 +42,7 @@
   animation: 1s spin linear infinite;
 }
 .loader:after {
-  color: var(--color-secondary);
+  color: var(--color-primary);
   transform: rotateY(65deg);
   animation-delay: 0.4s;
 }

@@ -1,32 +1,17 @@
 /* Base Card Styles */
 .light {
-  background-color: var(--color-secondary); /* Default background */
+  background-color: transparent; /* Default background */
   border-radius: 12px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   padding: 20px;
   margin: 15px;
   text-align: center;
   transition: transform 0.3s ease, box-shadow 0.3s ease,
-    background-color 0.3s ease;
+    background-color 0.3s ease, border 0.3s ease-in;
   cursor: default;
+  border: 2px solid var(--color-secondary);
 }
 
-/* Odd Child Hover Effect */
-.light:nth-child(odd):hover {
-  background-color: var(
-    --color-quaternary
-  ) !important; /* Example: Light blue */
-  transform: translateY(-5px); /* Slight lift on hover */
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
-}
-
-/* Even Child Hover Effect */
-.light:nth-child(even):hover {
-  background-color: var(--color-primary) !important; /* Example: Light green */
-  transform: translateY(-5px); /* Slight lift on hover */
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
-}
-/* Other Elements */
 .light p {
   font-size: 1rem;
   font-style: italic;

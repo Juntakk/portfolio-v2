@@ -78,7 +78,7 @@ const Contact = () => {
           {language === "en" ? "Get in Touch" : "Contactez-moi"}
         </p>
         <form onSubmit={handleSubmit} className="form__group">
-          <div class="form__group field">
+          <div class="form__group field hover-this">
             <input
               className={`form__field ${
                 isVisible ? "magictime slideUpReturn" : "none"
@@ -147,12 +147,12 @@ const Contact = () => {
           </div>
           <div className="social-icons">
             <button
-              className={`cta ${
+              className={`email-btn ${
                 isVisible ? "magictime slideRightReturn" : "none"
               }`}
               type="submit"
             >
-              <span>
+              <span className="">
                 {language === "en" ? "Send email" : "Envoyer courriel"}
               </span>
             </button>

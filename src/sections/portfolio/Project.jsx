@@ -44,6 +44,7 @@ const Project = ({ project, data }) => {
             <img src={projectData.image} alt="" />
           </div>
           <div className="back" onClick={openModal}>
+<<<<<<< Updated upstream
             <p className="title">{projectData.title}</p>
             <div className="btn_div">
               <a
@@ -52,6 +53,11 @@ const Project = ({ project, data }) => {
                 rel="noopner noreferrer"
                 onClick={openModal}
               >
+=======
+            <p className="title hover-this">{projectData.title}</p>
+            <div className="btn_div hover-this">
+              <a target="_blank" rel="noopner noreferrer" onClick={openModal}>
+>>>>>>> Stashed changes
                 {language === "en" ? "KNOW MORE" : "VOIR PLUS"}
               </a>
             </div>

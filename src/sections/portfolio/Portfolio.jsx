@@ -22,19 +22,16 @@ const Portfolio = () => {
     return [language === "en" ? "All" : "Tout", ...new Set(allCategories)];
   }, [data, language]);
 
-  const filterProjectsHandler = useCallback(
-    (category) => {
-      if (category === "All" || category === "Tout") {
-        setProjects(data);
-      } else {
-        const filteredProjects = data.filter(
-          (project) => project.category === category
-        );
-        setProjects(filteredProjects);
-      }
-    },
-    [data]
-  );
+  const filterProjectsHandler = useCallback((category) => {
+    if (category === "All" || category === "Tout") {
+      setProjects(data);
+    } else {
+      const filteredProjects = data.filter(
+        (project) => project.category === category
+      );
+      setProjects(filteredProjects);
+    }
+  }, []);
 
   return (
     <section id="portfolio" ref={myRef}>

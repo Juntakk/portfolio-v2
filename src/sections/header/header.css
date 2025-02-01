@@ -12,7 +12,7 @@
   transition: opacity 2s ease, transform 2s ease;
   margin-top: 15rem;
   text-align: center;
-  color: var(--color-primary) !important;
+  color: var(--color-secondary) !important;
 }
 .myName,
 .desc_p {
@@ -31,11 +31,15 @@
 .desc_p {
   font-size: 1.75rem;
   font-family: "Iceland", serif;
+<<<<<<< Updated upstream
   color: var(--color-tertiary);
+=======
+  color: var(--color-secondary);
+>>>>>>> Stashed changes
   margin-bottom: 1rem;
 }
 .down__arrow {
-  color: var(--color-primary);
+  color: var(--color-secondary);
   font-size: 3rem;
   z-index: 1;
   margin-bottom: 5rem;

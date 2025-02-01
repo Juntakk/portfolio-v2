@@ -24,7 +24,7 @@
   opacity: 0;
 }
 .socials__container a {
-  color: var(--color-quaternary);
+  color: var(--color-secondary);
   font-size: 3rem;
   cursor: pointer;
   transition: transform 0.75s ease-in-out;
@@ -34,7 +34,7 @@
   opacity: 0;
   position: absolute;
   background-color: var(--color-quaternary);
-  color: white;
+  color: var(--color-primary);
   padding: 5px;
   border-radius: 1px;
   font-size: 15px;
@@ -52,7 +52,7 @@
 }
 @media (max-width: 1025px) {
   .socials__container a {
-    font-size: 5rem;
+    font-size: 2rem;
   }
 }
 
@@ -62,7 +62,6 @@
     transition: all 1s ease-in-out;
   }
   .get_in_touch.center {
-    color: var(--color-primary) !important;
     position: absolute;
     z-index: 199 !important;
     bottom: 65%;
@@ -89,7 +88,6 @@
   }
   .socials__container.show a.center {
     font-size: 9rem;
-    color: var(--color-tertiary);
   }
 
   .socials__container a:hover .tooltip {

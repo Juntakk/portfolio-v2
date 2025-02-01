@@ -10,12 +10,21 @@
   padding: 1rem 3rem;
   font-size: 1.3rem;
   transition: all 0.75s ease-in-out;
+<<<<<<< Updated upstream
   color: var(--color-quinquenary);
   border-radius: 5px;
   border: 2px solid var(--color-primary) !important;
   z-index: 999;
   transition: all 0.5s ease;
   background-color: var(--color-tertiary);
+=======
+  color: var(--color-secondary);
+  border-radius: 5px;
+  border: 2px solid var(--color-secondary) !important;
+  z-index: 12;
+  transition: all 0.5s ease;
+  background-color: transparent;
+>>>>>>> Stashed changes
   font-family: "Iceland";
 }
 .cat__btn.active {

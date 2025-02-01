@@ -6,6 +6,11 @@ import { NodeGroup } from "react-move";
 import AboutImage from "../../assets/header2-removebg.png";
 import "./donut.css";
 import useVisibility from "../../hooks/useVisibility";
+<<<<<<< Updated upstream
+=======
+import { useLanguage } from "../../theme/LanguageContext";
+import { useThemeContext } from "../../context/theme-context";
+>>>>>>> Stashed changes
 
 const getRandom = (min, max) =>
   Math.floor(Math.random() * (max - (min + 1))) + min;
@@ -16,7 +21,15 @@ const mockData = [
   { name: "NodeJs" },
   { name: "Volleyball" },
   { name: "Java" },
+<<<<<<< Updated upstream
   { name: "Flutter" },
+=======
+  //   { name: "Html" },
+  //   { name: "WordPress" },
+  //   { name: "Shopify" },
+  //   { name: "CSS" },
+  { name: "Laravel" },
+>>>>>>> Stashed changes
 ];
 
 const pieLayout = pie()
@@ -24,6 +37,7 @@ const pieLayout = pie()
   .sort(null);
 
 const Donut = () => {
+  const { themeState } = useThemeContext();
   const [arcs, setArcs] = useState([]);
   const [isTablet, setIsTablet] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
@@ -127,6 +141,10 @@ const Donut = () => {
                         d={innerArcPath(state)}
                         className={`arc-path-${data.data.name}`}
                         opacity={0.9}
+                        stroke={
+                          themeState.primary === "color-1" ? "white" : "black"
+                        }
+                        strokeWidth="1"
                       />
                       <text
                         dy="4px"

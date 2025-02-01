@@ -11,7 +11,7 @@
   margin-top: 2rem;
   font-size: 7rem;
   font-family: "Iceland", serif;
-  color: var(--color-primary);
+  color: var(--color-secondary);
 }
 h2 .none {
   opacity: 0;
@@ -36,14 +36,16 @@ h2 .none {
   width: 300px;
   height: 200px;
   transition: all 0.5s ease-in-out;
+  border: none;
 }
 .services__container .service__card .face.face1 {
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
   border-bottom-left-radius: 15px;
   border-bottom-right-radius: 15px;
+  border: 1px solid var(--color-secondary);
   position: relative;
-  background: var(--color-secondary);
+  background: var(--color-primary);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -53,11 +55,11 @@ h2 .none {
 .services__container .service__card:hover .face.face1 {
   border-bottom-left-radius: 0px;
   border-bottom-right-radius: 0px;
-  background: var(--color-quaternary);
+  background: var(--color-primary);
   transform: translateY(0);
 }
 .services__container .service__card .face.face1 .content {
-  color: var(--color-tertiary);
+  color: var(--color-secondary);
   opacity: 1;
   text-align: center;
   transition: 0.5s;
@@ -68,22 +70,22 @@ h2 .none {
 }
 .services__container .service__card .face.face1 .content span {
   max-width: 100px;
-  color: var(--color-quaternary);
+  color: var(--color-secondary);
   transition: 0.5s all ease;
 }
 .services__container .service__card:hover .face.face1 .content span {
-  color: var(--color-primary);
+  color: var(--color-secondary);
 }
 .services__container .service__card .face.face1 .content h3 {
   margin: 10px 0 0;
   padding: 0;
-  color: var(--color-quaternary);
+  color: var(--color-secondary);
   text-align: center;
   font-size: 1.5em;
   transition: color 0.5s ease;
 }
 .services__container .service__card:hover .face.face1 .content h3 {
-  color: var(--color-primary);
+  color: var(--color-secondary);
 }
 .services__container .service__card .face.face2 {
   position: relative;
@@ -104,15 +106,16 @@ h2 .none {
   border-top-right-radius: 0px;
   border-bottom-left-radius: 15px;
   border-bottom-right-radius: 15px;
-  background-color: var(--color-secondary);
+  border: 1px solid var(--color-secondary);
+  background-color: var(--color-primary);
   transform: translateY(0);
   transition: all 0.5s ease;
 }
 .services__container .service__card .face.face2 .content p {
   margin: 0;
   padding: 0;
-  color: var(--color-primary);
-  font-size: 1.2rem;
+  color: var(--color-secondary);
+  font-size: 1.3rem;
 }
 .service__card.one.magictime.slideLeftReturn {
   animation-duration: 2.5s;
@@ -131,6 +134,7 @@ h2.none {
   justify-content: center;
   align-items: center;
   gap: 8rem;
+  margin-top: 1rem;
   margin-bottom: 5rem;
   background-color: transparent;
   padding: 0rem 1rem;
@@ -147,11 +151,11 @@ h2.none {
 .statistic h3 {
   font-family: "Iceland", serif;
   font-size: 3.5rem;
-  color: var(--color-tertiary);
+  color: var(--color-secondary);
   margin-bottom: 0.5rem;
 }
 .statistic p {
-  color: var(--color-primary);
+  color: var(--color-secondary);
   font-family: "Iceland", serif;
   font-size: 1.7rem;
   font-weight: bold;
@@ -172,7 +176,6 @@ h2.none {
   }
   .services__container .service__card {
     position: relative;
-    background-color: transparent;
     border: none;
     height: 200px;
     width: 300px;
@@ -188,7 +191,6 @@ h2.none {
     border-bottom-left-radius: 15px;
     border-bottom-right-radius: 15px;
     position: relative;
-    background: var(--color-secondary);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -199,37 +201,27 @@ h2.none {
   .services__container .service__card:hover .face.face1 {
     border-bottom-left-radius: 0px;
     border-bottom-right-radius: 0px;
-    background: var(--color-quaternary);
     transform: translateY(0);
   }
   .services__container .service__card .face.face1 .content {
-    color: var(--color-tertiary);
     opacity: 1;
     text-align: center;
     transition: 0.5s;
   }
   .services__container .service__card:hover .face.face1 .content {
-    color: var(--color-secondary);
     opacity: 1;
   }
   .services__container .service__card .face.face1 .content span {
     max-width: 100px;
-    color: var(--color-quaternary);
     transition: 0.5s all ease;
   }
-  .services__container .service__card:hover .face.face1 .content span {
-    color: var(--color-primary);
-  }
+
   .services__container .service__card .face.face1 .content h3 {
     margin: 10px 0 0;
     padding: 0;
-    color: var(--color-quaternary);
     text-align: center;
     font-size: 1.5em;
     transition: color 0.5s ease;
-  }
-  .services__container .service__card:hover .face.face1 .content h3 {
-    color: var(--color-primary);
   }
   .services__container .service__card .face.face2 {
     position: relative;
@@ -250,13 +242,11 @@ h2.none {
     border-top-right-radius: 0px;
     border-bottom-left-radius: 15px;
     border-bottom-right-radius: 15px;
-    background-color: var(--color-secondary);
     transform: translateY(0);
   }
   .services__container .service__card .face.face2 .content p {
     margin: 0;
     padding: 0;
-    color: var(--color-primary);
     font-size: 1.2rem;
   }
   .service__card.one.magictime.slideLeftReturn {
@@ -277,7 +267,6 @@ h2.none {
     align-items: center;
     gap: 8rem;
     margin-bottom: 3rem;
-    background-color: transparent;
     padding: 0rem 1rem;
     border-radius: 10px;
     opacity: 1;
@@ -292,11 +281,9 @@ h2.none {
   .statistic h3 {
     font-family: "Iceland", serif;
     font-size: 3.5rem;
-    color: var(--color-tertiary);
     margin-bottom: 0.5rem;
   }
   .statistic p {
-    color: var(--color-primary);
     font-family: "Iceland", serif;
     font-size: 1.7rem;
     font-weight: bold;
@@ -346,7 +333,6 @@ h2.none {
   .services__container .service__card .face.face2 .content p {
     margin: 0;
     padding: 0;
-    color: var(--color-primary);
     font-size: 19px;
   }
 }
@@ -359,7 +345,6 @@ h2.none {
   }
   .services__container .service__card {
     position: relative;
-    background-color: transparent;
     border: none;
     width: 250px;
     height: 190px;
@@ -379,7 +364,6 @@ h2.none {
   }
   .services__container .service__card {
     position: relative;
-    background-color: transparent;
     border: none;
     width: 200px;
     height: 150px;
@@ -389,4 +373,12 @@ h2.none {
     height: 150px;
     transition: 0.5s;
   }
+<<<<<<< Updated upstream
+=======
+  .services__container .service__card .face.face2 .content p {
+    margin: 0;
+    padding: 0;
+    font-size: 1rem;
+  }
+>>>>>>> Stashed changes
 }
