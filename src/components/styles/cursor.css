@@ -18,3 +18,12 @@
   transform: translate(-50%, -50%) scale(7); /* Enlarge the cursor on hover */
   background-color: #fff;
 }
+
+@media (max-width: 1200px) {
+  .cursor {
+    display: none;
+  }
+  .hover-cursor {
+    display: none;
+  }
+}
