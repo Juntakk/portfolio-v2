@@ -6,7 +6,21 @@ const cors = require("cors");
 const app = express();
 const port = 5000;
 
-app.use(cors()); // Enable CORS to allow frontend to fetch from backend
+const allowedOrigins = [
+  "http://localhost:3000",
+  "https://nicolasgauthier.netlify.app",
+];
+app.use(
+  cors({
+    origin: (origin, callback) => {
+      if (allowedOrigins.includes(origin) || !origin) {
+        callback(null, true);
+      } else {
+        callback(new Error("Not allowed by CORS"));
+      }
+    },
+  })
+);
 
 // Weather API route
 app.get("/weather", async (req, res) => {
