@@ -1,12 +1,14 @@
 import React, { useState, useEffect } from "react";
 import "./styles/weather.css";
-
 const Weather = () => {
   const [weatherData, setWeatherData] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   const [currentTime, setCurrentTime] = useState("");
-  const apiUrl = "/.netlify/functions/weather2";
+
+  const apiKey = process.env.WEATHER_API_KEY;
+  const city = "Montreal"; // Replace with your desired location
+  const apiUrl = `https://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${city}`;
 
   useEffect(() => {
     const fetchWeatherData = async () => {
@@ -37,16 +39,17 @@ const Weather = () => {
   }, [apiUrl]);
 
   if (loading) {
-    return null;
+    return <div className="loading">Loading weather data...</div>;
   }
 
   if (error) {
-    return null;
+    return <div className="error">Error: {error}</div>;
   }
 
   return (
     <div className="weather-container">
       <p className="time">{currentTime}</p>
+
       <div className="weather-details">
         <p className="temperature">{weatherData.current.temp_c}°C</p>
       </div>
