@@ -20,6 +20,7 @@ import Footer from "./components/Footer";
 import ProjectDetails from "./sections/portfolio/ProjectDetails";
 import Modal from "./components/Modal";
 import Cursor from "./components/Cursor";
+import Weather from "./components/Weather";
 
 const App = () => {
   const mainRef = useRef();
@@ -175,6 +176,7 @@ const App = () => {
       <main className={themeState.primary} ref={mainRef} id="main">
         <Navbar toggleTheme={toggleTheme} isDarkMode={isDarkMode} />
         <Socials />
+        <Weather />
         <Header isLoading={isLoading} setIsLoading={setIsLoading} />
         <div className="spacing1"></div>
         <Services />

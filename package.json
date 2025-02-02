@@ -13,10 +13,12 @@
   "description": "",
   "dependencies": {
     "aos": "^2.3.4",
+    "axios": "^1.7.9",
     "d3-array": "^3.2.4",
     "d3-ease": "^3.0.1",
     "d3-scale": "^4.0.2",
     "d3-shape": "^3.2.0",
+    "dotenv": "^16.4.7",
     "emailjs": "^4.0.3",
     "emailjs-com": "^3.2.0",
     "magic.css": "^1.4.8",

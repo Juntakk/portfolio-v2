@@ -70,6 +70,7 @@
   font-weight: 400;
   font-style: normal;
 }
+
 @media (max-width: 1024px) {
   .myName {
     font-size: 4rem !important;

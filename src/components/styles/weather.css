@@ -1,0 +1,54 @@
+.weather-container {
+  background-color: transparent;
+  position: fixed;
+  padding: 1rem;
+  top: 0%;
+  text-align: start;
+  font-family: "Times New Roman", Times, serif;
+}
+.time {
+  color: var(--color-secondary);
+  font-size: 1.2rem;
+}
+
+.weather-details {
+  margin-top: 0.5rem;
+}
+
+.weather-details .temperature {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #ff5e00;
+  text-align: center;
+}
+
+.loading,
+.error {
+  text-align: center;
+  font-size: 18px;
+  color: #888;
+}
+
+@media (max-width: 1025px) {
+  .weather-container {
+    padding: 0.5rem;
+    top: 1%;
+    z-index: 4444;
+    left: 43%;
+  }
+}
+@media (max-width: 700px) {
+  .weather-container {
+    left: 38%;
+  }
+}
+@media (max-width: 600px) {
+  .weather-container {
+    left: 35%;
+  }
+}
+@media (max-width: 450px) {
+  .weather-container {
+    left: 30%;
+  }
+}

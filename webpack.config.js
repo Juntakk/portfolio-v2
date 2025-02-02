@@ -1,13 +1,18 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const webpack = require("webpack");
+const dotenv = require("dotenv");
+
+// Load environment variables from .env file
+dotenv.config();
 
 module.exports = {
   entry: "./src/index.js",
   output: {
-    filename: "[name].[contenthash].bundle.js", // Ensure unique output filenames
+    filename: "[name].[contenthash].bundle.js",
     chunkFilename: "[name].[contenthash].js",
     path: path.resolve(__dirname, "dist"),
-    clean: true, // Clean the output directory before building
+    clean: true,
   },
   optimization: {
     splitChunks: {
@@ -52,6 +57,10 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: "./public/index.html",
       favicon: "./public/favicon.ico",
+    }),
+    // Inject environment variables into your app
+    new webpack.DefinePlugin({
+      "process.env": JSON.stringify(process.env),
     }),
   ],
   devServer: {
