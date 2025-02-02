@@ -1,17 +1,17 @@
-import path from "path";
-import HtmlWebpackPlugin from "html-webpack-plugin";
-import webpack from "webpack";
-import dotenv from "dotenv";
+const path = require("path");
+const HtmlWebpackPlugin = require("html-webpack-plugin");
+const webpack = require("webpack");
+const dotenv = require("dotenv");
 
 // Load environment variables from .env file
 dotenv.config();
 
-export default {
+module.exports = {
   entry: "./src/index.js",
   output: {
     filename: "[name].[contenthash].bundle.js",
     chunkFilename: "[name].[contenthash].js",
-    path: path.resolve(process.cwd(), "dist"),
+    path: path.resolve(__dirname, "dist"),
     clean: true,
   },
   optimization: {
