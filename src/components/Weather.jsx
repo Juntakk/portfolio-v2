@@ -1,19 +1,16 @@
 import React, { useState, useEffect } from "react";
 import "./styles/weather.css";
+
 const Weather = () => {
   const [weatherData, setWeatherData] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   const [currentTime, setCurrentTime] = useState("");
 
-  const apiKey = process.env.WEATHER_API_KEY;
-  const city = "Montreal"; // Replace with your desired location
-  const apiUrl = `https://cors-anywhere.herokuapp.com/https://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${city}`;
-
   useEffect(() => {
     const fetchWeatherData = async () => {
       try {
-        const response = await fetch(apiUrl);
+        const response = await fetch("http://localhost:5000/weather");
         if (!response.ok) {
           throw new Error("Failed to fetch weather data");
         }
@@ -36,7 +33,7 @@ const Weather = () => {
 
     const timeInterval = setInterval(updateTime, 1000);
     return () => clearInterval(timeInterval); // Clean up interval on component unmount
-  }, [apiUrl]);
+  }, []);
 
   if (loading) {
     return <div className="loading">Loading weather data...</div>;
@@ -49,7 +46,6 @@ const Weather = () => {
   return (
     <div className="weather-container">
       <p className="time">{currentTime}</p>
-
       <div className="weather-details">
         <p className="temperature">{weatherData.current.temp_c}°C</p>
       </div>
