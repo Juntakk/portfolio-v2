@@ -6,11 +6,12 @@ const Weather = () => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   const [currentTime, setCurrentTime] = useState("");
+  const apiUrl = "/.netlify/functions/weather2";
 
   useEffect(() => {
     const fetchWeatherData = async () => {
       try {
-        const response = await fetch("/.netlify/functions/weather");
+        const response = await fetch(apiUrl);
         if (!response.ok) {
           throw new Error("Failed to fetch weather data");
         }
@@ -33,7 +34,7 @@ const Weather = () => {
 
     const timeInterval = setInterval(updateTime, 1000);
     return () => clearInterval(timeInterval); // Clean up interval on component unmount
-  }, []);
+  }, [apiUrl]);
 
   if (loading) {
     return <div className="loading">Loading weather data...</div>;
