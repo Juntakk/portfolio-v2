@@ -8,6 +8,7 @@
   box-sizing: border-box;
   -webkit-text-size-adjust: 100%;
   cursor: none !important;
+  letter-spacing: 1px;
 }
 
 *,
@@ -21,15 +22,15 @@ body {
 }
 /* width */
 ::-webkit-scrollbar {
-  width: 5px;
+  width: 2px;
 }
 /* Track */
 ::-webkit-scrollbar-track {
-  background: var(--color-secondary);
+  background: black;
 }
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: var(--color-primary);
+  background: white;
 }
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
@@ -50,23 +51,14 @@ html {
 :root {
   --color-primary: #fff;
   --color-secondary: #000;
-  --color-tertiary: #fff;
-  --color-quaternary: #000;
-  --color-quinquenary: #fff;
 }
 main.color-1 {
-  --color-primary: #000;
-  --color-secondary: #fff;
-  --color-tertiary: #000;
-  --color-quaternary: #fff;
-  --color-quinquenary: #000;
+  --color-primary: #000000;
+  --color-secondary: #efefef;
 }
 main.color-2 {
   --color-primary: #fff;
-  --color-secondary: #000;
-  --color-tertiary: #fff;
-  --color-quaternary: #000;
-  --color-quinquenary: #fff;
+  --color-secondary: #000 !important;
 }
 
 .container {

@@ -2,15 +2,17 @@
 import React from "react";
 
 import "./styles/socials.css";
-import { IoLogoLinkedin } from "react-icons/io5";
-import { FaSquareGithub } from "react-icons/fa6";
+import { TiSocialLinkedinCircular } from "react-icons/ti";
+import { FaGithub } from "react-icons/fa";
 import { useEffect, useState } from "react";
+import { useThemeContext } from "../context/theme-context";
 
 const Socials = () => {
   const [isScrolling, setIsScrolling] = useState(false);
   const [scrollingTimeout, setScrollingTimeout] = useState(null);
   const [isMobile, setIsMobile] = useState(false);
   const [isVisible, setIsVisible] = useState();
+  const { themeState } = useThemeContext();
 
   useEffect(() => {
     const handleMobile = () => {
@@ -87,7 +89,13 @@ const Socials = () => {
         target="_blank"
         rel="noopner noreferrer"
       >
-        <IoLogoLinkedin />
+        <TiSocialLinkedinCircular
+          color={themeState.primary === "color-1" ? "black" : "white"}
+          stroke={themeState.primary === "color-1" ? "white" : "black"}
+          strokeWidth={0.1}
+          fill={themeState.primary === "color-1" ? "white" : "black"}
+          opacity={0.9}
+        />
         <span className="tooltip">LinkedIn</span>
       </a>
       <a
@@ -96,7 +104,14 @@ const Socials = () => {
         target="_blank"
         rel="noopner noreferrer"
       >
-        <FaSquareGithub />
+        <FaGithub
+          color={themeState.primary === "color-1" ? "black" : "white"}
+          stroke={themeState.primary === "color-1" ? "white" : "black"}
+          strokeWidth={0.1}
+          fill={themeState.primary === "color-1" ? "white" : "black"}
+          opacity={0.9}
+          size={35}
+        />
         <span className="tooltip">Github</span>
       </a>
     </div>

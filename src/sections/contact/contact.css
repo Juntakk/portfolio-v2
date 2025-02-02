@@ -5,7 +5,7 @@ input:-webkit-autofill {
   transition: background-color 5000s ease-in-out 0s;
 }
 input:-webkit-autofill:focus {
-  background-color: var(--color-tertiary) !important;
+  background-color: var(--color-primary) !important;
   color: var(--color-primary) !important;
   -webkit-text-fill-color: var(--color-primary) !important;
 }
@@ -15,14 +15,14 @@ input:-webkit-autofill:focus {
   overflow: hidden;
   align-items: center;
   flex-direction: column;
-  background-color: var(--color-quinquenary);
+  background-color: var(--color-primary);
 }
 .contact_container {
   position: relative;
   width: 50rem;
   border-radius: 5px;
   border: 1px solid var(--color-secondary);
-  background: var(--color-primary);
+  background: transparent;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -66,7 +66,7 @@ input:-webkit-autofill:focus {
   font-size: 1.4rem;
   color: var(--color-secondary);
   padding: 7px 0;
-  background: var(--color-primary);
+  background: transparent;
   transition: border-color 0.2s;
 }
 .form__field::placeholder {
@@ -149,7 +149,7 @@ textarea {
   margin-top: 1rem;
   font-size: 1.33rem;
   font-family: "Iceland";
-  background-color: var(--color-primary);
+  background-color: transparent;
   font-weight: bold;
   padding: 0.7em 2em;
   border: 1px solid var(--color-secondary);

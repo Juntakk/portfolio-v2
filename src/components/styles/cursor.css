@@ -15,7 +15,7 @@
 }
 
 .hover-cursor {
-  transform: translate(-50%, -50%) scale(7); /* Enlarge the cursor on hover */
+  transform: translate(-50%, -50%) scale(5); /* Enlarge the cursor on hover */
   background-color: #fff;
 }
 

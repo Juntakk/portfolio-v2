@@ -39,14 +39,14 @@ const Project = ({ project, data }) => {
   return (
     <>
       <div
-        className="portfolio__project"
+        className="portfolio__project hover-this"
         data-aos="fade-left"
         data-aos-duration="1500"
       >
         <div className="inner_card">
-          <div className="front">
+          {/* <div className="front">
             <img src={projectData.image} alt="" />
-          </div>
+          </div> */}
           <div className="back" onClick={openModal}>
             <p className="title hover-this">{projectData.title}</p>
             <div className="btn_div hover-this">

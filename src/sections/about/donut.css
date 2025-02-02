@@ -1,5 +1,5 @@
 #about {
-  background-color: var(--color-quinquenary);
+  background-color: var(--color-primary);
   cursor: default;
   display: flex;
   flex-direction: row;
@@ -35,6 +35,7 @@
   display: block;
   margin-left: 3rem;
   z-index: 1;
+  opacity: 1;
 }
 text {
   position: relative;
@@ -53,7 +54,7 @@ svg.donut {
   border: 1px solid var(--color-primary);
 }
 .arc-path-python {
-  fill: var(--color-quaternary);
+  fill: var(--color-secondary);
 }
 .arc-path-NodeJs {
   fill: var(--color-primary);
@@ -62,25 +63,25 @@ svg.donut {
   fill: var(--color-secondary);
 }
 .arc-path-java {
-  fill: var(--color-tertiary);
+  fill: var(--color-primary);
 }
 .arc-path-Flutter {
-  fill: var(--color-quaternary);
+  fill: var(--color-secondary);
 }
 .arc-path-WordPress {
-  fill: var(--color-tertiary);
+  fill: var(--color-secondary);
 }
 .arc-path-Shopify {
-  fill: var(--color-quaternary);
+  fill: var(--color-secondary);
 }
 .arc-path-Html {
-  fill: var(--color-tertiary);
+  fill: var(--color-secondary);
 }
 .arc-path-Laravel {
-  fill: var(--color-quaternary);
+  fill: var(--color-secondary);
 }
 .arc-path-CSS {
-  fill: var(--color-quaternary);
+  fill: var(--color-secondary);
 }
 @media (max-width: 1300px) {
   .bio {

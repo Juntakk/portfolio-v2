@@ -203,7 +203,7 @@ const Donut = () => {
           </NodeGroup>
         </g>
       </svg>
-      <div className="bio" data-aos="fade-down" data-aos-duration="2000">
+      {/* <div className="bio" data-aos="fade-down" data-aos-duration="2000">
         {language === "en" ? (
           <p
             className="bio__text"
@@ -225,7 +225,7 @@ const Donut = () => {
             <span className="nick">{currentText || "\u200B"}</span>
           </p>
         )}
-      </div>
+      </div> */}
     </section>
   );
 };

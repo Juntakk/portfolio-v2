@@ -78,7 +78,7 @@ const Contact = () => {
           {language === "en" ? "Get in Touch" : "Contactez-moi"}
         </p>
         <form onSubmit={handleSubmit} className="form__group">
-          <div class="form__group field hover-this">
+          <div className="form__group field hover-this">
             <input
               className={`form__field ${
                 isVisible ? "magictime slideUpReturn" : "none"
@@ -101,7 +101,7 @@ const Contact = () => {
               {language === "fr" ? "Votre courriel" : "Your email"}
             </label>
           </div>
-          <div class="form__group field">
+          <div className="form__group field">
             <input
               className={`form__field ${
                 isVisible ? "magictime slideUpReturn" : "none"
@@ -123,7 +123,7 @@ const Contact = () => {
               {language === "fr" ? "Compagnie" : "Company"}
             </label>
           </div>
-          <div class="form__group field">
+          <div className="form__group field">
             <textarea
               className={`form__field ${
                 isVisible ? "magictime slideUpReturn" : "none"

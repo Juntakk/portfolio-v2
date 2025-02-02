@@ -18,12 +18,14 @@ nav {
   justify-content: space-between;
   align-items: center;
   z-index: 1;
-  border-left: 1px solid var(--color-quaternary);
-  transition: all 1s 0.1s ease;
+  border-left: 1px solid var(--color-secondary);
+  transition: all 1s;
 }
 
 .nav__container.show {
   transform: translateX(0);
+  transition: all 1s ease-in-out;
+
   opacity: 1;
 }
 .nav__container.hide {
@@ -32,22 +34,22 @@ nav {
 }
 .nav__handle {
   position: absolute;
-  top: 35%;
-  border: 1px solid var(--color-primary) !important;
-  right: 9rem; /* Match the width of nav__container */
+  top: 45%;
+  border: 2px solid var(--color-secondary) !important;
+  border-right: none !important;
+  right: 9rem;
   width: 20px;
   height: 80px;
-  background-color: var(--color-primary);
+  background-color: transparent;
   color: var(--color-secondary);
-  border-top-left-radius: 50%;
-  border-bottom-left-radius: 50%;
+  border-top-left-radius: 40%;
+  border-bottom-left-radius: 40%;
   display: flex;
   justify-content: center;
   align-items: center;
   cursor: pointer;
   transform: translateY(-50%);
-  transition: right 1s 0.1s ease, transform 1s ease, background-color 1s ease !important;
-  animation: fadeInRight 2s forwards;
+  transition: all 0.9s 0.001s ease-in-out;
 }
 .nav__container.hide ~ .nav__handle {
   right: 0;
@@ -65,7 +67,7 @@ nav {
   margin-top: auto;
   margin-bottom: 1rem;
   color: var(--color-secondary);
-  transition: all 1s;
+  transition: all 1s ease-in-out;
   z-index: 2;
 }
 
@@ -95,7 +97,7 @@ nav {
   position: relative;
   color: var(--color-secondary);
   font-family: "Iceland";
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   display: inline-block;
   transition: all 0.75s all ease-in-out !important;
 }
@@ -159,7 +161,7 @@ nav {
 }
 .theme__icon:hover {
   transform: rotateZ(360deg);
-  color: var(--color-quaternary);
+  color: var(--color-secondary);
 }
 .line {
   color: var(--color-secondary);

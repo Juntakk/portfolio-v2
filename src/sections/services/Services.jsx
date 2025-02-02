@@ -31,23 +31,23 @@ const Services = () => {
       <h2 className={`${isVisible ? "magictime slideRightReturn" : "none"}`}>
         Services
       </h2>
-      <div class="services__container">
+      <div className="services__container">
         {/* service__card 1 */}
         <div
           className={`service__card one ${
             isVisible ? "magictime slideLeftReturn" : "none"
           }`}
         >
-          <div class="face face1">
-            <div class="content">
+          <div className="face face1">
+            <div className="content">
               <span>
                 <TfiLayoutAccordionList size={isMobile ? 45 : 75} />
               </span>
               <h3>{data[0].title}</h3>
             </div>
           </div>
-          <div class="face face2">
-            <div class="content">
+          <div className="face face2">
+            <div className="content">
               <p className="hover-this">{data[0].text}</p>
             </div>
           </div>
@@ -58,16 +58,16 @@ const Services = () => {
             isVisible ? "magictime slideLeftReturn" : "none"
           }`}
         >
-          <div class="face face1">
-            <div class="content">
+          <div className="face face1">
+            <div className="content">
               <span>
                 <FaLaptopCode size={isMobile ? 45 : 75} />
               </span>{" "}
               <h3>{data[1].title}</h3>
             </div>
           </div>
-          <div class="face face2">
-            <div class="content">
+          <div className="face face2">
+            <div className="content">
               <p className="hover-this">{data[1].text}</p>
             </div>
           </div>
@@ -78,16 +78,16 @@ const Services = () => {
             isVisible ? "magictime slideLeftReturn" : "none"
           }`}
         >
-          <div class="face face1">
-            <div class="content">
+          <div className="face face1">
+            <div className="content">
               <span>
                 <GrLaunch size={isMobile ? 45 : 75} />
               </span>
               <h3>{data[2].title}</h3>
             </div>
           </div>
-          <div class="face face2">
-            <div class="content">
+          <div className="face face2">
+            <div className="content">
               <p className="hover-this">{data[2].text}</p>
             </div>
           </div>
