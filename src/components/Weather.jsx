@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from "react";
+import "./styles/weather.css";
 
 const Weather = () => {
   const [weatherData, setWeatherData] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+  const [currentTime, setCurrentTime] = useState("");
 
-  const apiKey = "8b02ee50eb5441a8a5843921251001"; // Replace with your API key
-  const city = "Montreal"; // Replace with your desired location
-  const apiUrl = `http://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${city}`;
+  const apiUrl = "/.netlify/functions/weather"; // Netlify automatically serves functions from this path
 
   useEffect(() => {
     const fetchWeatherData = async () => {
@@ -27,27 +27,31 @@ const Weather = () => {
     };
 
     fetchWeatherData();
+
+    const updateTime = () => {
+      const date = new Date();
+      setCurrentTime(date.toLocaleTimeString());
+    };
+
+    const timeInterval = setInterval(updateTime, 1000);
+    return () => clearInterval(timeInterval); // Clean up interval on component unmount
   }, [apiUrl]);
 
   if (loading) {
-    return <div>Loading weather data...</div>;
+    return <div className="loading">Loading weather data...</div>;
   }
 
   if (error) {
-    return <div>Error: {error}</div>;
+    return <div className="error">Error: {error}</div>;
   }
 
   return (
-    <div>
-      <h2>
-        Weather in {weatherData.location.name}, {weatherData.location.country}
-      </h2>
-      <p>Temperature: {weatherData.current.temp_c}°C</p>
-      <p>Condition: {weatherData.current.condition.text}</p>
-      <img
-        src={`https:${weatherData.current.condition.icon}`}
-        alt={weatherData.current.condition.text}
-      />
+    <div className="weather-container">
+      <p className="time">{currentTime}</p>
+
+      <div className="weather-details">
+        <p className="temperature">{weatherData.current.temp_c}°C</p>
+      </div>
     </div>
   );
 };
