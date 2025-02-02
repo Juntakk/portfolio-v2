@@ -8,7 +8,7 @@ const Weather = () => {
 
   const apiKey = process.env.WEATHER_API_KEY;
   const city = "Montreal"; // Replace with your desired location
-  const apiUrl = `http://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${city}`;
+  const apiUrl = `https://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${city}`;
 
   useEffect(() => {
     const fetchWeatherData = async () => {
