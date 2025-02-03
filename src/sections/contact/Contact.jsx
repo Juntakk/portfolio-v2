@@ -1,4 +1,3 @@
-/* eslint-disable react-hooks/exhaustive-deps */
 import "./contact.css";
 import "magic.css/dist/magic.min.css";
 import { useLanguage } from "../../theme/LanguageContext";

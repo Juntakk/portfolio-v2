@@ -1,9 +1,8 @@
-/* eslint-disable react-hooks/exhaustive-deps */
 import React from "react";
 
 import "./styles/socials.css";
 import { TiSocialLinkedinCircular } from "react-icons/ti";
-import { FaGithub } from "react-icons/fa";
+import { TiSocialGithubCircular } from "react-icons/ti";
 import { useEffect, useState } from "react";
 import { useThemeContext } from "../context/theme-context";
 
@@ -104,13 +103,12 @@ const Socials = () => {
         target="_blank"
         rel="noopner noreferrer"
       >
-        <FaGithub
+        <TiSocialGithubCircular
           color={themeState.primary === "color-1" ? "black" : "white"}
           stroke={themeState.primary === "color-1" ? "white" : "black"}
           strokeWidth={0.1}
           fill={themeState.primary === "color-1" ? "white" : "black"}
           opacity={0.9}
-          size={35}
         />
         <span className="tooltip">Github</span>
       </a>

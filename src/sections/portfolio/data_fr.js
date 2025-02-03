@@ -1,5 +1,5 @@
-import images from "./images";
-import icons from "./icons";
+import images from "./images.js";
+import icons from "./icons.js";
 
 const data = [
   {

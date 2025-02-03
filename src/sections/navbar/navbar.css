@@ -258,13 +258,16 @@ nav {
     height: 10%;
     width: 100%;
   }
+  .cv {
+    font-size: 2rem;
+  }
   .nav__handle {
     display: none;
     pointer-events: none;
   }
   .language-icon {
-    height: 2rem;
-    width: 2rem;
+    height: 1.3rem;
+    width: 1.3rem;
     transition: all 1s;
     border-radius: 50%;
   }
@@ -275,6 +278,9 @@ nav {
     flex-direction: row;
     justify-content: start;
     padding: 0.25rem;
+  }
+  .theme__icon {
+    font-size: 1.4rem;
   }
   .nav__container.hide {
     transform: translateX(-100%);

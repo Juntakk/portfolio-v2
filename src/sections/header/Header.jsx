@@ -1,4 +1,3 @@
-/* eslint-disable react-hooks/exhaustive-deps */
 import { useEffect, useRef, useState } from "react";
 import "./header.css";
 import { useLanguage } from "../../theme/LanguageContext";

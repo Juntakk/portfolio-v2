@@ -19,7 +19,6 @@ function useVisibility(ref, threshold = 0.2) {
 
     return () => {
       if (ref.current) {
-        // eslint-disable-next-line react-hooks/exhaustive-deps
         observer.unobserve(ref.current);
       }
       observer.disconnect(); // Clean up observer

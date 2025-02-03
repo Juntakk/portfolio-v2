@@ -1,4 +1,4 @@
-import { useLanguage } from "./LanguageContext";
+import { useLanguage } from "./LanguageContext.js";
 import enImg from "../assets/uk.png";
 import frImg from "../assets/france.png";
 import React from "react";

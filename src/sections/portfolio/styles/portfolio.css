@@ -15,7 +15,7 @@
   font-family: "Iceland", serif;
   color: var(--color-secondary);
   text-align: center;
-  padding-top: 2rem;
+  padding-top: 12rem;
 }
 @media screen and (max-width: 975px) {
   #portfolio h2 {

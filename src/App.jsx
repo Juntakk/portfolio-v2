@@ -1,4 +1,3 @@
-/* eslint-disable react-hooks/exhaustive-deps */
 import React from "react";
 import Navbar from "./sections/navbar/Navbar";
 import Header from "./sections/header/Header";
@@ -185,8 +184,8 @@ const App = () => {
         <div className="spacing3"></div>
         <Donut />
         <div className="spacing2"></div>
-        <Testimonials />
-        <div className="spacing2"></div>
+        {/* <Testimonials />
+        <div className="spacing2"></div> */}
         <Contact />
         <Footer />
         <ProjectDetails />

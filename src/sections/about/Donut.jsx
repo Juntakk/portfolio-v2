@@ -5,9 +5,9 @@ import sortBy from "lodash/sortBy";
 import { NodeGroup } from "react-move";
 import AboutImage from "../../assets/header2-removebg.png";
 import "./donut.css";
-import useVisibility from "../../hooks/useVisibility";
-import { useLanguage } from "../../theme/LanguageContext";
-import { useThemeContext } from "../../context/theme-context";
+import useVisibility from "../../hooks/useVisibility.js";
+import { useLanguage } from "../../theme/LanguageContext.js";
+import { useThemeContext } from "../../context/theme-context.js";
 
 const getRandom = (min, max) =>
   Math.floor(Math.random() * (max - (min + 1))) + min;
