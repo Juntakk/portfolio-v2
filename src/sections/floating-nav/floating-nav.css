@@ -39,9 +39,9 @@
   }
 
   #floating__nav a {
-    padding: 1.5rem;
+    padding: 1rem;
     border-radius: 50%;
-    font-size: 2rem;
+    font-size: 1rem;
     color: var(--color-secondary);
     display: grid;
   }

@@ -72,6 +72,11 @@
 }
 
 @media (max-width: 1024px) {
+  .down__arrow {
+    margin-top: 1rem;
+    margin-bottom: 10rem;
+    font-size: 2rem;
+  }
   .myName {
     font-size: 4rem !important;
   }

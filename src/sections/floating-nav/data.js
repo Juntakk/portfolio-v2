@@ -10,7 +10,7 @@ const data = [
   { id: 2, link: "#services", icon: <FaGlobe /> },
   { id: 3, link: "#portfolio", icon: <PiShareNetworkBold /> },
   { id: 4, link: "#about", icon: <MdPerson /> },
-  { id: 5, link: "#contact", icon: <TbMessageDots /> },
+  //   { id: 5, link: "#contact", icon: <TbMessageDots /> },
 ];
 
 export default data;

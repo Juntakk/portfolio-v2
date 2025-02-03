@@ -26,7 +26,11 @@
   height: 4rem;
   background-color: var(--color-primary);
 }
-
+@media (max-width: 1025px) {
+  .spacing2 {
+    display: none;
+  }
+}
 @media (max-width: 700px) {
   /* .spacing3,
   .spacing2,
@@ -34,4 +38,8 @@
   .spacing4 {
     display: none;
   } */
+  .spacing2 {
+    display: flex;
+    height: 5rem;
+  }
 }

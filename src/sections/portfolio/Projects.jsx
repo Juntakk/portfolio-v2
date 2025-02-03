@@ -16,7 +16,7 @@ const Projects = ({ projects, data }) => {
 
   useEffect(() => {
     const handleResize = () => {
-      setIsMobile(window.innerWidth < 700);
+      setIsMobile(window.innerWidth < 1000);
     };
 
     handleResize();

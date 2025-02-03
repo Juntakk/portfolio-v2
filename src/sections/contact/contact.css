@@ -194,37 +194,56 @@ textarea {
 }
 @media (max-width: 1025px) {
   .contact_container {
-    width: 75%;
-  }
-}
-
-@media (max-width: 700px) {
-  .contact_container {
     width: 90%;
-    height: 70%;
+    height: 30%;
     border: none;
     margin: 10px;
     padding: 5px 0px;
     text-align: center;
     justify-content: flex-start;
     background-color: transparent;
-    margin-top: 15rem;
+    margin-top: 0rem;
   }
-  /* .contact_container h2 {
-     padding: 0.5rem;
-     justify-content: center;
-     align-items: center;
-     font-size: 3rem;
-     color: var(--color-primary);
-   }
-   .contact_container p {
-     color: var(--color-primary);
-     margin-bottom: 4rem;
-     margin-right: 1rem !important;
-     justify-content: center;
-     align-items: center;
-     text-align: center;
-   } */
+  #contact {
+    display: none;
+  }
+  .contact_container h2,
+  .contact_container p {
+    display: none;
+  }
+  .form__group {
+    display: none;
+  }
+  .form__field {
+    font-size: 1.2rem;
+    padding: 24px;
+  }
+
+  button.cta {
+    font-size: 20px;
+    padding: 12px;
+  }
+  .status_msg {
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
+}
+
+@media (max-width: 700px) {
+  .contact_container {
+    width: 90%;
+    height: 30%;
+    border: none;
+    margin: 10px;
+    padding: 5px 0px;
+    text-align: center;
+    justify-content: flex-start;
+    background-color: transparent;
+    margin-top: 0rem;
+  }
+  #contact {
+    height: 0vh;
+  }
   .contact_container h2,
   .contact_container p {
     display: none;

@@ -55,13 +55,13 @@ const Donut = () => {
 
   useEffect(() => {
     updateArcs();
-    const interval = setInterval(updateArcs, 1000);
+    const interval = setInterval(updateArcs, 3000);
     return () => clearInterval(interval);
   }, [updateArcs]);
 
   const view = isMobile ? [240, 240] : isTablet ? [850, 850] : [1200, 1200];
   const dims = [view[0], view[1]];
-  const radius = isMobile ? 75 : isTablet ? 350 : 400;
+  const radius = isMobile ? 75 : isTablet ? 250 : 375;
   const imageSize = radius * 1.4;
   const fontSize = isMobile ? "0.6rem" : isTablet ? "1.5rem" : "2.5rem";
 
@@ -137,7 +137,6 @@ const Donut = () => {
             style={{
               pointerEvents: "none",
               position: "relative",
-              zIndex: "20",
             }}
           />
           <NodeGroup
@@ -192,7 +191,7 @@ const Donut = () => {
                       </text>
                       <polyline
                         fill="none"
-                        stroke="black"
+                        stroke="none"
                         points={`${innerArcPath.centroid(state)},${p1},${p2}`}
                       />
                     </g>

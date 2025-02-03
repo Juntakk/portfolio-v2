@@ -58,12 +58,11 @@ const Socials = () => {
 
   useEffect(() => {
     const showNav = () => {
-      const contactSectionHeight =
-        document.getElementById("contact").scrollHeight;
       const totalHeight = document.documentElement.scrollHeight;
+      const viewportHeight = window.innerHeight;
       const currentScroll = window.scrollY;
 
-      if (currentScroll > totalHeight - contactSectionHeight * 1.8) {
+      if (currentScroll + viewportHeight >= totalHeight - 10) {
         setIsVisible(false);
       } else {
         setIsVisible(true);
@@ -76,6 +75,7 @@ const Socials = () => {
       window.removeEventListener("scroll", showNav);
     };
   }, []);
+
   return (
     <div
       className={`socials__container hover-this ${

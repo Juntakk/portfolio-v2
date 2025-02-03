@@ -4,7 +4,7 @@ nav {
   right: 0;
   height: 100%;
   display: flex;
-  z-index: 100;
+  z-index: 2;
 }
 
 .nav__container {
@@ -76,7 +76,7 @@ nav {
 }
 
 .cv:hover {
-  transform: scale(1.15);
+  transform: scale(1.05);
 }
 
 .icon {
@@ -182,7 +182,7 @@ nav {
 }
 @media (max-width: 1025px) {
   nav {
-    height: 10%;
+    height: 2.5rem;
     width: 100%;
   }
 
@@ -194,14 +194,14 @@ nav {
     background: none;
     border: none;
     cursor: pointer;
-    font-size: 2rem;
+    font-size: 1.5rem;
     color: var(--color-secondary);
     transition: all 0.75s ease-in-out;
   }
 
   .language-icon {
-    height: 2rem;
-    width: 2rem;
+    height: 1.5rem;
+    width: 1.5rem;
     transition: all 1s;
     border-radius: 50%;
   }
@@ -209,25 +209,25 @@ nav {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 0.5rem;
+    gap: 0rem;
     font-family: "Iceland";
     text-decoration: none;
-    font-size: 3rem;
-    padding: 0.5rem 1rem;
-    border-radius: 5px;
-    margin-top: auto;
-    margin-bottom: 1rem;
-    color: var(--color-primary);
-    transition: all 1s;
-    z-index: 2;
+    font-size: 1.8rem;
+    padding: 0rem;
+    border-radius: 0px;
+    margin-top: 0;
+    margin-bottom: 0rem;
+    margin-right: 1rem;
   }
   .nav__container {
-    height: 6rem;
+    height: 2.5rem;
     left: 0;
     width: 100%;
     flex-direction: row;
     justify-content: start;
     padding: 0.25rem;
+    border-left: none;
+    border-bottom: 1px solid var(--color-secondary);
     background-color: var(--color-primary);
   }
   .nav__container.hide {
@@ -254,56 +254,6 @@ nav {
   }
 }
 @media (max-width: 700px) {
-  nav {
-    height: 10%;
-    width: 100%;
-  }
-  .cv {
-    font-size: 2rem;
-  }
-  .nav__handle {
-    display: none;
-    pointer-events: none;
-  }
-  .language-icon {
-    height: 1.3rem;
-    width: 1.3rem;
-    transition: all 1s;
-    border-radius: 50%;
-  }
-  .nav__container {
-    height: 4rem;
-    left: 0;
-    width: 100%;
-    flex-direction: row;
-    justify-content: start;
-    padding: 0.25rem;
-  }
-  .theme__icon {
-    font-size: 1.4rem;
-  }
-  .nav__container.hide {
-    transform: translateX(-100%);
-    top: 0;
-    left: 0;
-    height: 10%;
-    width: 100%;
-    opacity: 1 !important;
-    position: fixed;
-  }
-  .nav__menu {
-    display: none;
-  }
-
-  .nav__right {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 1rem;
-    margin-right: auto;
-    margin-left: 1rem;
-  }
 }
 
 @keyframes chitchat {

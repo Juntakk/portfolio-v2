@@ -15,23 +15,12 @@
   font-family: "Iceland", serif;
   color: var(--color-secondary);
   text-align: center;
-  padding-top: 12rem;
+  padding-top: 5rem;
 }
-@media screen and (max-width: 975px) {
-  #portfolio h2 {
-    margin-top: 1.2rem;
-  }
+@media (max-width: 975px) {
 }
-@media screen and (max-width: 700px) {
-  #portfolio h2 {
-    margin-top: -5rem;
-    font-size: 4rem;
-  }
-  .portfolio__container {
+@media (max-width: 700px) {
+  #portfolio {
     height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
   }
 }

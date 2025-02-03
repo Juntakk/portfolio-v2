@@ -132,7 +132,7 @@
   .portfolio__project {
     width: 18rem;
     height: 16rem;
-    margin-left: 1rem;
+    margin-left: 0rem;
   }
   .title {
     font-size: 2rem;

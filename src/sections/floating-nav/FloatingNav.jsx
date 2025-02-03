@@ -37,7 +37,7 @@ const FloatingNav = () => {
         const timer = setTimeout(() => {
           setIsScrolling(true);
           setScrollingTimeout(null);
-        }, 1500);
+        }, 500);
         setScrollingTimeout(timer);
       }
 
@@ -47,7 +47,7 @@ const FloatingNav = () => {
         setIsScrolling(false);
         clearTimeout(scrollingTimeout);
         setScrollingTimeout(null);
-      }, 1500);
+      }, 3500);
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -64,7 +64,7 @@ const FloatingNav = () => {
       <Scrollspy
         offset={-350}
         className="scrollspy"
-        items={["header", "services", "portfolio", "about", "contact"]}
+        items={["header", "services", "portfolio", "about"]}
         currentClassName="active"
       >
         {data.map((item) => (

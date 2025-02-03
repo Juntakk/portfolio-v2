@@ -100,6 +100,7 @@
   align-items: center;
   padding: 0rem;
   margin-top: 2rem;
+  margin-top: auto;
 }
 
 .git__btn {
@@ -196,6 +197,56 @@
     flex-direction: row;
     flex-wrap: nowrap;
     gap: 0.5rem;
+  }
+
+  .icon {
+    padding: 0.5rem;
+    font-size: 1.5rem;
+  }
+  .icon span {
+    display: none;
+  }
+
+  .git__btn {
+    font-size: 1.2rem;
+  }
+
+  .btn__container {
+    padding: 0rem;
+  }
+
+  .btn__container span {
+    font-size: 1rem;
+  }
+}
+@media (max-width: 1025px) and (orientation: landscape) {
+  .theme__modal {
+    width: 50%;
+    height: 80%;
+    padding: 1rem;
+    margin: 0;
+  }
+  .modal__image-container {
+    width: 100%;
+    max-height: 130px; /* Set a fixed max-height for image */
+    overflow: hidden;
+    flex-shrink: 0;
+    border-radius: 8px;
+  }
+  .modal__title {
+    font-size: 1.8rem;
+  }
+  .modal__body {
+    flex-direction: column;
+  }
+  .modal__info {
+    font-size: 1rem;
+    line-height: 1.4;
+    max-width: 100%;
+  }
+
+  .modal__icons {
+    display: none;
   }
 
   .icon {

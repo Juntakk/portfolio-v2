@@ -63,6 +63,124 @@
 
 @media (max-width: 1025px) {
   .weather-container {
+    padding: 0rem;
+    top: 1%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+    height: auto;
+    width: 30%;
+    z-index: 2;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .weather-details {
+    margin-top: 0rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+  }
+  .shuffle {
+    color: var(--color-secondary);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .time {
+    color: var(--color-secondary);
+    font-size: 1.2rem;
+    text-align: center;
+    letter-spacing: 1px;
+  }
+  .city {
+    color: var(--color-secondary);
+    font-size: 1.2rem;
+    text-align: end;
+
+    letter-spacing: 1px;
+  }
+
+  .weather-container .temperature {
+    font-size: 1.2rem;
+    color: var(--color-secondary);
+    text-align: end;
+  }
+
+  .loading,
+  .error {
+    text-align: center !important;
+    font-size: 1.8rem;
+    color: var(--color-secondary);
+    background-color: transparent;
+    padding: 0rem;
+    animation: spin 1.5s infinite linear;
+  }
+}
+@media (max-width: 1025px) and (orientation: landscape) {
+  .shuffle {
     display: none;
+  }
+  .time {
+    display: none;
+  }
+  .weather-container {
+    margin-top: 0.5rem;
+  }
+}
+@media (max-width: 700px) {
+  .weather-container {
+    padding: 0.2rem;
+    top: 1%;
+    display: flex;
+    margin-left: 0.5rem;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    height: auto;
+    width: auto;
+    z-index: 2;
+    margin-top: 0.2rem;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .weather-details {
+    margin-top: 0rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+  }
+  .shuffle {
+    display: none;
+  }
+  .time {
+    display: none;
+  }
+  .city {
+    color: var(--color-secondary);
+    font-size: 1rem;
+    text-align: center;
+    letter-spacing: 1px;
+  }
+
+  .weather-container .temperature {
+    font-size: 0.8rem;
+    color: var(--color-secondary);
+    text-align: end;
+    margin-left: 0.5rem;
+  }
+
+  .loading,
+  .error {
+    text-align: center !important;
+    font-size: 1.8rem;
+    color: var(--color-secondary);
+    background-color: transparent;
+    padding: 0rem;
+    animation: spin 1.5s infinite linear;
   }
 }

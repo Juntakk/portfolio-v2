@@ -11,7 +11,7 @@
   mix-blend-mode: difference; /* Creates a contrast effect */
   transition: transform 0.3s ease, width 0.3s ease, height 0.3s ease;
   transform: translate(-50%, -50%) scale(1);
-  z-index: 1000;
+  z-index: 1044444400;
 }
 
 .hover-cursor {

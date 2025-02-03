@@ -19,6 +19,7 @@ const Services = () => {
   const english = language === "en";
   const myRef = useRef();
   const isVisible = useVisibility(myRef, 0.1);
+
   useEffect(() => {
     if (window.innerWidth < 700) {
       setIsMobile(true);
@@ -48,7 +49,13 @@ const Services = () => {
           </div>
           <div className="face face2">
             <div className="content">
-              <p className="hover-this">{data[0].text}</p>
+              <p className="hover-this">
+                <p className="hover-this">
+                  {isMobile
+                    ? data[0].text.replace(/[^.!?]*[.!?]\s*$/, "")
+                    : data[0].text}
+                </p>
+              </p>
             </div>
           </div>
         </div>
@@ -68,7 +75,11 @@ const Services = () => {
           </div>
           <div className="face face2">
             <div className="content">
-              <p className="hover-this">{data[1].text}</p>
+              <p className="hover-this">
+                {isMobile
+                  ? data[1].text.replace(/[^.!?]*[.!?]\s*$/, "")
+                  : data[1].text}
+              </p>
             </div>
           </div>
         </div>
@@ -88,7 +99,13 @@ const Services = () => {
           </div>
           <div className="face face2">
             <div className="content">
-              <p className="hover-this">{data[2].text}</p>
+              <p className="hover-this">
+                <p className="hover-this">
+                  {isMobile
+                    ? data[2].text.replace(/[^.!?]*[.!?]\s*$/, "")
+                    : data[2].text}
+                </p>
+              </p>
             </div>
           </div>
         </div>
