@@ -49,11 +49,11 @@ const Project = ({ project, data }) => {
           </div> */}
           <div className="back" onClick={openModal}>
             <p className="title hover-this">{projectData.title}</p>
-            <div className="btn_div hover-this">
+            {/* <div className="btn_div hover-this">
               <a target="_blank" rel="noopner noreferrer" onClick={openModal}>
                 {language === "en" ? "KNOW MORE" : "VOIR PLUS"}
               </a>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>

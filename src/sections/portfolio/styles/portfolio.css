@@ -18,6 +18,10 @@
   padding-top: 5rem;
 }
 @media (max-width: 975px) {
+  #portfolio h2 {
+    font-size: 4rem;
+    padding-top: 4rem;
+  }
 }
 @media (max-width: 700px) {
   #portfolio {

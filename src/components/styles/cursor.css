@@ -15,7 +15,7 @@
   background-color: #fff;
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 800px) {
   .cursor {
     display: none;
   }

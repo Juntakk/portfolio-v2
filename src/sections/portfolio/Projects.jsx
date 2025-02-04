@@ -28,6 +28,9 @@ const Projects = ({ projects, data }) => {
     <div className="portfolio__projects">
       {isMobile ? (
         <>
+          <p className="slideNumber">
+            {activeSlide + 1} / {projects.length}
+          </p>
           <Swiper
             className="portfolio__swiper"
             modules={[Navigation]}
@@ -47,9 +50,6 @@ const Projects = ({ projects, data }) => {
               </>
             ))}
           </Swiper>
-          <p className="slideNumber">
-            {activeSlide + 1} / {projects.length}
-          </p>
         </>
       ) : (
         projects.map((project) => (

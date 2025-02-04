@@ -1,34 +1,21 @@
 .portfolio__projects {
-  display: grid;
+  display: flex;
+  flex-direction: column;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   justify-content: center;
   align-items: center;
-  padding-inline: 12rem;
+  padding-inline: 0rem;
   gap: 2rem;
   margin-bottom: 2rem;
+  width: 100%;
 }
+
 @media screen and (max-width: 1000px) {
   .portfolio__swiper {
     margin: 0;
-    padding-top: 2rem !important;
+    padding-top: 0rem !important;
     width: 100%;
-    height: 20rem;
-  }
-  .swiper-wrapper {
-    margin: 0;
-    padding: 0;
-  }
-  .swiper-slide {
-    margin: 0;
-    padding: 0;
-  }
-}
-@media screen and (max-width: 700px) {
-  .portfolio__swiper {
-    margin: 0;
-    padding-top: 2rem !important;
-    width: 100%;
-    height: 20rem;
+    height: 17rem;
   }
   .swiper-wrapper {
     margin: 0;
@@ -39,10 +26,35 @@
     padding: 0;
   }
   .slideNumber {
-    color: var(--color-primary);
+    color: var(--color-secondary);
     font-family: "Iceland";
-    padding-bottom: 1rem;
     font-size: 2rem;
+    text-align: center;
+  }
+}
+@media screen and (max-width: 700px) {
+  .portfolio__swiper {
+    margin: 0;
+    padding-top: 2rem !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 17rem;
+  }
+  .swiper-wrapper {
+    margin: 0;
+    padding: 0;
+  }
+  .swiper-slide {
+    margin: 0;
+    padding: 0;
+  }
+  .slideNumber {
+    color: var(--color-secondary);
+    font-family: "Iceland";
+    font-size: 2rem;
+    margin-bottom: -4rem;
     text-align: center;
   }
 }
