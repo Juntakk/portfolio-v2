@@ -1,4 +1,3 @@
-/* eslint-disable react-hooks/exhaustive-deps */
 import { useEffect, useState, useRef } from "react";
 import "./progress_bar.css";
 import React from "react";
@@ -30,15 +29,15 @@ const ProgressBar = (props) => {
   }, []);
 
   return (
-    <div ref={progressBarRef}>
+    <section id="progress" ref={progressBarRef}>
       <div className="skill-box">
         <div className="skill-bar">
-          <span className={`skill-per ${title} ${isVisible ? "animate" : ""}`}>
-            {/* <span className="tooltip">{level}%</span> */}
-          </span>
+          <span
+            className={`skill-per ${title} ${isVisible ? "animate" : ""}`}
+          ></span>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

@@ -50,15 +50,15 @@ html {
 }
 :root {
   --color-primary: #fff;
-  --color-secondary: #000;
+  --color-secondary: rgb(1, 52, 223);
 }
 main.color-1 {
   --color-primary: #000000;
   --color-secondary: #efefef;
 }
 main.color-2 {
-  --color-primary: #fff;
-  --color-secondary: #000 !important;
+  --color-primary: #ffffff;
+  --color-secondary: rgb(1, 52, 223) !important;
 }
 
 .container {

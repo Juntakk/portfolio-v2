@@ -6,7 +6,6 @@ nav {
   display: flex;
   z-index: 2;
 }
-
 .nav__container {
   width: 9rem;
   height: 100%;
@@ -19,13 +18,10 @@ nav {
   align-items: center;
   z-index: 1;
   border-left: 1px solid var(--color-secondary);
-  transition: all 1s;
+  transition: all 0.5s ease;
 }
-
 .nav__container.show {
   transform: translateX(0);
-  transition: all 1s ease-in-out;
-
   opacity: 1;
 }
 .nav__container.hide {
@@ -49,7 +45,7 @@ nav {
   align-items: center;
   cursor: pointer;
   transform: translateY(-50%);
-  transition: all 0.9s 0.001s ease-in-out;
+  transition: all 0.5s ease;
 }
 .nav__container.hide ~ .nav__handle {
   right: 0;
@@ -70,48 +66,39 @@ nav {
   transition: all 1s ease-in-out;
   z-index: 2;
 }
-
 .cv__text {
   color: var(--color-secondary) !important;
 }
-
 .cv:hover {
   transform: scale(1.05);
 }
-
 .icon {
   font-size: 1.5rem;
   color: var(--color-secondary) !important;
 }
-
 .nav__menu {
   display: flex;
   flex-direction: column;
   list-style: none;
   gap: 4rem;
   justify-content: center;
-  align-items: flex-end;
+  align-items: center;
 }
-
 .nav__menu li a {
   position: relative;
   color: var(--color-secondary);
   font-family: "Iceland";
-  font-size: 1.2rem;
+  font-size: 1.15rem;
   display: inline-block;
   transition: all 0.75s all ease-in-out !important;
-}
-
-.nav__menu li a:hover {
-  color: var(--color-secondary) !important;
+  letter-spacing: 1px;
 }
 .nav__menu li a.active {
-  visibility: hidden; /* Fully hide the text during animation */
+  visibility: hidden;
 }
-
 .nav__menu li a.active::before {
   content: ""; /* Start with no content */
-  animation: chitchat 0.75s;
+  color: var(--color-secondary);
   position: absolute;
   top: 0;
   left: 0;
@@ -119,19 +106,20 @@ nav {
   text-align: left;
   visibility: visible;
   z-index: 3;
-  font-weight: bolder;
+  animation: chitchat 0.75s;
 }
-
 .nav__menu li a.active.animation-complete {
   text-decoration: underline;
-  visibility: visible; /* Reveal the main text after animation */
-  will-change: auto;
+  visibility: visible;
+  color: var(--color-secondary);
 }
-
+.nav__menu li a.animation-complete::before {
+  content: "";
+  animation: none;
+}
 .nav__menu li a.active.animation-complete::before {
   content: none; /* Remove the pseudo-element */
 }
-
 .nav__menu li {
   transition: all 0.5s ease-in-out;
   color: var(--color-secondary);
@@ -253,65 +241,54 @@ nav {
     margin-left: 1rem;
   }
 }
-@media (max-width: 700px) {
-}
 
 @keyframes chitchat {
   0% {
-    content: "#-";
-  }
-
-  5% {
-    content: ".$";
+    content: "#-"; /* Glitch start */
   }
 
   10% {
-    content: "^{3e";
+    content: "^3e"; /* Garbled text */
   }
 
   20% {
-    content: "#$_nick";
+    content: "_nick"; /* Easter egg */
   }
 
   30% {
-    content: "#{+.[";}35%{content: "@}-?xo";
+    content: "AI.exe"; /* Loading something mysterious */
   }
 
   40% {
-    content: "?{4@%#-";
+    content: "0x404"; /* Tech-style error */
   }
 
   50% {
-    content: "?2@%L@";
+    content: "??!!??"; /* More glitch */
   }
 
   60% {
-    content: "?{%:%/*";
+    content: "Denied!"; /* Fake error */
     right: 0;
   }
 
   70% {
-    content: "{4%0%Rx•";
+    content: "Retry.."; /* Classic fake loading */
     right: 0;
   }
 
   80% {
-    content: "{0%**";
-    right: 0;
-  }
-
-  85% {
-    content: "]>'&@";
+    content: "Oh no!"; /* Suspense */
     right: 0;
   }
 
   90% {
-    content: "404";
+    content: "4o4"; /* Glitchy 404 */
     right: 0;
   }
 
   100% {
-    content: "";
+    content: ""; /* Cleared at the end */
     right: 0;
   }
 }

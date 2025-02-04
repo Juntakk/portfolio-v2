@@ -20,41 +20,9 @@ const Navbar = ({ toggleTheme, isDarkMode }) => {
   const [activeSection, setActiveSection] = useState(1);
   const [isMobile, setIsMobile] = useState(false);
   const [completed, setCompleted] = useState(false);
-  const [isScrolling, setIsScrolling] = useState(false);
-  const [scrollingTimeout, setScrollingTimeout] = useState(null);
   const [isHovered, setIsHovered] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
   const { themeState } = useThemeContext();
-
-  useEffect(() => {
-    if (isMobile) return;
-    let stopScrollingTimeout;
-
-    const handleScroll = () => {
-      if (!isScrolling && !scrollingTimeout) {
-        const timer = setTimeout(() => {
-          setIsScrolling(true);
-          setScrollingTimeout(null);
-        }, 1000);
-        setScrollingTimeout(timer);
-      }
-
-      clearTimeout(stopScrollingTimeout);
-
-      stopScrollingTimeout = setTimeout(() => {
-        setIsScrolling(false);
-        clearTimeout(scrollingTimeout);
-        setScrollingTimeout(null);
-      }, 1000);
-    };
-
-    window.addEventListener("scroll", handleScroll);
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-      clearTimeout(stopScrollingTimeout);
-      clearTimeout(scrollingTimeout);
-    };
-  }, [isScrolling, scrollingTimeout]);
 
   useEffect(() => {
     if (activeSection) {
@@ -63,10 +31,14 @@ const Navbar = ({ toggleTheme, isDarkMode }) => {
       return () => clearTimeout(timer);
     }
   }, [activeSection]);
+
+  //Mobile state
   useEffect(() => {
     setIsMobile(window.innerWidth < 1025);
     setIsOpen(isMobile);
   }, [isMobile]);
+
+  //Section tracker
   useEffect(() => {
     const sections = document.querySelectorAll("section");
 
@@ -76,7 +48,6 @@ const Navbar = ({ toggleTheme, isDarkMode }) => {
           if (entry.isIntersecting) {
             const sectionId = entry.target.id;
             setActiveSection(sectionId);
-            console.log(sectionId);
           }
         });
       },
@@ -90,37 +61,8 @@ const Navbar = ({ toggleTheme, isDarkMode }) => {
     };
   }, []);
 
-  const [isOpen, setIsOpen] = useState(false);
-  const [startX, setStartX] = useState(null); // Tracks initial drag position
-
   const toggleNavbar = () => {
     setIsOpen((prev) => !prev);
-  };
-
-  const handleDragStart = (e) => {
-    setStartX(e.clientX); // Capture the initial X position
-  };
-
-  const handleDragMove = (e) => {
-    if (startX === null) return;
-
-    const deltaX = e.clientX - startX;
-
-    // If dragging enough to the right, close the navbar
-    if (deltaX < 10 && !isOpen) {
-      setIsOpen(true);
-      setStartX(null); // Reset startX to prevent repeated toggling
-    }
-
-    // If dragging enough to the left, open the navbar
-    if (deltaX > -10 && isOpen) {
-      setIsOpen(false);
-      setStartX(null); // Reset startX to prevent repeated toggling
-    }
-  };
-
-  const handleDragEnd = () => {
-    setStartX(null); // Reset when the drag ends
   };
 
   useEffect(() => {
@@ -129,15 +71,12 @@ const Navbar = ({ toggleTheme, isDarkMode }) => {
 
   return (
     <nav
-      onMouseDown={!isMobile ? handleDragStart : null}
-      onMouseMove={!isMobile ? handleDragMove : null}
-      onMouseUp={!isMobile ? handleDragEnd : null}
-      onMouseEnter={!isMobile ? () => setIsHovered(true) : null}
-      onMouseLeave={!isMobile ? () => setIsHovered(false) : null}
+    // onMouseEnter={!isMobile ? () => setIsHovered(true) : null}
+    // onMouseLeave={!isMobile ? () => setIsHovered(false) : null}
     >
       <div className={`nav__container ${isOpen ? "show" : "hide"}`}>
-        <div className="nav__right hover-this">
-          <button className="theme__icon" onClick={toggleTheme}>
+        <div className="nav__right">
+          <button className="theme__icon hover-this" onClick={toggleTheme}>
             {isDarkMode ? <MdDarkMode /> : <MdOutlineWbSunny />}
           </button>
           <div className="line">|</div>
@@ -145,12 +84,12 @@ const Navbar = ({ toggleTheme, isDarkMode }) => {
             <LanguageToggle />
           </i>
         </div>
-        <ul className="nav__menu">
+        <ul className="nav__menu hover-this ">
           {data.map((item) => (
             <li key={item.id}>
               <a
                 href={item.link}
-                className={`hover-this ${
+                className={`${
                   activeSection === item.link.replace("#", "")
                     ? `active ${completed ? "animation-complete" : ""}`
                     : ""
@@ -172,12 +111,14 @@ const Navbar = ({ toggleTheme, isDarkMode }) => {
         >
           <span className="cv__text hover-this">CV</span>{" "}
           <LiaCloudDownloadAltSolid
-            color={themeState.primary === "color-1" ? "white" : "black"}
+            color={
+              themeState.primary === "color-1" ? "white" : "rgb(1, 52, 223)"
+            }
           />
         </a>
       </div>
       {/* Handle */}
-      <div className="nav__handle" onClick={toggleNavbar}>
+      <div className="nav__handle hover-this" onClick={toggleNavbar}>
         <span>
           {isOpen ? (
             <MdKeyboardDoubleArrowRight />

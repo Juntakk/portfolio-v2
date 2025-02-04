@@ -20,6 +20,7 @@ import ProjectDetails from "./sections/portfolio/ProjectDetails";
 import Modal from "./components/Modal";
 import Cursor from "./components/Cursor";
 import Weather from "./components/Weather";
+import ProgressBar from "./sections/services/ProgressBar";
 
 const App = () => {
   const mainRef = useRef();
@@ -30,8 +31,8 @@ const App = () => {
   const { themeState, themeHandler } = useThemeContext();
 
   const colorMap = {
-    "color-1": "#FF5E00",
-    "color-2": "#FF5E00",
+    "color-1": "#ffffff",
+    "color-2": "#000000",
   };
 
   const handleParticleColor = (theme) => colorMap[theme] || "color-1";
@@ -173,6 +174,7 @@ const App = () => {
         }}
       ></div>
       <main className={themeState.primary} ref={mainRef} id="main">
+        <Cursor />
         <Navbar toggleTheme={toggleTheme} isDarkMode={isDarkMode} />
         <Socials />
         <Weather />
@@ -182,6 +184,8 @@ const App = () => {
         <div className="spacing4"></div>
         <Portfolio />
         <div className="spacing3"></div>
+        {/* <ProgressBar /> */}
+        {/* <div className="spacing3"></div> */}
         <Donut />
         <div className="spacing2"></div>
         {/* <Testimonials />
@@ -190,7 +194,6 @@ const App = () => {
         <Footer />
         <ProjectDetails />
         <Modal />
-        <Cursor />
         {/* <Card /> */}
         <FloatingNav />
       </main>

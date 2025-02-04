@@ -44,7 +44,7 @@ const Socials = () => {
           setScrollingTimeout(null);
         }
         return;
-      }, 1500);
+      }, 3000);
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -89,10 +89,12 @@ const Socials = () => {
         rel="noopner noreferrer"
       >
         <TiSocialLinkedinCircular
-          color={themeState.primary === "color-1" ? "black" : "white"}
-          stroke={themeState.primary === "color-1" ? "white" : "black"}
+          color={themeState.primary === "color-1" ? "black" : "rgb(1, 52, 223)"}
+          stroke={
+            themeState.primary === "color-1" ? "white" : "rgb(1, 52, 223)"
+          }
           strokeWidth={0.1}
-          fill={themeState.primary === "color-1" ? "white" : "black"}
+          fill={themeState.primary === "color-1" ? "white" : "rgb(1, 52, 223)"}
           opacity={0.9}
         />
         <span className="tooltip">LinkedIn</span>
@@ -104,10 +106,12 @@ const Socials = () => {
         rel="noopner noreferrer"
       >
         <TiSocialGithubCircular
-          color={themeState.primary === "color-1" ? "black" : "white"}
-          stroke={themeState.primary === "color-1" ? "white" : "black"}
+          color={themeState.primary === "color-1" ? "black" : "rgb(1, 52, 223)"}
+          stroke={
+            themeState.primary === "color-1" ? "white" : "rgb(1, 52, 223)"
+          }
           strokeWidth={0.1}
-          fill={themeState.primary === "color-1" ? "white" : "black"}
+          fill={themeState.primary === "color-1" ? "white" : "rgb(1, 52, 223)"}
           opacity={0.9}
         />
         <span className="tooltip">Github</span>

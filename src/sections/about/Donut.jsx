@@ -4,6 +4,7 @@ import { easeExpOut } from "d3-ease";
 import sortBy from "lodash/sortBy";
 import { NodeGroup } from "react-move";
 import AboutImage from "../../assets/header2-removebg.png";
+import AboutImageColored from "../../assets/header2-removebg-colored.png";
 import "./donut.css";
 import useVisibility from "../../hooks/useVisibility.js";
 import { useLanguage } from "../../theme/LanguageContext.js";
@@ -18,10 +19,6 @@ const mockData = [
   { name: "NodeJs" },
   { name: "Volleyball" },
   { name: "Java" },
-  //   { name: "Html" },
-  //   { name: "WordPress" },
-  //   { name: "Shopify" },
-  //   { name: "CSS" },
   { name: "Laravel" },
 ];
 
@@ -129,7 +126,9 @@ const Donut = () => {
             className={`about__image ${
               isVisible ? "magictime slideRightReturn" : "none"
             }`}
-            href={AboutImage}
+            href={
+              themeState.primary === "color-1" ? AboutImage : AboutImageColored
+            }
             x={-imageSize / 2}
             y={-imageSize / 2}
             width={imageSize}

@@ -21,6 +21,7 @@ const cities = [
   "Rome",
   "Moscow",
   "Mumbai",
+  "Montpellier",
 ];
 
 const Weather = () => {
@@ -104,7 +105,7 @@ const Weather = () => {
         <p className="temperature">{weatherData.current.temp_c}°C</p>
         <p className="time">{currentTime}</p>
       </div>
-      <span className="shuffle">
+      <span className="shuffle hover-this">
         &nbsp;
         <TfiControlShuffle size={26} onClick={getRandomCity} />
       </span>

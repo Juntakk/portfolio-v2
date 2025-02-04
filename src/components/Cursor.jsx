@@ -17,20 +17,6 @@ const Cursor = () => {
   }, [modalData]);
 
   useEffect(() => {
-    // Function to animate the text on hover
-    const animateit = function (e) {
-      const span = this.querySelector("span");
-      const { offsetX: x, offsetY: y } = e,
-        { offsetWidth: width, offsetHeight: height } = this,
-        move = 25,
-        xMove = (x / width) * (move * 2) - move,
-        yMove = (y / height) * (move * 2) - move;
-
-      span.style.transform = `translate(${xMove}px, ${yMove}px)`;
-
-      if (e.type === "mouseleave") span.style.transform = "";
-    };
-
     // Function to move the custom cursor
     const editCursor = (e) => {
       const { clientX: x, clientY: y } = e;
@@ -40,18 +26,11 @@ const Cursor = () => {
       }
     };
 
-    // Add event listeners for hover effects
-    const link = document.querySelectorAll("nav > .hover-this");
-    link.forEach((b) => b.addEventListener("mousemove", animateit));
-    link.forEach((b) => b.addEventListener("mouseleave", animateit));
-
     // Add event listener for cursor movement
     window.addEventListener("mousemove", editCursor);
 
     // Cleanup event listeners on component unmount
     return () => {
-      link.forEach((b) => b.removeEventListener("mousemove", animateit));
-      link.forEach((b) => b.removeEventListener("mouseleave", animateit));
       window.removeEventListener("mousemove", editCursor);
     };
   }, []);
