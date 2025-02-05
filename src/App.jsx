@@ -69,7 +69,7 @@ const App = () => {
   useEffect(() => {
     const timer = setTimeout(() => {
       setIsLoading(false);
-    }, 1000);
+    }, 2222);
     return () => clearTimeout(timer);
   }, []);
 
@@ -79,8 +79,8 @@ const App = () => {
     if (loadingElement) {
       setTimeout(() => {
         loadingElement.classList.add("fade-in");
-        setTimeout(() => setIsLoading(false), 2000);
-      }, 2000);
+        setTimeout(() => setIsLoading(false), 3333);
+      }, 3333);
     } else {
       setIsLoading(false);
     }
