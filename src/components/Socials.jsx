@@ -12,6 +12,7 @@ const Socials = () => {
   const [isMobile, setIsMobile] = useState(false);
   const [isVisible, setIsVisible] = useState();
   const { themeState } = useThemeContext();
+  const [isIntersecting, setIsIntersecting] = useState(false);
 
   useEffect(() => {
     const handleMobile = () => {
@@ -76,11 +77,36 @@ const Socials = () => {
     };
   }, []);
 
+  useEffect(() => {
+    const socialsContainer =
+      document.getElementsByClassName("socials__container")[0];
+    const socialsHeight = socialsContainer ? socialsContainer.offsetHeight : 0;
+    const twoPercent = window.innerHeight * 0.02;
+
+    const handleScroll = () => {
+      const h2Elements = document.querySelectorAll("h2");
+
+      const isAnyIntersecting = Array.from(h2Elements).some((element) => {
+        const elementTop = element.getBoundingClientRect().top;
+        const triggerHeight = window.innerHeight - socialsHeight - twoPercent;
+        return elementTop <= triggerHeight;
+      });
+
+      setIsIntersecting(isAnyIntersecting);
+      console.log(isAnyIntersecting ? "ya" : "no");
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    handleScroll(); // Run once to set initial state
+
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
     <div
-      className={`socials__container hover-this ${
-        isScrolling ? "show " : "hide "
-      } ${!isVisible ? "center" : ""}`}
+      className={`socials__container ${!isIntersecting ? "show " : "hide "} ${
+        !isVisible ? "center" : ""
+      }`}
     >
       <a
         href="https://www.linkedin.com/in/nicolasgauthierdev/"

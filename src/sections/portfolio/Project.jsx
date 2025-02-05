@@ -43,13 +43,13 @@ const Project = ({ project, data }) => {
         data-aos="fade-left"
         data-aos-duration="1500"
       >
-        <div className="inner_card">
+        <div className="inner_card" onClick={openModal}>
           <div className="front">
             <div className="project_icon">{projectData.mainIcon}</div>
           </div>
-          <div className="back" onClick={openModal}>
-            <p className="title hover-this">{projectData.title}</p>
-            <div className="btn_div hover-this">
+          <div className="back">
+            <div className="inner_back">
+              <p className="title hover-this">{projectData.title}</p>
               <a target="_blank" rel="noopner noreferrer" onClick={openModal}>
                 {language === "en" ? "KNOW MORE" : "VOIR PLUS"}
               </a>

@@ -35,8 +35,8 @@ const Portfolio = () => {
 
   return (
     <section id="portfolio" ref={myRef}>
+      <h2>{language === "en" ? "Projects" : "Projets"}</h2>
       <div className="portfolio__container" data-aos="fade-left">
-        <h2>{language === "en" ? "Projects" : "Projets"}</h2>
         <ProjectsCategories
           categories={categories}
           onFilterProjects={filterProjectsHandler}

@@ -30,6 +30,7 @@ const Weather = () => {
   const [error, setError] = useState(null);
   const [currentTime, setCurrentTime] = useState("");
   const [city, setCity] = useState("Montréal");
+  const [isVisible, setIsVisible] = useState(false);
 
   const apiUrl = "/.netlify/functions/weather"; // Netlify automatically serves functions from this path
 
@@ -61,6 +62,25 @@ const Weather = () => {
     fetchWeatherData();
   }, []); // Runs only once when component is mounted
 
+  useEffect(() => {
+    const handleScroll = () => {
+      const windowY = window.scrollY;
+      const headerHeight = document.getElementById("header").offsetHeight;
+      console.log(headerHeight);
+
+      if (windowY > headerHeight) {
+        setIsVisible(true);
+      } else {
+        setIsVisible(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
   const getRandomCity = () => {
     const randomCity = cities[Math.floor(Math.random() * cities.length)];
     fetchWeatherData(randomCity);
@@ -99,7 +119,7 @@ const Weather = () => {
   }
 
   return (
-    <div className="weather-container">
+    <div className={`weather-container${isVisible ? " hide" : ""}`}>
       <div className="weather-details">
         <p className="city">{city}</p>
         <p className="temperature">{weatherData.current.temp_c}°C</p>

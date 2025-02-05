@@ -92,7 +92,7 @@ const App = () => {
 
     window.particlesJS("particles-js", {
       particles: {
-        number: { value: 13, density: { enable: false, value_area: 2000 } },
+        number: { value: 8, density: { enable: true, value_area: 1000 } },
         color: { value: particleColor },
         shape: {
           type: "circle",
@@ -100,13 +100,13 @@ const App = () => {
           polygon: { nb_sides: 5 },
         },
         opacity: {
-          value: 0.3,
+          value: 0.2,
           random: true,
           anim: { enable: false, speed: 0.08, opacity_min: 0, sync: false },
         },
         size: {
-          value: isMobile ? 15 : 90,
-          random: false,
+          value: isMobile ? 35 : 120,
+          random: true,
           anim: { enable: false, speed: 15, size_min: 60, sync: false },
         },
         line_linked: {
@@ -180,9 +180,9 @@ const App = () => {
         <Weather />
         <Header isLoading={isLoading} setIsLoading={setIsLoading} />
         <div className="spacing1"></div>
-        <Services />
-        <div className="spacing4"></div>
         <Portfolio />
+        <div className="spacing4"></div>
+        <Services />
         <div className="spacing3"></div>
         {/* <ProgressBar /> */}
         {/* <div className="spacing3"></div> */}

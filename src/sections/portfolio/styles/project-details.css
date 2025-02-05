@@ -3,7 +3,7 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  border: 2px solid var(--color-secondary);
+  border: 1px solid var(--color-secondary);
   background-color: var(--color-primary);
   display: flex;
   flex-direction: column;
@@ -24,7 +24,6 @@
   width: 2rem;
   height: 2rem;
 }
-
 .modal__image-container {
   width: 100%;
   max-height: 300px; /* Set a fixed max-height for image */
@@ -61,26 +60,9 @@
   justify-content: flex-start;
   align-items: flex-start; /* Ensure text aligns well */
   color: var(--color-secondary);
-}
-
-.modal__info {
   font-size: 1.2rem;
   line-height: 1.5;
-  z-index: 1000;
-}
-
-.icon {
-  color: var(--color-secondary);
-  font-size: 2rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  flex: 0 0 45%;
-}
-
-.icon span {
-  font-size: 1rem;
+  width: 99%;
 }
 
 .modal__icons {
@@ -89,36 +71,48 @@
   align-items: center;
   color: var(--color-secondary);
   flex-wrap: wrap;
-  gap: 1rem;
+  gap: 1.5rem;
   width: 100%;
+  max-width: 15rem;
+}
+.icon {
+  color: var(--color-secondary);
+  font-size: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  flex: 0 0 45%;
 }
 
 .btn__container {
   width: 100%;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   align-items: center;
   padding: 0rem;
   margin-top: 2rem;
-  margin-top: auto;
 }
 
 .git__btn {
   background-color: transparent;
-  color: var(--color-secondary);
+  color: orangered;
   font-size: 2rem;
   font-family: "Iceland";
-  font-weight: 100;
-  padding: 0.25rem;
+  /* border: 1px solid var(--color-secondary);
+  border-right: 1px solid var(--color-secondary); */
+  font-weight: 600;
+  padding: 0.5rem;
   transition: transform 0.3s ease;
   &:hover {
-    transform: scale(1.2);
+    transform: scale(1.1);
   }
 }
 
-.btn__container span {
+.theme__modal span {
+  margin-left: auto;
   font-size: 1.5rem;
-  color: var(--color-secondary);
+  color: orangered;
   transition: all 0.5s ease-in-out;
   &:hover {
     transform: rotate(90deg) scale(1.2);
@@ -170,55 +164,6 @@
     flex: 0;
   }
 }
-
-/* Responsive Styles for Viewports Under 700px (Mobile) */
-@media (max-width: 700px) {
-  .theme__modal {
-    width: 95%;
-    height: auto;
-    padding: 1rem;
-    margin: 0;
-  }
-
-  .modal__title {
-    font-size: 1.8rem;
-  }
-  .modal__body {
-    flex-direction: column;
-  }
-  .modal__info {
-    font-size: 1rem;
-    line-height: 1.4;
-    max-width: 100%;
-  }
-
-  .modal__icons {
-    margin-top: 0.5rem;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    gap: 0.5rem;
-  }
-
-  .icon {
-    padding: 0.5rem;
-    font-size: 1.5rem;
-  }
-  .icon span {
-    display: none;
-  }
-
-  .git__btn {
-    font-size: 1.2rem;
-  }
-
-  .btn__container {
-    padding: 0rem;
-  }
-
-  .btn__container span {
-    font-size: 1rem;
-  }
-}
 @media (max-width: 1025px) and (orientation: landscape) {
   .theme__modal {
     width: 50%;
@@ -247,6 +192,53 @@
 
   .modal__icons {
     display: none;
+  }
+
+  .icon {
+    padding: 0.5rem;
+    font-size: 1.5rem;
+  }
+  .icon span {
+    display: none;
+  }
+
+  .git__btn {
+    font-size: 1.2rem;
+  }
+
+  .btn__container {
+    padding: 0rem;
+  }
+
+  .btn__container span {
+    font-size: 1rem;
+  }
+}
+@media (max-width: 700px) {
+  .theme__modal {
+    width: 95%;
+    height: auto;
+    padding: 1rem;
+    margin: 0;
+  }
+
+  .modal__title {
+    font-size: 1.8rem;
+  }
+  .modal__body {
+    flex-direction: column;
+  }
+  .modal__info {
+    font-size: 1rem;
+    line-height: 1.4;
+    max-width: 100%;
+  }
+
+  .modal__icons {
+    margin-top: 0.5rem;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 0.5rem;
   }
 
   .icon {

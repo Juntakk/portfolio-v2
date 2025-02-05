@@ -1,7 +1,7 @@
 .cursor {
   pointer-events: none;
   position: fixed;
-  padding: 0.3rem;
+  padding: 0.2rem;
   background-color: #fff;
   border-radius: 50%;
   mix-blend-mode: difference; /* Creates a contrast effect */
@@ -12,7 +12,8 @@
 
 .hover-cursor {
   transform: translate(-50%, -50%) scale(5); /* Enlarge the cursor on hover */
-  background-color: #fff;
+  background-color: transparent;
+  border: 1px solid var(--color-secondary);
 }
 
 @media (max-width: 800px) {

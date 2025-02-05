@@ -40,6 +40,9 @@ const ProjectDetails = () => {
 
   return (
     <Modal className="theme__modal">
+      <span onClick={closeModalHandler} className="hover-this">
+        <RxCross1 />
+      </span>
       <Swiper
         className="modal__image-container"
         modules={[Pagination, Navigation, Autoplay]}
@@ -68,7 +71,6 @@ const ProjectDetails = () => {
           {icons.map(([icon, name], index) => (
             <div key={index} className="icon">
               {icon}
-              <span>{name}</span>
             </div>
           ))}
         </div>
@@ -88,9 +90,6 @@ const ProjectDetails = () => {
             Demo
           </button>
         )}
-        <span onClick={closeModalHandler} className="hover-this">
-          <RxCross1 />
-        </span>
       </div>
     </Modal>
   );

@@ -9,16 +9,21 @@
   flex-direction: row;
   height: 4rem;
   z-index: 1;
+  opacity: 1;
+  transition: opacity 0.75s ease;
+}
+.weather-container.hide {
+  opacity: 0;
 }
 .shuffle {
-  color: var(--color-secondary);
+  color: orangered;
   display: flex;
   justify-content: center;
   align-items: center;
-  transition: all 0.5s ease-in-out;
+  transition: transform 0.5s ease-in-out;
 }
 .shuffle:hover {
-  transform: scale(1.15);
+  transform: scale(1.1);
 }
 .time {
   color: var(--color-secondary);
