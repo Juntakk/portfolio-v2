@@ -32,7 +32,7 @@ const App = () => {
 
   const colorMap = {
     "color-1": "#ffffff",
-    "color-2": "#000000",
+    "color-2": "#0134DF",
   };
 
   const handleParticleColor = (theme) => colorMap[theme] || "color-1";

@@ -4,7 +4,7 @@
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   justify-content: center;
   align-items: center;
-  padding-inline: 12rem;
+  padding-inline: 15rem;
   gap: 2rem;
   margin-bottom: 2rem;
 }

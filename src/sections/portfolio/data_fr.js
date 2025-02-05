@@ -1,5 +1,6 @@
 import images from "./images.js";
-import icons from "./icons.js";
+import iconsData from "./icons.js";
+const { icons, mainIcons } = iconsData;
 
 const data = [
   {
@@ -7,6 +8,7 @@ const data = [
     category: "Web",
     image: images.ChatImage,
     title: "Chatbot",
+    mainIcon: mainIcons.chatbot,
     icons: [icons.python, icons.django, icons.numpy, icons.html],
     screenShot: images.chatbotScreenShot,
     desc: "Python | Django | NumPy",
@@ -19,6 +21,7 @@ const data = [
     category: "Web",
     image: images.seeFlix,
     title: "Seeflix",
+    mainIcon: mainIcons.seeFlix,
     icons: [icons.react, icons.node, icons.mongo, icons.tailwind],
     screenShot: images.seeflixScreenshots,
     desc: "ReactJS | NodeJS | MongoDB",
@@ -43,6 +46,7 @@ const data = [
     category: "Web",
     image: images.Image9,
     title: "E-Commerce",
+    mainIcon: mainIcons.steem,
     icons: [icons.react, icons.node, icons.mongo, icons.css],
     screenShot: images.steemScreenshots,
     desc: "ReactJS | NodeJS | MongoDB",
@@ -55,6 +59,7 @@ const data = [
     category: "Jeux",
     image: images.Image3,
     title: "Jeu de Combat",
+    mainIcon: mainIcons.survivors,
     icons: [icons.cplusplus, icons.godot],
     screenShot: images.survivorsScreenshots,
     desc: "C++ | Godot | GDscript",
@@ -77,6 +82,7 @@ const data = [
     category: "Jeux",
     image: images.Image7,
     title: "Mini RPG",
+    mainIcon: mainIcons.rpg,
     icons: [icons.cplusplus, icons.raylib, icons.unreal],
     desc: "C++ | Raylib | Unreal Engine",
     demo: "",
@@ -99,6 +105,7 @@ const data = [
     category: "Mobile",
     image: images.Image12,
     title: "Recettes",
+    mainIcon: mainIcons.recipes,
     icons: [icons.flutter, icons.dart],
     screenShot: images.mealsScreenshot,
     desc: "Flutter | Riverpod | Clean",
@@ -121,6 +128,7 @@ const data = [
     category: "Mobile",
     image: images.Image14,
     title: "Voyages",
+    mainIcon: mainIcons.travel,
     icons: [icons.flutter, icons.dart],
     screenShot: images.placesScreenShot,
     desc: "Flutter | Bloc | MVC",
@@ -133,6 +141,7 @@ const data = [
     category: "Mobile",
     image: images.BlogImage,
     title: "Blog",
+    mainIcon: mainIcons.blog,
     icons: [icons.flutter, icons.dart],
     screenShot: images.blogScreenshot,
     desc: "Flutter | Bloc | Clean",

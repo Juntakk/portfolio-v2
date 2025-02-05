@@ -19,6 +19,15 @@ import { RiTailwindCssFill } from "react-icons/ri";
 import { IoLogoAndroid } from "react-icons/io";
 import { SiDart } from "react-icons/si";
 
+import { BsChatDots } from "react-icons/bs";
+import { BiCameraMovie } from "react-icons/bi";
+import { LuGamepad2 } from "react-icons/lu";
+import { GiFire } from "react-icons/gi";
+import { GiCrossedSwords } from "react-icons/gi";
+import { MdOutlineFastfood } from "react-icons/md";
+import { BsAirplane } from "react-icons/bs";
+import { GrBlog } from "react-icons/gr";
+
 const icons = {
   react: [<FaReact />, "React"],
   html: [<FaHtml5 />, "Html"],
@@ -41,4 +50,14 @@ const icons = {
   dart: [<SiDart />, "Dart"],
 };
 
-export default icons;
+const mainIcons = {
+  chatbot: <BsChatDots />,
+  seeFlix: <BiCameraMovie />,
+  steem: <LuGamepad2 />,
+  survivors: <GiFire />,
+  rpg: <GiCrossedSwords />,
+  recipes: <MdOutlineFastfood />,
+  travel: <BsAirplane />,
+  blog: <GrBlog />,
+};
+export default { icons, mainIcons };

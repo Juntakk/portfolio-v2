@@ -44,16 +44,16 @@ const Project = ({ project, data }) => {
         data-aos-duration="1500"
       >
         <div className="inner_card">
-          {/* <div className="front">
-            <img src={projectData.image} alt="" />
-          </div> */}
+          <div className="front">
+            <div className="project_icon">{projectData.mainIcon}</div>
+          </div>
           <div className="back" onClick={openModal}>
             <p className="title hover-this">{projectData.title}</p>
-            {/* <div className="btn_div hover-this">
+            <div className="btn_div hover-this">
               <a target="_blank" rel="noopner noreferrer" onClick={openModal}>
                 {language === "en" ? "KNOW MORE" : "VOIR PLUS"}
               </a>
-            </div> */}
+            </div>
           </div>
         </div>
       </div>
