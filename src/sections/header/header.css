@@ -20,6 +20,7 @@
   transform: translateX(-50px); /* Initial off-screen position */
   transition: opacity 2s ease, transform 2s ease;
 }
+
 .fade-left-active {
   opacity: 1;
   transform: translateX(0); /* Final position */
@@ -34,8 +35,11 @@
   color: var(--color-secondary);
   margin-bottom: 1rem;
 }
+.currentText {
+  color: orangered;
+}
 .down__arrow {
-  color: var(--color-secondary);
+  color: orangered;
   font-size: 2rem;
   z-index: 1;
   margin-bottom: 5rem;

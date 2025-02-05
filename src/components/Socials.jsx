@@ -45,7 +45,7 @@ const Socials = () => {
           setScrollingTimeout(null);
         }
         return;
-      }, 3000);
+      }, 2300);
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -77,34 +77,34 @@ const Socials = () => {
     };
   }, []);
 
-  useEffect(() => {
-    const socialsContainer =
-      document.getElementsByClassName("socials__container")[0];
-    const socialsHeight = socialsContainer ? socialsContainer.offsetHeight : 0;
-    const twoPercent = window.innerHeight * 0.02;
+  //   useEffect(() => {
+  //     const socialsContainer =
+  //       document.getElementsByClassName("socials__container")[0];
+  //     const socialsHeight = socialsContainer ? socialsContainer.offsetHeight : 0;
+  //     const twoPercent = window.innerHeight * 0.02;
 
-    const handleScroll = () => {
-      const h2Elements = document.querySelectorAll("h2");
+  //     const handleScroll = () => {
+  //       const h2Elements = document.querySelectorAll("h2");
 
-      const isAnyIntersecting = Array.from(h2Elements).some((element) => {
-        const elementTop = element.getBoundingClientRect().top;
-        const triggerHeight = window.innerHeight - socialsHeight - twoPercent;
-        return elementTop <= triggerHeight;
-      });
+  //       const isAnyIntersecting = Array.from(h2Elements).some((element) => {
+  //         const elementTop = element.getBoundingClientRect().top;
+  //         const triggerHeight = window.innerHeight - socialsHeight - twoPercent;
+  //         return elementTop <= triggerHeight;
+  //       });
 
-      setIsIntersecting(isAnyIntersecting);
-      console.log(isAnyIntersecting ? "ya" : "no");
-    };
+  //       setIsIntersecting(isAnyIntersecting);
+  //       console.log(isAnyIntersecting ? "ya" : "no");
+  //     };
 
-    window.addEventListener("scroll", handleScroll);
-    handleScroll(); // Run once to set initial state
+  //     window.addEventListener("scroll", handleScroll);
+  //     handleScroll(); // Run once to set initial state
 
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+  //     return () => window.removeEventListener("scroll", handleScroll);
+  //   }, []);
 
   return (
     <div
-      className={`socials__container ${!isIntersecting ? "show " : "hide "} ${
+      className={`socials__container ${isScrolling ? "show " : "hide "} ${
         !isVisible ? "center" : ""
       }`}
     >
@@ -115,10 +115,6 @@ const Socials = () => {
         rel="noopner noreferrer"
       >
         <TiSocialLinkedinCircular
-          color={themeState.primary === "color-1" ? "black" : "rgb(1, 52, 223)"}
-          stroke={
-            themeState.primary === "color-1" ? "white" : "rgb(1, 52, 223)"
-          }
           strokeWidth={0.1}
           fill={themeState.primary === "color-1" ? "white" : "rgb(1, 52, 223)"}
           opacity={0.9}
@@ -132,10 +128,6 @@ const Socials = () => {
         rel="noopner noreferrer"
       >
         <TiSocialGithubCircular
-          color={themeState.primary === "color-1" ? "black" : "rgb(1, 52, 223)"}
-          stroke={
-            themeState.primary === "color-1" ? "white" : "rgb(1, 52, 223)"
-          }
           strokeWidth={0.1}
           fill={themeState.primary === "color-1" ? "white" : "rgb(1, 52, 223)"}
           opacity={0.9}

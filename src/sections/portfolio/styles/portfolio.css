@@ -12,11 +12,12 @@
   transition: all 1s ease-in-out;
 }
 #portfolio h2 {
+  margin-top: 5rem;
   font-size: 5rem;
   font-family: "Iceland", serif;
   color: var(--color-secondary);
-  border-right: 5px solid orangered !important;
-  border-bottom: 3px solid orangered !important;
+  border-right: 2px solid orangered !important;
+  border-bottom: 2px solid orangered !important;
   text-align: start;
   width: auto;
   margin-top: 5rem;
@@ -26,7 +27,6 @@
 @media (max-width: 975px) {
   #portfolio h2 {
     font-size: 4rem;
-    padding-top: 4rem;
   }
 }
 @media (max-width: 700px) {

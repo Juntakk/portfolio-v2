@@ -76,10 +76,15 @@ const Header = ({ isLoading, setIsLoading }) => {
             transition: "opacity 2s ease, transform 2s ease",
           }}
         >
-          {" "}
-          {language === "en"
-            ? currentText + " Developer"
-            : "Développeur " + currentText}
+          {language === "en" ? (
+            <>
+              <span className="currentText">{currentText}</span> Developer
+            </>
+          ) : (
+            <>
+              Développeur <span className="currentText">{currentText}</span>
+            </>
+          )}
         </p>
         <a href="#services" className="down__arrow hover-this">
           <span>

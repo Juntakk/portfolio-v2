@@ -88,19 +88,7 @@
   transition: visibility 0.7s ease-in-out;
 }
 
-@media screen and (max-width: 1224px) {
-  .info {
-    font-size: 1.25rem;
-  }
-  .portfolio__project {
-    background-color: transparent;
-    width: 100%;
-    height: 20rem;
-    perspective: 5000px;
-  }
-}
-
-@media screen and (max-width: 975px) {
+@media screen and (max-width: 1025px) {
   .portfolio__project {
     background-color: transparent;
     width: 80%;
@@ -119,7 +107,6 @@
     font-size: 1.25rem;
   }
   .project_icon {
-    margin-top: 2rem;
     font-size: 7rem;
   }
 }

@@ -50,6 +50,9 @@ nav {
 .nav__container.hide ~ .nav__handle {
   right: 0;
 }
+.nav__handle span {
+  color: orangered;
+}
 .cv {
   display: flex;
   justify-content: center;
@@ -98,7 +101,7 @@ nav {
 }
 .nav__menu li a.active::before {
   content: ""; /* Start with no content */
-  color: var(--color-secondary);
+  color: orangered;
   position: absolute;
   top: 0;
   left: 0;
@@ -110,6 +113,7 @@ nav {
 }
 .nav__menu li a.active.animation-complete {
   text-decoration: underline;
+  text-decoration-color: orangered;
   visibility: visible;
   color: var(--color-secondary);
 }

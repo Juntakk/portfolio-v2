@@ -7,7 +7,7 @@ import { useLanguage } from "../../theme/LanguageContext";
 const ProjectsCategories = ({ categories, onFilterProjects }) => {
   const language = useLanguage();
   const [activeCategory, setActiveCategory] = useState(
-    language === "en" ? "All" : "Tout"
+    language === "en" ? "Web" : "Web"
   );
 
   useEffect(() => {

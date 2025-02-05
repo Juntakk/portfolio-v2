@@ -127,7 +127,9 @@ const Donut = () => {
               isVisible ? "magictime slideRightReturn" : "none"
             }`}
             href={
-              themeState.primary === "color-1" ? AboutImage : AboutImageColored
+              themeState.primary === "color-1"
+                ? AboutImageColored
+                : AboutImageColored
             }
             x={-imageSize / 2}
             y={-imageSize / 2}

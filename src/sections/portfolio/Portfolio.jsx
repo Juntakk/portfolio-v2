@@ -6,6 +6,7 @@ import data_fr from "./data_fr";
 import { useState, useMemo, useCallback, useRef } from "react";
 import { useLanguage } from "../../theme/LanguageContext";
 import React from "react";
+import useVisibility from "../../hooks/useVisibility";
 
 const Portfolio = () => {
   const { language } = useLanguage();
@@ -16,6 +17,7 @@ const Portfolio = () => {
       (project.category === language) === "en" ? "All" : "Tout"
     )
   );
+  const isVisible = useVisibility(myRef, 0.1);
 
   const categories = useMemo(() => {
     const allCategories = data.map((item) => item.category);
@@ -35,7 +37,9 @@ const Portfolio = () => {
 
   return (
     <section id="portfolio" ref={myRef}>
-      <h2>{language === "en" ? "Projects" : "Projets"}</h2>
+      <h2 className={`${isVisible ? "magictime slideRightReturn" : "none"}`}>
+        {language === "en" ? "Projects" : "Projets"}
+      </h2>
       <div className="portfolio__container" data-aos="fade-left">
         <ProjectsCategories
           categories={categories}

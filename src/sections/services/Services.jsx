@@ -50,11 +50,9 @@ const Services = () => {
           <div className="face face2">
             <div className="content">
               <p className="hover-this">
-                <p className="hover-this">
-                  {isMobile
-                    ? data[0].text.replace(/[^.!?]*[.!?]\s*$/, "")
-                    : data[0].text}
-                </p>
+                {isMobile
+                  ? data[0].text.replace(/[^.!?]*[.!?]\s*$/, "")
+                  : data[0].text}
               </p>
             </div>
           </div>

@@ -111,6 +111,7 @@
 
 .theme__modal span {
   margin-left: auto;
+  padding-bottom: 1rem;
   font-size: 1.5rem;
   color: orangered;
   transition: all 0.5s ease-in-out;

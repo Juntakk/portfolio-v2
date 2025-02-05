@@ -10,11 +10,12 @@
 }
 #services h2 {
   margin-top: 5rem;
+  margin-bottom: 1rem;
   font-size: 5rem;
   font-family: "Iceland", serif;
   color: var(--color-secondary);
-  border-right: 5px solid orangered !important;
-  border-bottom: 3px solid orangered !important;
+  border-right: 2px solid orangered !important;
+  border-bottom: 2px solid orangered !important;
   text-align: start;
   width: auto;
   margin-top: 5rem;
@@ -71,31 +72,21 @@ h2 .none {
   color: var(--color-secondary);
   opacity: 1;
   text-align: center;
-  transition: 0.5s;
 }
-.services__container .service__card:hover .face.face1 .content {
-  color: var(--color-secondary);
-  opacity: 1;
-}
+
 .services__container .service__card .face.face1 .content span {
   max-width: 100px;
-  color: var(--color-secondary);
-  transition: 0.5s all ease;
+  color: orangered;
 }
-.services__container .service__card:hover .face.face1 .content span {
-  color: var(--color-secondary);
-}
+
 .services__container .service__card .face.face1 .content h3 {
   margin: 10px 0 0;
   padding: 0;
-  color: var(--color-secondary);
+  color: orangered;
   text-align: center;
   font-size: 1.5em;
-  transition: color 0.5s ease;
 }
-.services__container .service__card:hover .face.face1 .content h3 {
-  color: var(--color-secondary);
-}
+
 .services__container .service__card .face.face2 {
   position: relative;
   background: transparent;
@@ -118,8 +109,6 @@ h2 .none {
   border-bottom-left-radius: 15px;
   border-bottom-right-radius: 15px;
   border: 1px solid var(--color-secondary);
-  border-top: none !important;
-
   background-color: transparent;
   transform: translateY(0);
   transition: all 0.5s ease;
@@ -174,128 +163,8 @@ h2.none {
   font-size: 1.2rem;
   font-weight: lighter;
 }
-/*LANDSCAPE TABLETS*/
-@media (min-width: 701px) and (max-width: 1025px) {
-  #services h2 {
-    margin-top: 5rem !important;
-    font-size: 6rem;
-  }
-  .services__container {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 2rem;
-    font-family: "Iceland", "serif";
-  }
-  .services__container .service__card {
-    position: relative;
-    border: none;
-    height: 200px;
-    width: 300px;
-  }
-  .services__container .service__card .face {
-    height: 200px;
-    width: 300px;
-    transition: 0.5s;
-  }
-  .services__container .service__card .face.face1 {
-    border-top-left-radius: 15px;
-    border-top-right-radius: 15px;
-    border-bottom-left-radius: 15px;
-    border-bottom-right-radius: 15px;
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 2;
-    overflow: hidden;
-    transform: translateY(100px);
-  }
-  .services__container .service__card:hover .face.face1 {
-    border-bottom-left-radius: 0px;
-    border-bottom-right-radius: 0px;
-    transform: translateY(0);
-  }
-  .services__container .service__card .face.face1 .content {
-    opacity: 1;
-    text-align: center;
-    transition: 0.5s;
-  }
-  .services__container .service__card:hover .face.face1 .content {
-    opacity: 0;
-  }
-  .services__container .service__card .face.face1 .content span {
-    max-width: 100px;
-    transition: 0.5s all ease;
-  }
 
-  .services__container .service__card .face.face1 .content h3 {
-    margin: 10px 0 0;
-    padding: 0;
-    text-align: center;
-    font-size: 1.5em;
-    transition: color 0.5s ease;
-  }
-  .services__container .service__card .face.face2 {
-    position: relative;
-    background: transparent;
-    border-top-left-radius: 15px;
-    border-top-right-radius: 15px;
-    border-bottom-left-radius: 15px;
-    border-bottom-right-radius: 15px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
-    box-sizing: border-box;
-    transform: translateY(-100px);
-  }
-  .services__container .service__card:hover .face.face2 {
-    border-top-left-radius: 0px;
-    border-top-right-radius: 0px;
-    border-bottom-left-radius: 15px;
-    border-bottom-right-radius: 15px;
-    transform: translateY(0);
-  }
-  .services__container .service__card .face.face2 .content p {
-    margin: 0;
-    padding: 0;
-    font-size: 1.2rem;
-  }
-  .service__card.one.magictime.slideLeftReturn {
-    animation-duration: 2.5s;
-  }
-  .service__card.two.magictime.slideLeftReturn {
-    animation-duration: 2s;
-  }
-  .service__card.three.magictime.slideLeftReturn {
-    animation-duration: 1.5s;
-  }
-  h2.none {
-    opacity: 0;
-  }
-  .statistics__row {
-    display: none;
-  }
-  .statistics__row .none {
-    opacity: 0;
-  }
-  .statistic {
-    text-align: center;
-  }
-  .statistic h3 {
-    font-family: "Iceland", serif;
-    font-size: 3.5rem;
-    margin-bottom: 0.5rem;
-  }
-  .statistic p {
-    font-family: "Iceland", serif;
-    font-size: 1.7rem;
-    font-weight: bold;
-  }
-}
-@media (max-width: 1025px) {
+@media (max-width: 1200px) {
   #services h2 {
     margin-top: 1rem;
     font-size: 4rem;
@@ -307,27 +176,27 @@ h2.none {
   }
   .services__container .service__card {
     height: 200px;
-    width: 300px;
+    width: 500px;
     border-radius: 15px;
   }
   .services__container .service__card .face {
     height: 200px;
-    width: 300px;
+    width: 500px;
   }
   .services__container .service__card .face.face1 {
     border-radius: 15px;
     transform: translateY(0px);
-    transition: all 1s ease-in-out;
+    transition: none;
   }
   .services__container .service__card:hover .face.face1 {
     border-radius: 15px;
+    visibility: hidden;
   }
   .services__container .service__card .face.face2 {
     background: transparent;
     border-radius: 15px;
     z-index: 2;
     transform: translateY(-0px);
-    transition: transform 1s ease-in-out, visibility 0s ease;
     visibility: hidden;
   }
   .services__container .service__card:hover .face.face2 {
@@ -339,7 +208,10 @@ h2.none {
   .services__container .service__card .face.face2 .content p {
     margin: 0;
     padding: 0;
-    font-size: 1rem;
+    font-size: 1.5rem;
+  }
+  .statistics__row {
+    display: none;
   }
 }
 @media (max-width: 700px) {

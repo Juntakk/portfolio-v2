@@ -68,7 +68,7 @@ const Weather = () => {
       const headerHeight = document.getElementById("header").offsetHeight;
       console.log(headerHeight);
 
-      if (windowY > headerHeight) {
+      if (windowY > headerHeight && window.innerWidth > 1025) {
         setIsVisible(true);
       } else {
         setIsVisible(false);
