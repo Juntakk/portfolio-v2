@@ -239,7 +239,7 @@ h2.none {
   }
 }
 @media (max-width: 400px) {
-  #services h2 {
+  /* #services h2 {
     margin-top: 6rem;
   }
   .services__container .service__card:hover .face.face2 {
@@ -260,5 +260,5 @@ h2.none {
     margin: 0;
     padding: 0;
     font-size: 1rem;
-  }
+  } */
 }

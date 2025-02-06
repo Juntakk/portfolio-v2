@@ -206,12 +206,12 @@
     margin-top: 1.5rem;
     flex-direction: row;
     flex-wrap: nowrap;
-    gap: 3.5rem;
+    gap: 2rem;
   }
 
-  .icon {
+  .language__icon {
     padding: 0.5rem;
-    font-size: 1.5rem;
+    font-size: 2rem;
   }
   .icon span {
     display: none;
