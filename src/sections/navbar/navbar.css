@@ -162,7 +162,24 @@ nav {
   font-size: 1.6rem;
   cursor: default;
 }
+.nav__logo img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2rem; /* Ensure no forced size */
+  height: 2rem;
+}
 
+.language-icon {
+  border-radius: 50%;
+  transition: transform 0.2s ease-in-out;
+  object-fit: contain;
+  display: block;
+}
+
+.language-icon:hover {
+  transform: scale(1.1);
+}
 .icon {
   color: var(--color-secondary);
 }
@@ -188,8 +205,8 @@ nav {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 0.5rem; /* Ensure no forced size */
-    height: 0.5rem;
+    width: 1.5rem; /* Ensure no forced size */
+    height: 1.5rem;
   }
 
   .language-icon {
