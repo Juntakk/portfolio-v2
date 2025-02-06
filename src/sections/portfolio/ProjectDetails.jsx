@@ -69,9 +69,12 @@ const ProjectDetails = () => {
         </div>
         <div className="modal__icons hover-this">
           {icons.map(([icon, name], index) => (
-            <div key={index} className="icon">
-              {icon}
-            </div>
+            <>
+              <div key={index} className="language__icon">
+                {icon}
+                <span className="language__tooltip">{name}</span>
+              </div>
+            </>
           ))}
         </div>
       </div>

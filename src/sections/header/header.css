@@ -8,11 +8,15 @@
 }
 .myName {
   opacity: 0;
+  display: block !important;
   transform: translateX(-50px); /* Initial fade-left position */
   transition: opacity 2s ease, transform 2s ease;
   margin-top: 10rem;
   text-align: center;
-  color: var(--color-secondary) !important;
+  color: var(--color-secondary);
+}
+.first-letter {
+  color: orangered;
 }
 .myName,
 .desc_p {

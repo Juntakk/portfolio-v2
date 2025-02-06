@@ -7,6 +7,8 @@
 }
 .project_icon {
   color: orangered;
+  opacity: 0.9;
+
   display: flex;
   justify-content: center;
   align-items: center;

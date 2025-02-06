@@ -60,11 +60,13 @@ const Header = ({ isLoading, setIsLoading }) => {
             opacity: isLoading ? 0 : 1,
             transition: "opacity 2s ease, transform 2s ease",
             fontSize: "5.5rem",
-            color: "var(--color-black)",
           }}
         >
           <span className="typing iceland-regular hover-this">
-            Nicolas Gauthier
+            <span className="first-letter">N</span>icolas
+          </span>
+          <span className="typing iceland-regular hover-this">
+            <span className="first-letter">G</span>authier
           </span>
         </h1>
         <p
