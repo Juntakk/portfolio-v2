@@ -162,15 +162,7 @@ nav {
   font-size: 1.6rem;
   cursor: default;
 }
-.nav__logo {
-  font-size: 1.2rem;
-  transition: all 1s;
-  border-radius: 50%;
-}
-.nav__logo:hover {
-  transform: scale(1.15);
-  cursor: pointer;
-}
+
 .icon {
   color: var(--color-secondary);
 }
@@ -192,13 +184,25 @@ nav {
     color: var(--color-secondary);
     transition: all 0.75s ease-in-out;
   }
+  .nav__logo img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 0.5rem; /* Ensure no forced size */
+    height: 0.5rem;
+  }
 
   .language-icon {
-    height: 1.5rem;
-    width: 1.5rem;
-    transition: all 1s;
     border-radius: 50%;
+    transition: transform 0.2s ease-in-out;
+    object-fit: contain;
+    display: block;
   }
+
+  .language-icon:hover {
+    transform: scale(1.1);
+  }
+
   .cv {
     display: flex;
     justify-content: center;

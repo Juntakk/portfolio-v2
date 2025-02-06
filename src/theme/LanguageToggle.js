@@ -1,4 +1,5 @@
 import { useLanguage } from "./LanguageContext.js";
+import "../sections/navbar/navbar.css";
 import enImg from "../assets/uk.png";
 import frImg from "../assets/france.png";
 import React from "react";
@@ -9,7 +10,7 @@ const LanguageToggle = () => {
 
   return (
     <>
-      <span onClick={toggleLanguage} className="language__toggle">
+      <span onClick={toggleLanguage} className="">
         <p style={{ cursor: "pointer" }}>
           {language === "en" ? (
             <img src={enImg} alt="Switch to French" className="language-icon" />
