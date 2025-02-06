@@ -113,6 +113,8 @@ nav {
 }
 .nav__menu li a.active.animation-complete {
   text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 4px;
   text-decoration-color: orangered;
   visibility: visible;
   color: var(--color-secondary);

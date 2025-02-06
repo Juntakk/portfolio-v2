@@ -58,7 +58,7 @@ const Donut = () => {
 
   const view = isMobile ? [240, 240] : isTablet ? [850, 850] : [1200, 1200];
   const dims = [view[0], view[1]];
-  const radius = isMobile ? 75 : isTablet ? 250 : 375;
+  const radius = isMobile ? 90 : isTablet ? 250 : 475;
   const imageSize = radius * 1.4;
   const fontSize = isMobile ? "0.6rem" : isTablet ? "1.5rem" : "2.5rem";
 
@@ -115,6 +115,9 @@ const Donut = () => {
   }, [currentText, isDeleting, typingSpeed, texts, currentIndex, isPaused]);
   return (
     <section id="about" ref={myRef}>
+      <h2 className={`${isVisible ? "magictime slideRightReturn" : "none"}`}>
+        {language === "en" ? "About" : "À propos"}
+      </h2>{" "}
       <svg
         className="donut"
         width="100%"

@@ -6,8 +6,6 @@
   margin-bottom: 2rem;
 }
 @media screen and (max-width: 1025px) {
-  .portfolio__projects {
-  }
   .portfolio__swiper {
     margin: 0;
     padding-top: 0rem !important;

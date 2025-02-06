@@ -84,7 +84,7 @@
     transition: all 1s ease-in-out;
   }
   .socials__container.show.center {
-    bottom: 35%;
+    bottom: 20%;
     left: calc(100vw - (50vw + 9rem));
     flex-direction: row;
   }

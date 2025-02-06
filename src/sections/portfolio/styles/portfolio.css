@@ -7,6 +7,7 @@
   /* justify-content: space-evenly;
   align-items: center;*/
   flex-direction: column;
+  padding-bottom: 8rem;
 }
 .portfolio__container {
   transition: all 1s ease-in-out;
@@ -17,14 +18,13 @@
   font-family: "Iceland", serif;
   color: var(--color-secondary);
   opacity: 0.9;
-
   border-right: 3px solid orangered !important;
   border-bottom: 3px solid orangered !important;
   text-align: start;
   width: auto;
   border-top-right-radius: 4px;
   border-bottom-right-radius: 8px;
-  margin-top: 5rem;
+
   margin-right: auto;
   padding: 1rem;
 }

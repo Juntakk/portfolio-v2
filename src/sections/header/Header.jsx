@@ -88,7 +88,7 @@ const Header = ({ isLoading, setIsLoading }) => {
             </>
           )}
         </p>
-        <a href="#services" className="down__arrow hover-this">
+        <a href="#portfolio" className="down__arrow hover-this">
           <span>
             <MdKeyboardDoubleArrowDown />
           </span>

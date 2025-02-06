@@ -5,6 +5,7 @@ import { useState, useRef } from "react";
 import useVisibility from "../../hooks/useVisibility";
 import emailjs from "emailjs-com";
 import React from "react";
+import { MdKeyboardDoubleArrowUp } from "react-icons/md";
 
 const Contact = () => {
   const { language } = useLanguage();
@@ -17,6 +18,11 @@ const Contact = () => {
     message: "",
   });
   const [status, setStatus] = useState("");
+
+  const goToTop = () => {
+    console.log("clicked");
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -159,6 +165,9 @@ const Contact = () => {
         </form>
         {status && <span className="status_msg">{status}</span>}
       </div>{" "}
+      <div className="up__arrow hover-this" onClick={goToTop}>
+        <MdKeyboardDoubleArrowUp />
+      </div>
     </section>
   );
 };

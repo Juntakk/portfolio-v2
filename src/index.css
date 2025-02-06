@@ -22,7 +22,7 @@ body {
 }
 /* width */
 ::-webkit-scrollbar {
-  width: 2px;
+  width: 1px;
 }
 /* Track */
 ::-webkit-scrollbar-track {
@@ -30,7 +30,7 @@ body {
 }
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: white;
+  background: orangered;
 }
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
@@ -67,4 +67,15 @@ main.color-2 {
 }
 section {
   height: 100vh;
+}
+
+@media (max-width: 1025px) {
+  h2 {
+    font-size: 4rem;
+  }
+}
+@media (max-width: 600px) {
+  h2 {
+    font-size: 3.5rem !important;
+  }
 }
