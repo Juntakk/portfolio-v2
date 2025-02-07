@@ -1,3 +1,31 @@
+:root {
+  --color-react: #00d8ff; /* Bright cyan for React */
+  --color-python: #ffd43b; /* Python Yellow */
+  --color-nodejs: #6cc24a; /* Lighter green for Node.js */
+  --color-volleyball: #ff8c00; /* Warm Orange Volleyball */
+  --color-java: #f4511e; /* Vibrant Java Orange */
+  --color-next: #333333; /* Dark Gray for Next.js */
+}
+
+.arc-path-reactjs {
+  fill: var(--color-react);
+}
+.arc-path-python {
+  fill: var(--color-python);
+}
+.arc-path-nodejs {
+  fill: var(--color-nodejs);
+}
+.arc-path-volleyball {
+  fill: var(--color-volleyball);
+}
+.arc-path-java {
+  fill: var(--color-java);
+}
+.arc-path-nextjs {
+  fill: var(--color-next);
+}
+
 #about {
   background-color: var(--color-primary);
   cursor: default;
@@ -60,42 +88,6 @@ text {
 }
 polyline {
   stroke: transparent;
-}
-svg.donut {
-  width: 100%;
-}
-.arc-path-reactjs {
-  fill: orangered;
-}
-.arc-path-python {
-  fill: var(--color-secondary);
-}
-.arc-path-NodeJs {
-  fill: var(--color-primary);
-}
-.arc-path-volleyball {
-  fill: var(--color-secondary);
-}
-.arc-path-java {
-  fill: var(--color-primary);
-}
-.arc-path-Flutter {
-  fill: var(--color-secondary);
-}
-.arc-path-WordPress {
-  fill: var(--color-secondary);
-}
-.arc-path-Shopify {
-  fill: var(--color-secondary);
-}
-.arc-path-Html {
-  fill: var(--color-secondary);
-}
-.arc-path-Laravel {
-  fill: orangered;
-}
-.arc-path-CSS {
-  fill: var(--color-secondary);
 }
 @media (max-width: 1300px) {
   .bio {

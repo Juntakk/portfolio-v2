@@ -3,7 +3,6 @@ import { arc, pie } from "d3-shape";
 import { easeExpOut } from "d3-ease";
 import sortBy from "lodash/sortBy";
 import { NodeGroup } from "react-move";
-import AboutImage from "../../assets/header2-removebg.png";
 import AboutImageColored from "../../assets/header2-removebg-colored.png";
 import "./donut.css";
 import useVisibility from "../../hooks/useVisibility.js";
@@ -14,12 +13,12 @@ const getRandom = (min, max) =>
   Math.floor(Math.random() * (max - (min + 1))) + min;
 
 const mockData = [
-  { name: "ReactJs" },
   { name: "Python" },
-  { name: "NodeJs" },
+  { name: "NextJs" },
   { name: "Volleyball" },
+  { name: "NodeJs" },
+  { name: "ReactJs" },
   { name: "Java" },
-  { name: "Laravel" },
 ];
 
 const pieLayout = pie()
@@ -116,7 +115,7 @@ const Donut = () => {
   return (
     <section id="about" ref={myRef}>
       <h2 className={`${isVisible ? "magictime slideRightReturn" : "none"}`}>
-        {language === "en" ? "About" : "À propos"}
+        {language === "en" ? "Skills" : "Expertise"}
       </h2>{" "}
       <svg
         className="donut"
@@ -179,11 +178,11 @@ const Donut = () => {
                       <path
                         d={innerArcPath(state)}
                         className={`arc-path-${data.data.name}`}
-                        opacity={0.9}
-                        stroke={
-                          themeState.primary === "color-1" ? "white" : "black"
-                        }
-                        strokeWidth="1"
+                        opacity={1}
+                        // stroke={
+                        //   themeState.primary === "color-1" ? "white" : "black"
+                        // }
+                        strokeWidth="0"
                       />
                       <text
                         dy=""
