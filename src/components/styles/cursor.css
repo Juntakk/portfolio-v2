@@ -6,7 +6,7 @@
   border-radius: 50%;
   transition: transform 0.3s ease, width 0.3s ease, height 0.3s ease;
   transform: translate(-50%, -50%) scale(1);
-  z-index: 1044444400;
+  z-index: 999;
 }
 
 .hover-cursor {
