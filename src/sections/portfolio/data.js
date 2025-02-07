@@ -29,17 +29,6 @@ const data = [
     github: "https://github.com/Juntakk/SeeFlix",
     info: "Movie search platform that allows users to search and view details of thousands of movies. Using the IMDb API, users can browse this site in real time.",
   },
-  //   {
-  //     id: 3,
-  //     category: "Mobile",
-  //     image: images.Image1,
-  //     title: "Reservation App",
-  //     icons: [icons.java, icons.sql, icons.android],
-  //     desc: "Java | Android Studio | SQL",
-  //     demo: "",
-  //     github: "https://github.com/Juntakk/Android-Camping-App",
-  //     info: "Activity and field booking application for a camping company, allowing customers to choose from various options based on an SQL database.",
-  //   },
   {
     id: 3,
     category: "Web",
