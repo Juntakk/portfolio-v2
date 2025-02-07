@@ -49,8 +49,8 @@ html {
   scroll-behavior: smooth;
 }
 :root {
-  --color-primary: #fff;
-  --color-secondary: rgb(1, 52, 223);
+  --color-primary: #000000;
+  --color-secondary: #efefef;
 }
 main.color-1 {
   --color-primary: #000000;
