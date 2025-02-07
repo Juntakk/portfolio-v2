@@ -49,7 +49,7 @@ const Services = () => {
           </div>
           <div className="face face2">
             <div className="content">
-              <p className="hover-this">
+              <p className="">
                 {isMobile
                   ? data[0].text.replace(/[^.!?]*[.!?]\s*$/, "")
                   : data[0].text}
@@ -73,7 +73,7 @@ const Services = () => {
           </div>
           <div className="face face2">
             <div className="content">
-              <p className="hover-this">
+              <p className="">
                 {isMobile
                   ? data[1].text.replace(/[^.!?]*[.!?]\s*$/, "")
                   : data[1].text}
@@ -97,12 +97,10 @@ const Services = () => {
           </div>
           <div className="face face2">
             <div className="content">
-              <p className="hover-this">
-                <p className="hover-this">
-                  {isMobile
-                    ? data[2].text.replace(/[^.!?]*[.!?]\s*$/, "")
-                    : data[2].text}
-                </p>
+              <p className="">
+                {isMobile
+                  ? data[2].text.replace(/[^.!?]*[.!?]\s*$/, "")
+                  : data[2].text}
               </p>
             </div>
           </div>
@@ -110,7 +108,7 @@ const Services = () => {
       </div>
       {!isMobile ? (
         <div
-          className={`statistics__row hover-this ${
+          className={`statistics__row ${
             isVisible ? "magictime slideLeftReturn" : "none"
           }`}
         >

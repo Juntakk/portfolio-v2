@@ -67,7 +67,7 @@ const ProjectDetails = () => {
           <h1 className="modal__title">{title}</h1>
           <p className="modal__info">{info}</p>
         </div>
-        <div className="modal__icons hover-this">
+        <div className="modal__icons">
           {icons.map(([icon, name], index) => (
             <>
               <div key={index} className="language__icon">

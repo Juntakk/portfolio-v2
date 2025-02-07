@@ -104,9 +104,9 @@ const Socials = () => {
 
   return (
     <div
-      className={`socials__container ${isScrolling ? "show " : "hide "} ${
-        !isVisible ? "center" : ""
-      }`}
+      className={`socials__container hover-this ${
+        isScrolling ? "show " : "hide "
+      } ${!isVisible ? "center" : ""}`}
     >
       <a
         href="https://www.linkedin.com/in/nicolasgauthierdev/"

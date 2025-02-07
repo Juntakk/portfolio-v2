@@ -80,7 +80,7 @@ const Navbar = ({ toggleTheme, isDarkMode }) => {
             {isDarkMode ? <MdDarkMode /> : <MdOutlineWbSunny />}
           </button>
           <div className="line">|</div>
-          <i className="nav__logo">
+          <i className="nav__logo hover-this">
             <LanguageToggle />
           </i>
         </div>

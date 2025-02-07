@@ -62,10 +62,10 @@ const Header = ({ isLoading, setIsLoading }) => {
             fontSize: "5.5rem",
           }}
         >
-          <span className="typing iceland-regular hover-this">
+          <span className="typing iceland-regular">
             <span className="first-letter">N</span>icolas
           </span>
-          <span className="typing iceland-regular hover-this">
+          <span className="typing iceland-regular">
             <span className="first-letter">G</span>authier
           </span>
         </h1>
