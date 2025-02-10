@@ -73,6 +73,9 @@ section {
   h2 {
     font-size: 4rem;
   }
+  section h2 {
+    margin-top: 3rem !important;
+  }
 }
 @media (max-width: 600px) {
   h2 {

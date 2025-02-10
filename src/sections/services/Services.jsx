@@ -42,7 +42,7 @@ const Services = () => {
           <div className="face face1">
             <div className="content">
               <span>
-                <TfiLayoutAccordionList size={isMobile ? 45 : 75} />
+                <TfiLayoutAccordionList size={isMobile ? 65 : 75} />
               </span>
               <h3>{data[0].title}</h3>
             </div>
@@ -66,7 +66,7 @@ const Services = () => {
           <div className="face face1">
             <div className="content">
               <span>
-                <FaLaptopCode size={isMobile ? 45 : 75} />
+                <FaLaptopCode size={isMobile ? 65 : 75} />
               </span>{" "}
               <h3>{data[1].title}</h3>
             </div>
@@ -90,7 +90,7 @@ const Services = () => {
           <div className="face face1">
             <div className="content">
               <span>
-                <GrLaunch size={isMobile ? 45 : 75} />
+                <GrLaunch size={isMobile ? 65 : 75} />
               </span>
               <h3>{data[2].title}</h3>
             </div>
@@ -106,28 +106,6 @@ const Services = () => {
           </div>
         </div>
       </div>
-      {!isMobile ? (
-        <div
-          className={`statistics__row ${
-            isVisible ? "magictime slideLeftReturn" : "none"
-          }`}
-        >
-          <div className="statistic">
-            <h3>20+</h3>
-            <p>{english ? "Successful projects" : "Projets réussis"}</p>
-          </div>
-          <div className="statistic">
-            <h3>3+</h3>
-            <p>{english ? "Years experience" : "Années d'expérience"}</p>
-          </div>
-          <div className="statistic">
-            <h3>10+</h3>
-            <p>{english ? "Tools/Frameworks" : "Outils/Frameworks"}</p>
-          </div>
-        </div>
-      ) : (
-        ""
-      )}
     </section>
   );
 };

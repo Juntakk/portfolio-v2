@@ -1,12 +1,10 @@
 #services {
   background-color: var(--color-primary);
-  height: max-content;
+  height: 100vh;
   z-index: 1;
   display: flex;
-  justify-content: space-evenly;
-  align-items: center;
+
   flex-direction: column;
-  overflow: hidden;
 }
 #services h2 {
   margin-top: 0rem;
@@ -28,13 +26,14 @@ h2 .none {
   opacity: 0;
 }
 .services__container {
+  margin-top: 3rem;
+  margin-right: 1rem;
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 2rem;
   font-family: "Iceland", "serif";
-  margin-bottom: 12rem;
 }
 .services__container .service__card {
   position: relative;
@@ -77,7 +76,7 @@ h2 .none {
 }
 
 .services__container .service__card .face.face1 .content span {
-  max-width: 100px;
+  width: 100px;
   color: orangered;
   opacity: 0.7;
 }
@@ -87,7 +86,7 @@ h2 .none {
   padding: 0;
   color: orangered;
   text-align: center;
-  font-size: 1.5em;
+  font-size: 1.5rem;
 }
 
 .services__container .service__card .face.face2 {
@@ -135,48 +134,16 @@ h2 .none {
 h2.none {
   opacity: 0;
 }
-.statistics__row {
-  /* display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 8rem;
-  margin-top: 1rem;
-  margin-bottom: 5rem;
-  background-color: transparent;
-  padding: 0rem 1rem;
-  border-radius: 10px;
-  opacity: 1;
-  transition: all 1s ease-in-out; */
-  display: none;
-}
-.statistics__row .none {
-  opacity: 0;
-}
-.statistic {
-  text-align: center;
-}
-.statistic h3 {
-  font-family: "Iceland", serif;
-  font-size: 2.5rem;
-  color: var(--color-secondary);
-  margin-bottom: 0.5rem;
-}
-.statistic p {
-  color: var(--color-secondary);
-  font-family: "Iceland", serif;
-  font-size: 1.2rem;
-  font-weight: lighter;
-}
 
-@media (max-width: 1200px) {
+@media (max-width: 1300px) {
   #services h2 {
-    margin-top: 1rem;
+    margin-top: 3rem;
     font-size: 4rem;
   }
   .services__container {
-    margin-top: 2rem;
+    margin-top: 5rem;
     flex-direction: column;
-    gap: 1rem;
+    gap: 5rem;
   }
   .services__container .service__card {
     height: 200px;
@@ -219,8 +186,9 @@ h2.none {
   }
 }
 @media (max-width: 700px) {
-  #services h2 {
-    margin-top: 6rem;
+  .services__container {
+    gap: 1.5rem;
+    margin-top: 3rem;
   }
   .services__container .service__card:hover .face.face2 {
     transform: translateY(-190px);
@@ -229,13 +197,18 @@ h2.none {
   .services__container .service__card {
     position: relative;
     border: none;
-    width: 250px;
-    height: 190px;
+    width: 300px;
+    height: 200px;
   }
   .services__container .service__card .face {
-    width: 250px;
-    height: 190px;
+    width: 300px;
+    height: 200px;
     transition: 0.5s;
+  }
+  .services__container .service__card .face.face2 .content p {
+    margin: 0;
+    padding: 0;
+    font-size: 1.5rem;
   }
 }
 @media (max-width: 400px) {

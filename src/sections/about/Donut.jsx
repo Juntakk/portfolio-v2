@@ -57,9 +57,9 @@ const Donut = () => {
 
   const view = isMobile ? [240, 240] : isTablet ? [850, 850] : [1200, 1200];
   const dims = [view[0], view[1]];
-  const radius = isMobile ? 90 : isTablet ? 250 : 475;
+  const radius = isMobile ? 90 : isTablet ? 250 : 500;
   const imageSize = radius * 1.4;
-  const fontSize = isMobile ? "0.6rem" : isTablet ? "1.5rem" : "2.5rem";
+  const fontSize = isMobile ? "0.6rem" : isTablet ? "1.5rem" : "3.7rem";
 
   const innerArcPath = arc()
     .innerRadius(radius * 0.7)
@@ -72,46 +72,7 @@ const Donut = () => {
   const myRef = useRef();
   const isVisible = useVisibility(myRef);
   const { language } = useLanguage();
-  const texts =
-    language === "en"
-      ? ["apps.", "websites.", "games.", "software."]
-      : ["applications.", "sites webs.", "logiciels."];
-  const [currentText, setCurrentText] = useState("");
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const [isDeleting, setIsDeleting] = useState(false);
-  const [typingSpeed, setTypingSpeed] = useState(10);
-  const [isPaused, setIsPaused] = useState(false);
 
-  useEffect(() => {
-    const handleTyping = () => {
-      if (isPaused) {
-        return;
-      }
-      const fullText = texts[currentIndex];
-      if (!fullText) {
-        return;
-      }
-      if (!isDeleting && fullText) {
-        setCurrentText(fullText.substring(0, currentText.length + 1));
-        if (currentText === fullText) {
-          setIsPaused(true);
-          setTimeout(() => setIsPaused(false), 1500);
-          setIsDeleting(true);
-          setTypingSpeed(100); // Pause before deleting
-        }
-      } else {
-        setCurrentText(fullText.substring(0, currentText.length - 1));
-        if (currentText === "") {
-          setIsDeleting(false);
-          setTypingSpeed(175); // Reset typing speed
-          setCurrentIndex((prevIndex) => (prevIndex + 1) % texts.length); // Move to next text
-        }
-      }
-    };
-
-    const timer = setTimeout(handleTyping, typingSpeed);
-    return () => clearTimeout(timer);
-  }, [currentText, isDeleting, typingSpeed, texts, currentIndex, isPaused]);
   return (
     <section id="about" ref={myRef}>
       <h2 className={`${isVisible ? "magictime slideRightReturn" : "none"}`}>
