@@ -72,7 +72,7 @@ const data = [
     id: 6,
     category: "Web",
     image: images.Image12,
-    title: "Diet App",
+    title: "Alimentation",
     mainIcon: mainIcons.recipes,
     icons: [icons.next, icons.tailwind, icons.shadCn],
     desc: "NextJS | Tailwind | Clean",
@@ -93,6 +93,19 @@ const data = [
     demo: "",
     github: "https://github.com/Juntakk/blog_app",
     info: "Application de blogs, en utilisant l'Architecture Clean et Bloc pour la gestion d'état, l'utilisateur doit se créer un compte et se connecter pour visionner des blogs d'autres utilisateurs et créer, modifier et supprimer les siens.",
+  },
+  {
+    id: 8,
+    category: "Mobile",
+    image: images.favPlaces,
+    title: "Souvenirs",
+    mainIcon: mainIcons.places,
+    icons: [icons.flutter, icons.dart],
+    screenShot: images.favPlaces,
+    desc: "",
+    demo: "",
+    github: "https://github.com/Juntakk/favorite-places",
+    info: "Application de voyage utilisant l'API Google Maps et la fonctionnalité photo pour capturer des souvenirs et sauvegarder leur emplacement sur la carte. Développée avec l'Architecture Clean et Bloc pour la gestion d'état.",
   },
 ];
 

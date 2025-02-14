@@ -20,7 +20,7 @@ import { IoLogoAndroid } from "react-icons/io";
 import { SiDart } from "react-icons/si";
 import { SiNextdotjs } from "react-icons/si";
 import { SiShadcnui } from "react-icons/si";
-
+import { GiWorld } from "react-icons/gi";
 import { BsChatDots } from "react-icons/bs";
 import { BiCameraMovie } from "react-icons/bi";
 import { LuGamepad2 } from "react-icons/lu";
@@ -64,5 +64,6 @@ const mainIcons = {
   recipes: <MdOutlineFastfood />,
   travel: <BsAirplane />,
   blog: <GrBlog />,
+  places: <GiWorld />,
 };
 export default { icons, mainIcons };
