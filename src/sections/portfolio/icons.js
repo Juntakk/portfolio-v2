@@ -18,6 +18,8 @@ import { SiNumpy } from "react-icons/si";
 import { RiTailwindCssFill } from "react-icons/ri";
 import { IoLogoAndroid } from "react-icons/io";
 import { SiDart } from "react-icons/si";
+import { SiNextdotjs } from "react-icons/si";
+import { SiShadcnui } from "react-icons/si";
 
 import { BsChatDots } from "react-icons/bs";
 import { BiCameraMovie } from "react-icons/bi";
@@ -48,6 +50,9 @@ const icons = {
   tailwind: [<RiTailwindCssFill />, "Tailwind"],
   android: [<IoLogoAndroid />, "Android"],
   dart: [<SiDart />, "Dart"],
+  next: [<SiNextdotjs />, "Next"],
+  next: [<SiNextdotjs />, "Next"],
+  shadCn: [<SiShadcnui />, "Shadcn"],
 };
 
 const mainIcons = {

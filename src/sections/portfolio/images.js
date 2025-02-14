@@ -7,7 +7,7 @@ import Image14 from "../../assets/camera-1130731_1280.jpg";
 import BlogImage from "../../assets/anatomy-of-a-blog-post-header-3.jpg";
 import ChatImage from "../../assets/chat-8147986_1280.jpg";
 
-import mealsScreenshot from "../../assets/screenshots/meals1.png";
+import dietAppScreenshot from "../../assets/screenshots/diet-app-ten.vercel.app_(Screenshot).png";
 import blogScreenshot from "../../assets/screenshots/blog1.png";
 
 import steem1 from "../../assets/screenshots/steem1.png";
@@ -34,13 +34,14 @@ const images = {
   Image14,
   BlogImage,
   ChatImage,
-  mealsScreenshot: [mealsScreenshot],
+  dietAppScreenshot: [dietAppScreenshot],
   blogScreenshot: [blogScreenshot],
   steemScreenshots: [steem1, steem2, steem4, steem5],
   seeflixScreenshots: [seeflix1, seeflix2],
   chatbotScreenShot: [chatbotScreenShot],
   placesScreenShot: [placesScreenShot],
   game3ScreenShot: [game3ScreenShot],
+  survivorsScreenshots: [survivors1, survivors2],
   survivorsScreenshots: [survivors1, survivors2],
 };
 
