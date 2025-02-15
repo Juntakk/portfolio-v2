@@ -17,7 +17,7 @@
   font-size: 5rem;
   font-family: "Iceland", serif;
   color: var(--color-secondary);
-  opacity: 0.9;
+  opacity: 1;
   border-right: 3px solid orangered !important;
   border-bottom: 3px solid orangered !important;
   text-align: start;
@@ -28,6 +28,10 @@
   margin-right: auto;
   padding: 1rem;
 }
+#portfolio h2.none {
+  opacity: 0;
+}
+
 @media (max-width: 975px) {
   #portfolio h2 {
     font-size: 4rem;

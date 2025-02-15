@@ -40,7 +40,11 @@ const Portfolio = () => {
       <h2 className={`${isVisible ? "magictime slideRightReturn" : "none"}`}>
         {language === "en" ? "Projects" : "Projets"}
       </h2>
-      <div className="portfolio__container" data-aos="fade-left">
+      <div
+        className={`portfolio__container ${
+          isVisible ? "magictime slideRightReturn" : "none"
+        }`}
+      >
         <ProjectsCategories
           categories={categories}
           onFilterProjects={filterProjectsHandler}

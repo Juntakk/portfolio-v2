@@ -4,7 +4,7 @@ import React from "react";
 import "./styles/project-categories.css";
 import { useLanguage } from "../../theme/LanguageContext";
 
-const ProjectsCategories = ({ categories, onFilterProjects }) => {
+const ProjectsCategories = ({ categories, onFilterProjects, className }) => {
   const language = useLanguage();
   const [activeCategory, setActiveCategory] = useState(
     language === "en" ? "Web" : "Web"
@@ -21,11 +21,7 @@ const ProjectsCategories = ({ categories, onFilterProjects }) => {
     }, 200);
   };
   return (
-    <div
-      className="portfolio__categories"
-      data-aos="fade-left"
-      data-aos-duration="2000"
-    >
+    <div className="portfolio__categories">
       {categories.map((category) => (
         <CategoryButton
           key={category}
